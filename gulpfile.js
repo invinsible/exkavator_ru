@@ -26,10 +26,14 @@ const paths = {
   images: {
     src:  'src/img/**/*.{png,jpg,jpeg}',
     dest: 'dist/img/'
+  },
+  fonts: {
+    src:  'src/fonts/**/*.{woff,woff2}',
+    dest: 'dist/fonts/'
   }
 };
 
-// Обработка ошибок — не даёт watch упасть
+// Обработка ошибок
 function handleError(err) {
   console.error(err.message);
   this.emit('end');
@@ -40,7 +44,7 @@ function clean() {
   return del(['dist']);
 }
 
-// HTML → dist/
+// HTML 
 function html() {
   return src(paths.html.src)
     .pipe(newer(paths.html.dest))
@@ -48,7 +52,7 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// SCSS → CSS, автопрефиксы, минификация
+// CSS - автопрефиксы, минификация
 function styles() {
   return src(paths.styles.src)
     .pipe(sass({ outputStyle: 'expanded' }).on('error', handleError))
@@ -58,7 +62,7 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-// JS — конкатенация + минификация
+// JS - конкатенация, минификация
 function scripts() {
   return src(paths.scripts.src)
     .pipe(concat('main.min.js'))
@@ -68,7 +72,7 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-// Сжатие картинок PNG/JPG
+// Сжатие картинок
 function images() {
   return src(paths.images.src)
     .pipe(newer(paths.images.dest))
@@ -77,6 +81,14 @@ function images() {
       imagemin.optipng({ optimizationLevel: 3 })
     ]))
     .pipe(dest(paths.images.dest));
+}
+
+// Копирование шрифтов
+function fonts() {
+  return src(paths.fonts.src)
+    .pipe(newer(paths.fonts.dest))
+    .pipe(dest(paths.fonts.dest))
+    .pipe(browserSync.stream());
 }
 
 // Dev-сервер
@@ -96,16 +108,17 @@ function watchFiles(done) {
   watch(paths.styles.src, styles);
   watch(paths.scripts.src, scripts);
   watch(paths.images.src, images);
+  watch(paths.fonts.src, fonts);
   done();
 }
 
-// Сборка всех ассетов
-const buildAll = parallel(html, styles, scripts, images);
+// Сборка
+const buildAll = parallel(html, styles, scripts, images, fonts);
 
-// dev: очистка → сборка → сервер + watch
+// dev
 exports.default = series(clean, buildAll, parallel(serve, watchFiles));
 
-// build: очистка → сборка (без сервера)
+// build
 exports.build = series(clean, buildAll);
 
 exports.clean = clean;
