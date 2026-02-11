@@ -5,3 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

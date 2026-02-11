@@ -1,4 +1,11 @@
 body {
-  font-family: $font-family;
-  color: $color-primary;
+  min-width: 375px;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container-desktop);
 }
