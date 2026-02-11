@@ -1,18 +1,20 @@
 // button
 .button {
     display: block;
-    border: 1px solid transparent;
+    width: fit-content;
+    border: 0;
     border-radius: var(--radius-8);
+    cursor: pointer;    
     
     
     &--primary {
         background-color: var(--primary-500);
         color: var(--text-white);
 
-        &:hover {
+        &:hover,&:focus {
             box-shadow: 0px 2px 8px 0px #00429780;
         }
-        &:focus {
+        &:active  {
             background-color: var(--primary-600);
         }
     }
@@ -20,10 +22,10 @@
         background-color: var(--primary-50);
         color: var(--text-primary);
 
-        &:hover {
+        &:hover,&:focus {
             box-shadow: 0px 2px 8px 0px #CCE2FF80;
         }
-        &:focus {
+        &:active  {
             background-color: var(--primary-100);
         }
     }
@@ -31,22 +33,23 @@
         background-color: var(--neutral-60);
         color: var(--text-base);
 
-        &:hover {
+        &:hover,&:focus {
             box-shadow: 0px 2px 8px 0px #E0E5EB80;
         }
-        &:focus {
+        &:active  {
             background-color: var(---neutral-100);
         }
     }
     &--regular-alt {
         background-color: var(--neutral-0);
         color: var(--text-base);
-        border-color: var(--neutral-100);
+        outline: 1px solid  var(--neutral-100);
 
-        &:hover {
+
+        &:hover,&:focus {
             box-shadow: 0px 2px 8px 0px #E0E5EB80;
         }
-        &:focus {
+        &:active  {
             background-color: var(---neutral-60);
         }
     }
