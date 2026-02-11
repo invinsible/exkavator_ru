@@ -16,8 +16,9 @@ const paths = {
     dest: 'dist/'
   },
   styles: {
-    src:  'src/scss/**/*.scss',
-    dest: 'dist/css/'
+    src:   'src/scss/main.scss',
+    watch: 'src/scss/**/*.scss',
+    dest:  'dist/css/'
   },
   scripts: {
     src:  'src/js/**/*.js',
@@ -105,7 +106,7 @@ function serve(done) {
 // Слежение за файлами
 function watchFiles(done) {
   watch(paths.html.src, html);
-  watch(paths.styles.src, styles);
+  watch(paths.styles.watch, styles);
   watch(paths.scripts.src, scripts);
   watch(paths.images.src, images);
   watch(paths.fonts.src, fonts);

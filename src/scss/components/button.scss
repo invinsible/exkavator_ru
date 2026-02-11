@@ -1,24 +1,54 @@
 // button
 .button {
+    display: block;
     border: 1px solid transparent;
+    border-radius: var(--radius-8);
     
     
     &--primary {
         background-color: var(--primary-500);
         color: var(--text-white);
+
+        &:hover {
+            box-shadow: 0px 2px 8px 0px #00429780;
+        }
+        &:focus {
+            background-color: var(--primary-600);
+        }
     }
     &--primary-alt {
         background-color: var(--primary-50);
         color: var(--text-primary);
+
+        &:hover {
+            box-shadow: 0px 2px 8px 0px #CCE2FF80;
+        }
+        &:focus {
+            background-color: var(--primary-100);
+        }
     }
     &--regular {
         background-color: var(--neutral-60);
         color: var(--text-base);
+
+        &:hover {
+            box-shadow: 0px 2px 8px 0px #E0E5EB80;
+        }
+        &:focus {
+            background-color: var(---neutral-100);
+        }
     }
     &--regular-alt {
         background-color: var(--neutral-0);
         color: var(--text-base);
         border-color: var(--neutral-100);
+
+        &:hover {
+            box-shadow: 0px 2px 8px 0px #E0E5EB80;
+        }
+        &:focus {
+            background-color: var(---neutral-60);
+        }
     }
 
     &--large {
