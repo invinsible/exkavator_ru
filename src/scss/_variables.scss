@@ -22,7 +22,7 @@
     --neutral-60: #EDF0F3;
     --neutral-50: #EDF0F3;
     --neutral-25: #F4F8FB;
-    --neutral-25: #F7FAFD;
+    --neutral-5: #F7FAFD;
     --neutral-0: #FFFFFF;
 
     // primary
@@ -81,5 +81,10 @@
     --text-base: var(--neutral-600);
     --text-white: var(--neutral-0);
     --text-primary: var(--primary-500);
+
+    // field
+    --field-disabled-bg: var(--neutral-25);
+    --field-disabled-text: var(--neutral-300);
+    --field-ouline: var(--neutral-200);
 }
 

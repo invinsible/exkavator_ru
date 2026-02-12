@@ -66,29 +66,114 @@
     <main class="page-trade">
         <div class="container">
             <h1>Продажа спецтехники б/у и новой</h1>
-            <div style="display: flex;gap:16px;">
-                <button class="button button--large button--primary" type="button">primary</button>
-                <button class="button button--large button--primary-alt" type="button">primary-alt</button>
+            
 
-                <button class="button button--large button--regular" type="button">regular</button>
-                <button class="button button--large button--regular-alt" type="button">regular-alt</button>
-            </div>
-            <br>
-            <div style="display: flex;gap:16px;">
-                <button class="button button--medium button--primary" type="button">primary</button>
-                <button class="button button--medium button--primary-alt" type="button">primary-alt</button>
+            <div class="filter">
+                <div class="filter__wrapper">
+                    <div class="field field--select">
+                        <input class="field__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
+                        <label class="field__label" for="type">
+                            <span class="field__caption">Тип техники</span>
+                        </label>
+                        <div class="field__backdrop">
+                            <p>option 1</p>
+                            <p>option 2</p>
+                        </div>
+                    </div>
 
-                <button class="button button--medium button--regular" type="button">regular</button>
-                <button class="button button--medium button--regular-alt" type="button">regular-alt</button>
-            </div>
-            <br>
-            <div style="display: flex;gap:16px;">
-                <button class="button button--small button--primary" type="button">primary</button>
-                <button class="button button--small button--primary-alt" type="button">primary-alt</button>
+                    <div class="field field--select">
+                        <input class="field__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
+                        <label class="field__label" for="brand">
+                            <span class="field__caption">Марка</span>
+                        </label>
+                    </div>
 
-                <button class="button button--small button--regular" type="button">regular</button>
-                <button class="button button--small button--regular-alt" type="button">regular-alt</button>
+                    <div class="field field--select">
+                        <input class="field__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
+                        <label class="field__label" for="model">
+                            <span class="field__caption">Модель</span>
+                        </label>
+                    </div>
+
+                    <div class="field field--text">
+                        <input class="field__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                        <label class="field__label" for="place">
+                            <span class="field__caption">Регион, город, населенный пункт</span>
+                        </label>
+                    </div>
+
+                    <div class="field field--select">
+                        <input class="field__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
+                        <label class="field__label" for="durability">
+                            <span class="field__caption">Состояние техники</span>
+                        </label>
+                    </div>
+
+                    <div class="field field--select">
+                        <input class="field__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
+                        <label class="field__label" for="availability">
+                            <span class="field__caption">Доступность</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__range">
+                        <div class="field field--select">
+                            <input class="field__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
+                            <label class="field__label" for="minPrice">
+                                <span class="field__caption">Цена от, ₽</span>
+                            </label>
+                        </div>
+                        <div class="field field--select">
+                            <input class="field__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
+                            <label class="field__label" for="maxPrice">
+                                <span class="field__caption">до, ₽</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter__range">
+                        <div class="field field--select">
+                            <input class="field__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
+                            <label class="field__label" for="yearFrom">
+                                <span class="field__caption">Год выпуска от</span>
+                            </label>
+                        </div>
+                        <div class="field field--select">
+                            <input class="field__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
+                            <label class="field__label" for="yearTo">
+                                <span class="field__caption">до</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field field--text">
+                        <input class="field__input" type="text" placeholder="Моточасы наработки, до" name="mHours" id="mHours" autocomplete="off"/>
+                        <label class="field__label" for="mHours">
+                            <span class="field__caption">Моточасы наработки, до</span>
+                        </label>
+                    </div>
+
+                    <div class="field field--text">
+                        <input class="field__input" type="text" placeholder="Слова в объявлении" name="words" id="words" autocomplete="off"/>
+                        <label class="field__label" for="words">
+                            <span class="field__caption">Слова в объявлении</span>
+                        </label>
+                    </div>
+
+                    
+
+                    <!-- <div class="field">
+                        <input class="field__input" type="text" placeholder="Слова в объявлении" name="words-1" id="word-1" autocomplete="off" disabled/>
+                        <label class="field__label" for="word-1">
+                            <span class="field__caption">Слова в объявлении</span>
+                        </label>
+                    </div> -->
+                </div>                
             </div>
+
+
+            
+           
             
 
             

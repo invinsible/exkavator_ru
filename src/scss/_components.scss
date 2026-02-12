@@ -62,6 +62,7 @@
 }
 
 @import 'components/button';
+@import 'components/field';
 
 
 // chip
@@ -80,5 +81,36 @@
     &--primary {
         background-color: var(----primary-500);
         color: var(--text-white);
+    }
+}
+
+.filter {
+    max-width: 958px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__range {
+        display: flex;
+        gap: 2px;
+        .field {
+            flex: 1;
+
+            &:first-child .field__label{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:last-child .field__label{
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
     }
 }

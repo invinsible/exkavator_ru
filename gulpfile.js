@@ -25,7 +25,7 @@ const paths = {
     dest: 'dist/js/'
   },
   images: {
-    src:  'src/img/**/*.{png,jpg,jpeg}',
+    src:  'src/img/**/*.{png,jpg,jpeg,svg}',
     dest: 'dist/img/'
   },
   fonts: {
@@ -58,7 +58,7 @@ function styles() {
   return src(paths.styles.src)
     .pipe(sass({ outputStyle: 'expanded' }).on('error', handleError))
     .pipe(autoprefixer({ cascade: false }))
-    .pipe(cleanCSS({ level: 2 }))
+    .pipe(cleanCSS({ level: 1 }))
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
