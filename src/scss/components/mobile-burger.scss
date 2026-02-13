@@ -1,0 +1,46 @@
+.mobile-burger {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+
+    span,
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 2px;
+        background-color: var(--neutral-0);
+        // border-radius: 1px;
+        transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+    }
+
+    &::before { top: 6px; }
+    span       { top: 11px; }
+    &::after   { top: 16px; }
+
+    &.is-active {
+        &::before {
+            top: 11px;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        span {
+            opacity: 0;
+        }
+
+        &::after {
+            top: 11px;
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+}

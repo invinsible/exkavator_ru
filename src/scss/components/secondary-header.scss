@@ -1,0 +1,15 @@
+.secondary-header {
+    display: none;
+    background-color: var(--neutral-50);
+
+    @media (min-width: $breakpoint-md) {
+        display: block;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}

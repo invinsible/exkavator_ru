@@ -1,11 +1,52 @@
 body {
-  min-width: 375px;
-  font-family: var(--font-family);
-  color: var(--color-primary);
+    min-width: 375px;
+    font-family: var(--font-family);
+    color: var(--text-base);
+    @include text-size('base');
+    @include text-weight('base');
+}
+
+.container {
+    padding: 0 16px;
+    margin: 0 auto;
+    max-width: var(--container-desktop);
+
+    @media (min-width: $breakpoint-xs) {
+        padding: 0 24px;
+    }
+}
+
+// Typography
+.super-title {
+    @include text-size('primaryLarge');
+    @include text-weight('extrabold');
+}
+
+h1 {
+    @include text-size('secondary');
+    @include text-weight('bold');
+
+    @media (min-width: $breakpoint-sm) {
+        @include text-size('primary');
+        @include text-weight('extrabold');
+    }
+}
+
+h2 {
+    @include text-size('secondary');
+    @include text-weight('bold');
+}
+
+h3 {
+    @include text-size('lg');
+    @include text-weight('bold');
 }
 
 
-.container {
-  margin: 0 auto;
-  max-width: var(--container-desktop);
+main {
+    padding: 16px 0;
+
+    @media (min-width: $breakpoint-sm) {
+        padding: 32px 0;
+    }
 }

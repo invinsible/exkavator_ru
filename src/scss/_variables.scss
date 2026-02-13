@@ -1,10 +1,15 @@
+// breakpoints (SCSS variables)
+$breakpoint-xxs: 340px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+
 :root {
-    --color-primary: #2c3e50;
-    --color-accent: #e74c3c;
-
     --font-family: 'Montserrat', sans-serif;
-
     --fw-medium:    500;
+    --fw-semibold:  600;
+    --fw-bold:      700;
     --fw-extrabold: 800;
 
 
@@ -20,9 +25,9 @@
     --neutral-200: #C0CCD8;
     --neutral-100: #E0E5EB;
     --neutral-60: #EDF0F3;
-    --neutral-50: #EDF0F3;
+    --neutral-50: #EFF2F5;
     --neutral-25: #F4F8FB;
-    --neutral-5: #F7FAFD;
+    --neutral-20: #F7FAFD;
     --neutral-0: #FFFFFF;
 
     // primary
@@ -55,12 +60,20 @@
     --green-500: #16B921;
     --green-400: #49E953;
     --green-100: #CCFECF;
-    --green-50: #EFF2F5;
+    --green-75: #D9FFDB;    
+    --green-50: #E8FCEA;
 
 
+
+    // breakpoints
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1280px;
 
     // container
     --container-desktop: 1280px;
+
+    // typography — размеры и веса определены в _typography.scss
 
 
     // spacing

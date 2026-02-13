@@ -1,0 +1,32 @@
+.main-header {
+    padding: 12px 0;
+    background-color: var(--primary-600);
+
+    @media (min-width: $breakpoint-md) {
+        padding: 4px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media (min-width: $breakpoint-md) {
+            gap: 32px;
+        }
+        
+    }
+
+    &__logo  {
+        width: 120px;
+        flex-shrink: 0;  
+        
+        @media (min-width: $breakpoint-md) {
+            width: auto;
+        }
+    }
+   
+}
+
+
+

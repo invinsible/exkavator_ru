@@ -26,4 +26,11 @@ document.addEventListener('click', () => {
     closeAllSelects();
 });
 
+const burger = document.querySelector('.mobile-burger');
+if (burger) {
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+    });
+}
+
 

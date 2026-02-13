@@ -1,0 +1,45 @@
+// Typography System
+
+$font-sizes: (
+  'xs':   (size: 11px, line-height: 14px),
+  'sm':   (size: 12px, line-height: 16px),
+  'base': (size: 14px, line-height: 20px),
+  'md':   (size: 16px, line-height: 24px),
+  'lg':   (size: 18px, line-height: 24px),
+  'secondary':   (size: 24px, line-height: 30px),
+  'primary':  (size: 36px, line-height: 40px),
+  'primaryLarge':  (size: 44px, line-height: 48px),
+);
+
+$font-weights: (
+  'base':    500,
+  'semibold':  600,
+  'bold':      700,
+  'extrabold': 800,
+);
+
+// Миксины — для использования внутри компонентов
+@mixin text-size($name) {
+  $values: map-get($font-sizes, $name);
+  font-size: map-get($values, 'size');
+  line-height: map-get($values, 'line-height');
+}
+
+@mixin text-weight($name) {
+  font-weight: map-get($font-weights, $name);
+}
+
+// Утилити-классы размеров
+@each $name, $values in $font-sizes {
+  .text-#{$name} {
+    font-size: map-get($values, 'size');
+    line-height: map-get($values, 'line-height');
+  }
+}
+
+// Утилити-классы толщин
+@each $name, $weight in $font-weights {
+  .fw-#{$name} {
+    font-weight: $weight;
+  }
+}
