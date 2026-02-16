@@ -3,7 +3,7 @@
     display: block;
     width: fit-content;
     border: 0;
-    border-radius: var(--radius-8);
+    border-radius: 8px;
     cursor: pointer;    
     
     
@@ -70,4 +70,10 @@
         font-size: 12px;
         line-height: 16px;
     }
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }

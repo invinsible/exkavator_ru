@@ -64,124 +64,362 @@
             
         </div>
     </div>
-    <main class="page-trade">
-        <div class="container">
-            <h1>Продажа спецтехники б/у и новой</h1>
-            
-
-            <div class="filter">
-                <div class="filter__wrapper">
-                    <div class="field field--select">
-                        <input class="field__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
-                        <label class="field__label" for="type">
-                            <span class="field__caption">Тип техники</span>
-                        </label>
-                        <div class="field__backdrop">
-                            <p>option 1</p>
-                            <p>option 2</p>
-                        </div>
-                    </div>
-
-                    <div class="field field--select">
-                        <input class="field__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
-                        <label class="field__label" for="brand">
-                            <span class="field__caption">Марка</span>
-                        </label>
-                    </div>
-
-                    <div class="field field--select">
-                        <input class="field__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
-                        <label class="field__label" for="model">
-                            <span class="field__caption">Модель</span>
-                        </label>
-                    </div>
-
-                    <div class="field field--text">
-                        <input class="field__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                        <label class="field__label" for="place">
-                            <span class="field__caption">Регион, город, населенный пункт</span>
-                        </label>
-                    </div>
-
-                    <div class="field field--select">
-                        <input class="field__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
-                        <label class="field__label" for="durability">
-                            <span class="field__caption">Состояние техники</span>
-                        </label>
-                    </div>
-
-                    <div class="field field--select">
-                        <input class="field__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
-                        <label class="field__label" for="availability">
-                            <span class="field__caption">Доступность</span>
-                        </label>
-                    </div>
-
-                    <div class="filter__range">
+    <div class="container">
+        <div class="layout">
+            <main class="content">
+                <h1>Продажа спецтехники б/у и новой</h1>
+                <section class="filter section">
+                    <p class="small-title">Поиск по 24 304 объявлениям</p>
+                    <div class="filter__wrapper">
                         <div class="field field--select">
-                            <input class="field__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
-                            <label class="field__label" for="minPrice">
-                                <span class="field__caption">Цена от, ₽</span>
+                            <input class="field__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
+                            <label class="field__label" for="type">
+                                <span class="field__caption">Тип техники</span>
+                            </label>
+                            <div class="field__backdrop">
+                                <p>option 1</p>
+                                <p>option 2</p>
+                            </div>
+                        </div>
+
+                        <div class="field field--select">
+                            <input class="field__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
+                            <label class="field__label" for="brand">
+                                <span class="field__caption">Марка</span>
                             </label>
                         </div>
+
                         <div class="field field--select">
-                            <input class="field__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
-                            <label class="field__label" for="maxPrice">
-                                <span class="field__caption">до, ₽</span>
+                            <input class="field__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
+                            <label class="field__label" for="model">
+                                <span class="field__caption">Модель</span>
                             </label>
                         </div>
-                    </div>
 
-                    <div class="filter__range">
-                        <div class="field field--select">
-                            <input class="field__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                            <label class="field__label" for="yearFrom">
-                                <span class="field__caption">Год выпуска от</span>
+                        <div class="field field--text">
+                            <input class="field__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                            <label class="field__label" for="place">
+                                <span class="field__caption">Регион, город, населенный пункт</span>
                             </label>
                         </div>
+
                         <div class="field field--select">
-                            <input class="field__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                            <label class="field__label" for="yearTo">
-                                <span class="field__caption">до</span>
+                            <input class="field__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
+                            <label class="field__label" for="durability">
+                                <span class="field__caption">Состояние техники</span>
                             </label>
                         </div>
-                    </div>
 
-                    <div class="field field--text">
-                        <input class="field__input" type="text" placeholder="Моточасы наработки, до" name="mHours" id="mHours" autocomplete="off"/>
-                        <label class="field__label" for="mHours">
-                            <span class="field__caption">Моточасы наработки, до</span>
-                        </label>
-                    </div>
+                        <div class="field field--select">
+                            <input class="field__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
+                            <label class="field__label" for="availability">
+                                <span class="field__caption">Доступность</span>
+                            </label>
+                        </div>
 
-                    <div class="field field--text">
-                        <input class="field__input" type="text" placeholder="Слова в объявлении" name="words" id="words" autocomplete="off"/>
-                        <label class="field__label" for="words">
-                            <span class="field__caption">Слова в объявлении</span>
-                        </label>
-                    </div>
+                        <div class="filter__range">
+                            <div class="field field--select">
+                                <input class="field__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
+                                <label class="field__label" for="minPrice">
+                                    <span class="field__caption">Цена от, ₽</span>
+                                </label>
+                            </div>
+                            <div class="field field--select">
+                                <input class="field__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
+                                <label class="field__label" for="maxPrice">
+                                    <span class="field__caption">до, ₽</span>
+                                </label>
+                            </div>
+                        </div>
 
+                        <div class="filter__range">
+                            <div class="field field--select">
+                                <input class="field__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
+                                <label class="field__label" for="yearFrom">
+                                    <span class="field__caption">Год выпуска от</span>
+                                </label>
+                            </div>
+                            <div class="field field--select">
+                                <input class="field__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
+                                <label class="field__label" for="yearTo">
+                                    <span class="field__caption">до</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field field--text">
+                            <input class="field__input" type="text" placeholder="Моточасы наработки, до" name="mHours" id="mHours" autocomplete="off"/>
+                            <label class="field__label" for="mHours">
+                                <span class="field__caption">Моточасы наработки, до</span>
+                            </label>
+                        </div>
+
+                        <div class="field field--text">
+                            <input class="field__input" type="text" placeholder="Слова в объявлении" name="words" id="words" autocomplete="off"/>
+                            <label class="field__label" for="words">
+                                <span class="field__caption">Слова в объявлении</span>
+                            </label>
+                        </div>
+
+                        
+
+                        <!-- <div class="field">
+                            <input class="field__input" type="text" placeholder="Слова в объявлении" name="words-1" id="word-1" autocomplete="off" disabled/>
+                            <label class="field__label" for="word-1">
+                                <span class="field__caption">Слова в объявлении</span>
+                            </label>
+                        </div> -->
+                    </div>
+                </section>
+
+                <section class="categories section">
+                    <p class="small-title">Популярные типы техники</p>
+                    <ul class="categories__list">
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Автокраны</span>
+                                <span class="rounded-link-card__description">2426 объявлений</span>
+                            </a>                                
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Экскаваторы-погрузчики</span>
+                                <span class="rounded-link-card__description">1040 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Мини-краны</span>
+                                <span class="rounded-link-card__description">660 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Тракторы</span>
+                                <span class="rounded-link-card__description">384 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Седельные тягачи</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Самосвалы</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Экскаваторы гусеничные</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Дизельные генераторы</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Асфальтоукладчики</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Вилочные автопогрузчики</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Мини-погрузчики</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Бортовые полуприцепы</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Дорожные катки</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Тентованные полуприцепы</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <p class="rounded-link-card__title">Башенные краны</p>
+                                <p class="rounded-link-card__description">1492 объявлений</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Рефрижераторы</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="small-title">Популярные марки</p>
+                    <ul class="categories__list">
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Caterpillar</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Doosan</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Hitachi</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">JCB</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">John Deere</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Komatsu</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Liebherr</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Metso</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Sany</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Terex</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">Volvo</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                <span class="rounded-link-card__title">XCMG</span>
+                                <span class="rounded-link-card__description">1492 объявлений</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="offers section">
+                    <h2>Спецпредложения</h2>
+                </section>
+                <section class="companies section">
+                    <h2>Популярные компании</h2>
+                </section>
+                <section class="requests section">
+                    <h2>Заявки</h2>
+                    <nav class="requests__list">
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю телескопический погрузчик Dieci APOLLO 25.6</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>                    
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю ассенизаторскую машину ЗИЛ КО-510 б/у</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>                    
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю трактор МТЗ 82.1 б/у</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>                    
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю трактор МТЗ 320.4М</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>                    
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю самосвал Shacman SX33186W366C 8x4 б/у 2024 г.в.</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>                      
+                    </nav>
+                    <div class="button-group">
+                        <a class="button button--small button--regular-alt" href="#">Все заявки</a>
+                        <a class="button button--small button--regular-alt" href="#">Разместить заявку</a>
+                    </div>
                     
-
-                    <!-- <div class="field">
-                        <input class="field__input" type="text" placeholder="Слова в объявлении" name="words-1" id="word-1" autocomplete="off" disabled/>
-                        <label class="field__label" for="word-1">
-                            <span class="field__caption">Слова в объявлении</span>
-                        </label>
-                    </div> -->
-                </div>                
-            </div>
-
-
-            
-           
-            
-
-            
-
-
+                </section>                    
+                
+            </main>
+            <aside class="sidebar">
+                aside
+            </aside>
         </div>
-    </main>
+    </div>
+
     <footer class="main-footer">
         <div class="container"></div>
     </footer>

@@ -10,6 +10,28 @@
 @import 'components/main-header';
 @import 'components/secondary-header';
 
+
+.layout {
+    display: grid;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 298px;
+        column-gap: 16px;   
+    }
+
+    @media (min-width: 1440px) { 
+        column-gap: 24px;  
+    }
+
+    aside {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+        border: 1px solid ;
+    }
+}
+
 // menu
 .main-menu {
     display: none;
@@ -61,6 +83,47 @@
 @import 'components/button';
 @import 'components/field';
 
+.rounded-link-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &__title {
+        display: block;
+        @include text-weight('semibold');
+    }
+
+    &__description {
+        margin-top: auto;
+        display: block;
+        color: var(--text-secondary);
+        @include text-size('sm');
+    }
+
+    &--blue {
+        padding: 8px 12px 10px 12px;
+        background-color: var(--primary-50);
+
+        .rounded-link-card__title {
+            color: var(--text-primary);
+            line-height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &--gray {
+        padding: 12px;
+        background-color: var(--neutral-25);
+
+        .rounded-link-card__title {
+            margin-bottom: 8px;
+            color: var(--text-base);            
+        }
+    }
+}
 
 // chip
 .chip {
@@ -81,8 +144,39 @@
     }
 }
 
+.crumbs {
+    display: flex;
+
+    &__item {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding-right: 4px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: var(--neutral-200);
+        }
+
+        &:last-child {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.section {
+    margin-bottom: 16px;
+}
+
 .filter {
-    max-width: 958px;
 
     &__wrapper {
         display: grid;
@@ -111,3 +205,48 @@
         }
     }
 }
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;    
+
+    &__list {
+        display: grid;
+        row-gap: 9px;
+        column-gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        li {
+            min-width: 0; // хак для трех точек в конце blue-card__title
+        }
+    }
+}
+
+.requests {    
+
+    &__list {
+        margin-bottom: 16px;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(1, 1fr);
+
+        @media (min-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+
+
