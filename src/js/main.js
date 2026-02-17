@@ -1,3 +1,14 @@
+const dropdownButtons = document.querySelectorAll('.button--dropdown');
+if (dropdownButtons.length > 0) {
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('is-open');
+        });
+    })
+    
+}
+
+
 const selectFields = document.querySelectorAll('.field--select');
 
 function closeAllSelects(except = null) {
