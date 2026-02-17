@@ -95,6 +95,11 @@ $breakpoint-lg: 1280px;
     --text-white: var(--neutral-0);
     --text-primary: var(--primary-500);
     --text-secondary: var(--neutral-400);
+    --text-link: var(--primary-500);
+    --text-disabled: var(--neutral-300);
+
+    // Background
+    --bg-disable: var(--neutral-25);
 
     // field
     --field-disabled-bg: var(--neutral-25);

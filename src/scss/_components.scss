@@ -125,6 +125,12 @@
     }
 }
 
+.icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
 // chip
 .chip {
     padding: var(--spacing-2) var(--spacing-3);

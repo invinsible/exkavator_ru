@@ -5,46 +5,289 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Экскаватор Ру - техника и комтранс в России</title>
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    fieldset {
+        padding: 25px;
+        margin-bottom: 15px;
+    }
+    .ds-row {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+    .ds-element-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border: 1px dashed #ccc;
+        border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-   <div style="display: flex;gap:16px;">
-                <button class="button button--large button--primary" type="button">primary</button>
-                <button class="button button--large button--primary-alt" type="button">primary-alt</button>
-
-                <button class="button button--large button--regular" type="button">regular</button>
-                <button class="button button--large button--regular-alt" type="button">regular-alt</button>
+    <div class="container">
+        <fieldset>
+            <legend>Buttons</legend>
+            <div class="ds-row">
+                <div class="ds-element-wrapper">
+                    <p>primary <small>(large-medium-small-disable)</small></p>
+                    <button class="button button--large button--primary" type="button" >Показать объявления</button>
+                    <button class="button button--medium button--primary" type="button">Показать объявления</button>
+                    <button class="button button--small button--primary" type="button">Показать объявления</button>
+                    <button class="button button--small button--primary" type="button" disabled>Показать объявления</button>                  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>primaryAlt <small>(large-medium-small-disable)</small></p>
+                    <button class="button button--large button--primary-alt" type="button">Показать объявления</button>
+                    <button class="button button--medium button--primary-alt" type="button">Показать объявления</button>
+                    <button class="button button--small button--primary-alt" type="button">Показать объявления</button>
+                    <button class="button button--small button--primary-alt" type="button" disabled>Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regular <small>(large-medium-small-disable)</small></p>
+                    <button class="button button--large button--regular" type="button">Показать объявления</button>
+                    <button class="button button--medium button--regular" type="button">Показать объявления</button>
+                    <button class="button button--small button--regular" type="button">Показать объявления</button>
+                    <button class="button button--small button--regular" type="button" disabled>Показать объявления</button>
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regularAlt <small>(large-medium-small-disable)</small></p>
+                    <button class="button button--large button--regular-alt" type="button">Показать объявления</button>
+                    <button class="button button--medium button--regular-alt" type="button">Показать объявления</button>
+                    <button class="button button--small button--regular-alt" type="button">Показать объявления</button>
+                    <button class="button button--small button--regular-alt" type="button" disabled>Показать объявления</button>
+                </div>
+                
             </div>
-            <br>
-            <div style="display: flex;gap:16px;">
-                <button class="button button--medium button--primary" type="button">primary</button>
-                <button class="button button--medium button--primary-alt" type="button">primary-alt</button>
-
-                <button class="button button--medium button--regular" type="button">regular</button>
-                <button class="button button--medium button--regular-alt" type="button">regular-alt</button>
+        </fieldset>
+        <fieldset>
+            <legend>Medium buttons with icon</legend>
+            <div class="ds-row">
+                <div class="ds-element-wrapper">
+                    <p>primary <small>(full-icon-dropdown-disable)</small></p>
+                    <button class="button button--medium button--primary button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary button--dropdown" type="button">                        
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>                  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>primaryAlt <small>(full-icon-dropdown-disable)</small></p>
+                    <button class="button button--medium button--primary-alt button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary-alt" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary-alt button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--primary-alt button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regular <small>(full-icon-dropdown-disable)</small></p>
+                    <button class="button button--medium button--regular button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--regular button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regularAlt <small>(full-icon-dropdown-disable)</small></p>
+                    <button class="button button--medium button--regular-alt button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular-alt" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular-alt button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--regular-alt button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
             </div>
-            <br>
-            <div style="display: flex;gap:16px;">
-                <button class="button button--small button--primary" type="button">primary</button>
-                <button class="button button--small button--primary-alt" type="button">primary-alt</button>
-
-                <button class="button button--small button--regular" type="button">regular</button>
-                <button class="button button--small button--regular-alt" type="button">regular-alt</button>
+        </fieldset>
+        <fieldset>
+            <legend>Buttons extra colors</legend>
+            <div class="ds-row">
+                <div class="ds-element-wrapper">
+                    <p>green</p>
+                    <button class="button button--medium button--green button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--green" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--green button--dropdown" type="button">                        
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--green button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>                  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>greenAlt</p>
+                    <button class="button button--medium button--green-alt button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--green-alt" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--green-alt button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--green-alt button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>primaryAltNoBody</p>
+                    <button class="button button--medium button--primary-alt button--no-body button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary-alt button--no-body" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--primary-alt button--no-body button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--primary-alt button--no-body button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regularAltNoBody</p>
+                    <button class="button button--medium button--regular-alt button--no-body button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular-alt button--no-body" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--medium button--regular-alt button--no-body button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--medium button--regular-alt button--no-body button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
             </div>
+        </fieldset>
+        <fieldset>
+            <legend>Small buttons</legend>
+            <div class="ds-row">
+                <div class="ds-element-wrapper">
+                    <p>green</p>
+                    <button class="button button--small button--green button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--green" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--green button--dropdown" type="button">                        
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--green button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>                  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>greenAlt</p>
+                    <button class="button button--small button--green-alt button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--green-alt" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--green-alt button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--small button--green-alt button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>primaryAltNoBody</p>
+                    <button class="button button--small button--primary-alt button--no-body button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--primary-alt button--no-body" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--primary-alt button--no-body button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--small button--primary-alt button--no-body button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>regularAltNoBody</p>
+                    <button class="button button--small button--regular-alt button--no-body button--dropdown" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--regular-alt button--no-body" type="button">
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления
+                    </button>
+                    <button class="button button--small button--regular-alt button--no-body button--dropdown" type="button">Показать объявления</button>
+                    <button class="button button--small button--regular-alt button--no-body button--dropdown" type="button" disabled>
+                        <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
+                        Показать объявления</button>  
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Typography</legend>
+                <p class="super-title">Супер-заголовок</p>
+                <h1>Заголовок 1-го уровня</h1>
+                <h2>Заголовок 2-го уровня</h2>
+                <h3>Заголовок 3-го уровня</h3>
+                <p class="text-lg">Крупный текст</p>
+                <p class="text-md">Основной текст увеличенный</p>
+                <p class="text-md fw-bold">Основной текст увеличенный жирный</p>
+                <p>Основной текст</p>
+                <p class="fw-semibold">Основной текст полужирный</p>
+                <p class="fw-bold">Основной текст жирный</p>
+                <p class="text-sm">Мелкий текст</p>
+                <p class="text-sm fw-semibold">Мелкий текст полужирный</p>
+                <p class="text-sm fw-bold">Мелкий текст жирный</p>
+                <p class="text-xs">Сверх мелкий текст</p>
+        </fieldset>
+    </div>
+    
 
-            <p class="super-title">Супер-заголовок</p>
-            <h1>Заголовок 1-го уровня</h1>
-            <h2>Заголовок 2-го уровня</h2>
-            <h3>Заголовок 3-го уровня</h3>
-            <p class="text-lg">Крупный текст</p>
-            <p class="text-md">Основной текст увеличенный</p>
-            <p class="text-md fw-bold">Основной текст увеличенный жирный</p>
-            <p>Основной текст</p>
-            <p class="fw-semibold">Основной текст полужирный</p>
-            <p class="fw-bold">Основной текст жирный</p>
-            <p class="text-sm">Мелкий текст</p>
-            <p class="text-sm fw-semibold">Мелкий текст полужирный</p>
-            <p class="text-sm fw-bold">Мелкий текст жирный</p>
-            <p class="text-xs">Сверх мелкий текст</p>
+    
+            
 
   <script src="js/main.min.js"></script>
 </body>
