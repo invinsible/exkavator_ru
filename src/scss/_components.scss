@@ -12,6 +12,7 @@
 
 
 .layout {
+    padding: 16px 0;
     display: grid;
 
     @media (min-width: 1024px) {
@@ -22,13 +23,68 @@
     @media (min-width: 1440px) { 
         column-gap: 24px;  
     }
+}
 
-    aside {
-        display: none;
-        @media (min-width: 1024px) {
-            display: block;
+.adv-banner {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content {
+    @media (min-width: 768px) { 
+        padding-top: 16px;
+    }
+    @media (min-width: 1024px) {
+        padding-top: 24px;
+    }
+    
+}
+
+.sidebar {
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    // .sidebar-block
+    &-block {
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid var(--neutral-100);
+        
+        &__title {
+            margin-bottom: 16px;
+            @include text-weight('bold');
         }
-        border: 1px solid ;
+
+        // .sidebar-block-list
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &__link {
+                @include text-size('sm');
+                color: var(--text-base);
+            }
+
+            &__title {
+                padding: 8px 4px;
+            }
+
+            &__news-img {
+                border-radius: 8px;
+                overflow: hidden;
+
+                & + p {
+                    padding: 8px 4px;
+                }
+            }
+        }
     }
 }
 
@@ -112,6 +168,22 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .rounded-link-card__description {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgNiA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMy41NzYgMEw1LjI0NCAyLjQ2TDMuNTc2IDQuOTQ0SDIuNTMyTDQuMTA0IDIuNDZMMi41MzIgMEgzLjU3NlpNNC4zNDQgMi4wMjhWMi45MDRIMFYyLjAyOEg0LjM0NFoiIGZpbGw9IiM4MTk4QjEiLz4KPC9zdmc+Cg==");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
     }
 
     &--gray {
@@ -158,6 +230,7 @@
         gap: 4px;
         align-items: center;
         padding-right: 4px;
+        color: var(--text-secondary);
 
         &::after {
             content: '';
