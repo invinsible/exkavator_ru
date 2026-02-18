@@ -252,12 +252,16 @@
 }
 
 .section {
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .filter {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
-    &__wrapper {
+    &__inputs {
         display: grid;
         grid-template-columns: 1fr;
         gap: var(--spacing-8);
@@ -267,22 +271,37 @@
         }
     }
 
+    &__checkboxes {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
     &__range {
         display: flex;
         gap: 2px;
-        .field {
-            flex: 1;
 
-            &:first-child .field__label{
+        .field-dropdown {
+
+            &:first-child .field-dropdown__label{
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
-            &:last-child .field__label{
+            &:last-child .field-dropdown__label{
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
             }
         }
     }
+    
 }
 
 .categories {

@@ -1,8 +1,7 @@
-.field {
+.field-dropdown {
     position: relative;
-    font-size: 14px;
-    line-height: 24px;
-
+    cursor: pointer;
+    width: 100%;
 
     &__label {
         display: block;
@@ -10,10 +9,13 @@
         height: 48px;
         padding: 12px 8px;
         background-color: var(--neutral-50);   
-        border-radius: var(--radius-8);     
+        border-radius: 8px;     
         transition: all 0.2s ease;
         outline-color: var(--field-ouline);
-        cursor: text; 
+        // cursor: text; 
+
+        cursor: pointer;
+        pointer-events: none;
     }
 
     &__caption {
@@ -39,7 +41,10 @@
         background-color: transparent;
         border: 0;
         outline: 0;
-        user-select: none;        
+        user-select: none;    
+        
+        cursor: pointer;
+        pointer-events: none;
 
         &::placeholder {
             color: transparent;
@@ -60,127 +65,103 @@
     }
 
     &__backdrop {
+        padding: 10px;
         display: none;
         position: absolute;
+        width: 100%;
         background-color: #fff;
         z-index: 99;
-        padding: 10px;
         border: 1px solid black;
     }
 
-    &--text {
-        
-        .field__input {
-            // смещение caption при фокусе и заполненном input
-            &:focus + .field__label .field__caption,
-            &:not(:placeholder-shown) + .field__label .field__caption {
-                top: 12px;
-                font-size: 11px;
-                line-height: 16px;
-                color: var(--neutral-400);
-            }
-            // label при заполненном input
-            &:not(:placeholder-shown) + .field__label {
-                background-color: var(--primary-50);            
-            }
-        }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        background-image: url('../../img/filter-arrow-down.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2;
     }
 
-    &--select {
-        cursor: pointer;
-        
-        .field__label, .field__input {
-            cursor: pointer;
-            pointer-events: none;
-        }        
-        
-
+    &.is-open {
+        .field-dropdown__label {
+            outline: 1px solid var(--field-ouline);
+        }
+        .field-dropdown__backdrop {
+            display: block;
+        }
         &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 8px;
-            width: 16px;
-            height: 16px;
-            transform: translateY(-50%);
-            background-image: url('../../img/filter-arrow-down.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 2;
-        }
-
-        &.is-open {
-            .field__label {
-                outline: 1px solid var(--field-ouline);
-            }
-            .field__backdrop {
-                display: block;
-            }
-            &::after {
-                transform: translateY(-50%) rotate(180deg);
-            }
+            transform: translateY(-50%) rotate(180deg);
         }
     }
+
+    &.selected {
+        .field-dropdown__caption {
+            top: 12px;
+            font-size: 11px;
+            line-height: 16px;
+            color: var(--neutral-400);
+        }
+    }
+
+    // &--text {
+        
+    //     .field__input {
+    //         // смещение caption при фокусе и заполненном input
+    //         &:focus + .field__label .field__caption,
+    //         &:not(:placeholder-shown) + .field__label .field__caption {
+    //             top: 12px;
+    //             font-size: 11px;
+    //             line-height: 16px;
+    //             color: var(--neutral-400);
+    //         }
+    //         // label при заполненном input
+    //         &:not(:placeholder-shown) + .field__label {
+    //             background-color: var(--primary-50);            
+    //         }
+    //     }
+    // }
+
+   
 }
 
 
-// .field-2 {
-//     position: relative;
+.field-checkbox {
+    position: relative;
 
-//     &__label {
-//         position: relative;
-//         display: block;
-//         padding: var(--spacing-12) var(--spacing-8);
-//         background-color: var(--neutral-50);
-//         font-size: 14px;
-//         border-radius: var(--radius-8);
-//         cursor: text;
+    &__label {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        cursor: pointer;
 
-//         &:focus-within {
-//             outline: 1px solid var(--neutral-200);
-//         }
-//     }
+        &::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            background-color: var(--neutral-60);
+            
+        }
+    }
 
-//     &__input {
-//         width: 100%;
-//         background-color: transparent;
-//         font-size: 14px;
-//         line-height: 24px;
-//         color: var(--neutral-700);
-//         border: 0;
-//         outline: 0;
-//         transform: translateY(6px);
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+        cursor: pointer;
 
-//         &::placeholder {
-//             color: transparent;
-//         }
-
-//         /* При фокусе */
-//         &:focus + .field__caption,
-//         /* Если инпут заполнен */
-//         &:not(:placeholder-shown) + .field__caption {
-//             top: 12px;
-//             font-size: 11px;
-//             color: var(--neutral-400);
-//         }
-
-//         // &:focus {
-//         //     outline: 1px solid var(--neutral-200);
-//         // }
-
-
-//     }
-
-//     &__caption {
-//         position: absolute;
-//         left: 8px;
-//         top:  50%;
-//         transform: translateY(-50%);
-//         user-select: none;
-//         pointer-events: none;
-//         color: var(--neutral-500);
-//         transition: all 0.2s ease;
-//     }
-
-// }
-
+        &:checked + .field-checkbox__label::before {
+            background-color: var(--primary-500);;
+        }
+    }
+}

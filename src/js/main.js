@@ -9,18 +9,18 @@ if (dropdownButtons.length > 0) {
 }
 
 
-const selectFields = document.querySelectorAll('.field--select');
+const dropdownFields = document.querySelectorAll('.field-dropdown');
 
 function closeAllSelects(except = null) {
-    selectFields.forEach((el) => {
+    dropdownFields.forEach((el) => {
         if (el !== except) {
             el.classList.remove('is-open');
         }
     });
 }
 
-if(selectFields.length > 0) {
-    selectFields.forEach((el) => {
+if(dropdownFields.length > 0) {
+    dropdownFields.forEach((el) => {
         const input = el.querySelector('input');
         input.readOnly = true;
 
