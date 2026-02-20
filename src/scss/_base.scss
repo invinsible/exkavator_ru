@@ -32,7 +32,6 @@ body {
 }
 
 h1 {
-    margin-bottom: 40px;
     @include text-size('secondary');
     @include text-weight('bold');
 
@@ -42,8 +41,7 @@ h1 {
     }
 }
 
-h2 {
-    margin-bottom: 16px;
+h2 {    
     @include text-size('secondary');
     @include text-weight('bold');
 }
