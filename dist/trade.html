@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Продажа спецтехники, строительной техники б y и новой. Объявления о покупке и продаже спецтехники на портале Экскаватор Ру</title>
+  <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -385,49 +386,57 @@
                 
 
                 <section class="special-offers section">
-                    <h2>Спецпредложения</h2>
-                    <ul class="special-offers__list">
-                        <li class="special-item">
-                            <a href="#" class="special-item__img">
-                                <img src="img/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
-                            </a>
-                            <div class="special-item__description">
-                                <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
-                                <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
-                                <div class="special-item__action">
-                                    <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                    <button class="button button--small button--primary-alt">Позвонить</button>
+                    <div class="special-offers__title">
+                        <h2>Спецпредложения</h2>
+                        <div class="special-offers__nav">
+                            <button class="special-offers__prev" type="button"></button>
+                            <button class="special-offers__next" type="button"></button>
+                        </div>
+                    </div>
+                    
+                    <div class="special-offers__slider swiper">
+                        <ul class="special-offers__list swiper-wrapper">
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
+                                    <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="special-item">
-                            <a href="#" class="special-item__img">
-                                <img src="img/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
-                            </a>
-                            <div class="special-item__description">
-                                <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
-                                <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
-                                <div class="special-item__action">
-                                    <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                    <button class="button button--small button--primary-alt">Позвонить</button>
+                            </li>
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
+                                    <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="special-item">
-                            <a href="#" class="special-item__img">
-                                <img src="img/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
-                            </a>
-                            <div class="special-item__description">
-                                <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
-                                <p class="special-item__cities">Москва и еще 22 города</p>
-                                <div class="special-item__action">
-                                    <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                    <button class="button button--small button--primary-alt">Позвонить</button>
+                            </li>
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
+                                    <p class="special-item__cities">Москва и еще 22 города</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">11 240 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
 
                 <section class="companies section">
@@ -645,7 +654,7 @@
         <div class="container"></div>
     </footer>
     
-
-  <script src="js/main.min.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>

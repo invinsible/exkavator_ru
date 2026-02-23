@@ -44,4 +44,16 @@ if (burger) {
     });
 }
 
+const specialOffersSlider = new Swiper('.special-offers__slider', {
+    slidesPerView: 1,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: '.special-offers__next',
+        prevEl: '.special-offers__prev',
+    },
+    breakpoints: {
+        768: { slidesPerView: 2 },
+        1280: { slidesPerView: 3, spaceBetween: 12, },
+    }
+});
 

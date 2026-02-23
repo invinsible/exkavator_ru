@@ -31,6 +31,10 @@ const paths = {
   fonts: {
     src:  'src/fonts/**/*.{woff,woff2}',
     dest: 'dist/fonts/'
+  },
+  vendors: {
+    src:  'src/vendors/**/*',
+    dest: 'dist/vendors/'
   }
 };
 
@@ -92,6 +96,14 @@ function fonts() {
     .pipe(browserSync.stream());
 }
 
+// Копирование vendors (без минификации)
+function vendors() {
+  return src(paths.vendors.src)
+    .pipe(newer(paths.vendors.dest))
+    .pipe(dest(paths.vendors.dest))
+    .pipe(browserSync.stream());
+}
+
 // Dev-сервер
 function serve(done) {
   browserSync.init({
@@ -110,11 +122,12 @@ function watchFiles(done) {
   watch(paths.scripts.src, scripts);
   watch(paths.images.src, images);
   watch(paths.fonts.src, fonts);
+  watch(paths.vendors.src, vendors);
   done();
 }
 
 // Сборка
-const buildAll = parallel(html, styles, scripts, images, fonts);
+const buildAll = parallel(html, styles, scripts, images, fonts, vendors);
 
 // dev
 exports.default = series(clean, buildAll, parallel(serve, watchFiles));
