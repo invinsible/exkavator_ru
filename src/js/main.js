@@ -45,15 +45,26 @@ if (burger) {
 }
 
 const specialOffersSlider = new Swiper('.special-offers__slider', {
-    slidesPerView: 1,
+    slidesPerView: 1.15,
     spaceBetween: 8,
     navigation: {
         nextEl: '.special-offers__next',
         prevEl: '.special-offers__prev',
     },
     breakpoints: {
-        768: { slidesPerView: 2 },
-        1280: { slidesPerView: 3, spaceBetween: 12, },
+        480: { spaceBetween: 12 },
+        768: { slidesPerView: 3 },       
+    }
+});
+
+const companiesSlider = new Swiper('.companies__slider', {
+    slidesPerView: 4,
+    spaceBetween: 9,
+    breakpoints: {
+        480: { spaceBetween: 12 },
+        560: { slidesPerView: 5 },
+        700: { slidesPerView: 6 },
+        1440: { slidesPerView: 8 },
     }
 });
 

@@ -59,7 +59,12 @@
     }
 
     // .sidebar-block
-    &-block {       
+    &-block {
+
+        .button {
+            margin-top: 16px;
+            width: 100%;
+        }
         
         &__title {
             margin-bottom: 16px;
@@ -72,7 +77,13 @@
             flex-direction: column;
             gap: 16px;
 
+            .crumbs {
+                margin-top: 2px;
+            }
+
             &__link {
+                display: flex;
+                gap: 14px;
                 @include text-size('sm');
                 color: var(--text-base);
             }
@@ -81,12 +92,25 @@
                 padding: 8px 4px;
             }
 
-            &__news-img {
+            &__big-img {
                 border-radius: 8px;
                 overflow: hidden;
 
                 & + p {
                     padding: 8px 4px;
+                }
+            }
+
+            &__right-img {
+                width: 60px;
+                height: 40px;
+                flex-shrink: 0;
+                border-radius: 6px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }
@@ -345,20 +369,34 @@
 
 .companies {
 
+    &__slider {
+        padding-bottom: 10px;
+    }
+
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 9px;
+        margin-bottom: 16px;
+        max-width: 340px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        
+        // gap: 8px;
+
+        @media (min-width: $breakpoint-sm) {
+            // gap: 22px;
+            // justify-content: space-between;
+        }
     }
 
     &__item  {
         position: relative;
+        // width: auto;
     }
 
-    &__link {        
-        width: 112px;
-        height: 112px;        
+    &__link {   
+        padding: 10px;     
+        width: 70px;
+        height: 70px;        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -366,6 +404,18 @@
         background: #fff;
         border: 1px solid var(--neutral-100);
         border-radius: 12px;
+
+        @media (min-width: $breakpoint-xs) {
+            width: 102px;
+            height: 102px;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            width: 112px;
+            height: 112px;
+        }
+
+        
 
         img {
             // max-width: 100%;
@@ -394,6 +444,10 @@
 
     &__list {
         max-width: 340px;
+
+        @media (min-width: $breakpoint-sm) {
+            max-width: none;
+        }
     }
 
     &__title {

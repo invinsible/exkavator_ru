@@ -441,28 +441,54 @@
 
                 <section class="companies section">
                     <h2>Популярные компании</h2>
-                    <ul class="companies__list">
-                        <li class="companies__item">
-                            <a href="#" class="companies__link ultra">
-                                <img src="img/companies-1.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="companies__item">
-                            <a href="#" class="companies__link">
-                                <img src="img/companies-2.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="companies__item">
-                            <a href="#" class="companies__link">
-                                <img src="img/companies-3.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="companies__item">
-                            <a href="#" class="companies__link ultra">
-                                <img src="img/companies-4.jpg" alt="">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="companies__slider swiper">
+                        <ul class="companies__list swiper-wrapper">
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link ultra">
+                                    <img src="img/companies-1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-2.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-3.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-4.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link ultra">
+                                    <img src="img/companies-5.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-6.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-7.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="companies__item swiper-slide">
+                                <a href="#" class="companies__link">
+                                    <img src="img/companies-8.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="button-group">
+                        <a class="button button--small button--regular-alt" href="#">Все компании</a>
+                        <a class="button button--small button--regular-alt" href="#">Разместить компанию</a>
+                    </div>
                 </section>
 
                 <section class="requests section">
@@ -604,18 +630,22 @@
                     <ul class="sidebar-block-list">
                         <li class="sidebar-block-list__item">
                             <a href="#" class="sidebar-block-list__link">
-                                <div class="sidebar-block-list__news-img">
-                                    <img src="img/news-sidebar-1.jpg" alt="Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру">
+                                <div class="sidebar-block-list__text">
+                                    <div class="sidebar-block-list__big-img">
+                                        <img src="img/news-sidebar-1.jpg" alt="Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру">
+                                    </div>
+                                    <p>Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру</p>
                                 </div>
-                                <p>Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру</p>
                             </a>
                         </li>
                         <li class="sidebar-block-list__item">
                             <a href="#" class="sidebar-block-list__link">
-                                <div class="sidebar-block-list__news-img">
-                                    <img src="img/news-sidebar-2.jpg" alt="Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель">
+                                <div class="sidebar-block-list__text">
+                                    <div class="sidebar-block-list__big-img">
+                                        <img src="img/news-sidebar-2.jpg" alt="Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель">
+                                    </div>
+                                    <p>Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель</p>
                                 </div>
-                                <p>Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель</p>
                             </a>
                         </li>
                     </ul>
@@ -625,26 +655,101 @@
                     <ul class="sidebar-block-list">
                         <li class="sidebar-block-list__item">
                             <a href="#" class="sidebar-block-list__link">
-                                <p>Купим седельные тягачи</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">13.01.26</li>
-                                    <li class="crumbs__item">Москва</li>
-                                </ul>
+                                <div class="sidebar-block-list__text">
+                                    <p>Купим седельные тягачи</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.01.26</li>
+                                        <li class="crumbs__item">Москва</li>
+                                    </ul>
+                                </div>
                             </a>
                         </li>
                         <li class="sidebar-block-list__item">
                             <a href="#" class="sidebar-block-list__link">
-                                <p>Куплю эвакуатор</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">13.01.26</li>
-                                    <li class="crumbs__item">Москва</li>
-                                </ul>
+                                <div class="sidebar-block-list__text">
+                                    <p>Куплю эвакуатор</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.01.26</li>
+                                        <li class="crumbs__item">Москва</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>Купим экскаватор-погрузчик Амкодор</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.01.26</li>
+                                        <li class="crumbs__item">Красноярск</li>
+                                    </ul>
+                                </div>
                             </a>
                         </li>
                     </ul>
+                    <a class="button button--small button--regular-alt" href="#">Все заявки</a>
                 </div>
                 <div class="sidebar-block rounded-gray-block">
                     <p class="sidebar-block__title">Новости компаний</p>
+                    <ul class="sidebar-block-list">
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>FIORI бетоносмеситель с самозагрузкой - новые преимущества</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/news-1.jpg" alt="FIORI бетоносмеситель с самозагрузкой - новые преимущества">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>Fiori & SAMTECH отмечают 15 лет на рынке России!</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/news-1.jpg" alt="Fiori & SAMTECH отмечают 15 лет на рынке России!">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>Доставлена очередная партия запчастей Fiori</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/news-1.jpg" alt="Доставлена очередная партия запчастей Fiori">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/news-1.jpg" alt="KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="button button--small button--regular-alt" href="#">Все новости</a>
                 </div>
             </aside>
         </div>
