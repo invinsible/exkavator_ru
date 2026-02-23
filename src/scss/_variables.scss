@@ -97,6 +97,7 @@ $breakpoint-lg: 1280px;
     --text-secondary: var(--neutral-400);
     --text-link: var(--primary-500);
     --text-disabled: var(--neutral-300);
+    --link-hover: red;
 
     // Background
     --bg-disable: var(--neutral-25);
@@ -105,5 +106,7 @@ $breakpoint-lg: 1280px;
     --field-disabled-bg: var(--neutral-25);
     --field-disabled-text: var(--neutral-300);
     --field-ouline: var(--neutral-200);
+
+    --transition-hover: 0.2s ease-in-out;
 }
 
