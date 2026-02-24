@@ -25,6 +25,7 @@ if(dropdownFields.length > 0) {
         input.readOnly = true;
 
         el.addEventListener('click', (e) => {
+            // if (e.target === input) return;
             e.stopPropagation();
             closeAllSelects(el);
             el.classList.toggle('is-open');

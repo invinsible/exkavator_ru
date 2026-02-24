@@ -13,7 +13,7 @@
         outline-color: var(--field-ouline);
 
         cursor: pointer;
-        // pointer-events: none;
+        pointer-events: none;
     }
 
     &__caption {
@@ -53,6 +53,9 @@
 
         &:disabled + .field-dropdown__label .field-dropdown__caption {
             color: var(--field-disabled-text);
+        }
+        &:disabled + .field-dropdown__label {
+            pointer-events: none;
         }
 
         &:focus-visible + .field-dropdown__label {
@@ -101,6 +104,10 @@
 
         
 
+    }
+
+    &.disabled {
+        pointer-events: none;
     }
 
     // &--text {
