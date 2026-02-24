@@ -25,7 +25,10 @@ if(dropdownFields.length > 0) {
         input.readOnly = true;
 
         el.addEventListener('click', (e) => {
-            // if (e.target === input) return;
+            if (e.target.closest('.dropdown-backdrop') && !e.target.closest('.dropdown-backdrop__option')) {
+                e.stopPropagation();
+                return;
+            }
             e.stopPropagation();
             closeAllSelects(el);
             el.classList.toggle('is-open');
@@ -42,6 +45,8 @@ if(dropdownFields.length > 0) {
                 option.classList.add('selected');
                 el.classList.add('selected');
                 el.classList.remove('is-open');
+                const searchInput = el.querySelector('.field-text__input');
+                if (searchInput) searchInput.value = '';
             });
         });
 

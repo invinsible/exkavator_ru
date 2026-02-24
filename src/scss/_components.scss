@@ -679,6 +679,7 @@
     border-radius: 8px;
     box-shadow: 0px 2px 8px 0px rgba(204, 226, 255, 0.5);
     transform: translateY(2px);
+    cursor: auto;
 
     &__option {
         padding: 6px 12px;
@@ -698,5 +699,9 @@
         padding: 6px 12px;
         @include text-size('sm');
         @include text-weight('bold');
+    }
+
+    &__search {
+        padding: 8px;
     }
 }
