@@ -312,9 +312,44 @@
 
     &__checkboxes {
         display: flex;
-        gap: 16px;
+        gap: 8px;
         align-items: center;
         flex-wrap: wrap;
+
+        @media (min-width: $breakpoint-sm) {
+            gap: 16px;
+        }
+        @media (max-width: #{ $breakpoint-sm - 1px }) {
+            .field-checkbox {
+                &__label {                    
+                    display: block;
+                    padding: 8px;
+                    outline: 1px solid var(--neutral-100);
+                    border-radius: 8px;
+                    background-color: var(--neutral-0);
+                    @include text-size('sm');
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &__input {
+                    &:checked + .field-checkbox__label::after {
+                        display: none;
+                    }
+                    &:checked + .field-checkbox__label {
+                        background-color: var(--neutral-100);
+                        outline: 0;
+                    }
+                    &:focus-visible + .field-checkbox__label {
+                        outline: 1px solid var(--field-ouline);
+                        outline-offset: 2px;
+                    }
+                }
+            }
+        }
+        
     }
 
     &__buttons {

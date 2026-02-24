@@ -41,24 +41,24 @@
         background-color: transparent;
         border: 0;
         outline: 0;
-        user-select: none;    
+        // user-select: none;    
         
         cursor: pointer;
-        pointer-events: none;
+        // pointer-events: none;
 
         &::placeholder {
             color: transparent;
         }
 
-        &:disabled + .field__label {
+        &:disabled + .field-dropdown__label {
             background-color: var(--field-disabled-bg);
         }
 
-        &:disabled + .field__label .field__caption {
+        &:disabled + .field-dropdown__label .field-dropdown__caption {
             color: var(--field-disabled-text);
         }
 
-        &:focus + .field__label {
+        &:focus-visible + .field-dropdown__label {
             outline: 1px solid var(--field-ouline);
         }
 
@@ -134,12 +134,21 @@
 .field-checkbox {
     position: relative;
 
+    &:hover {
+        .field-checkbox__label::before {
+            background-color: var(--neutral-100);
+        }
+        .field-checkbox__input:checked + .field-checkbox__label::before {
+            background-color: var(--primary-200);
+        }
+    }
+
     &__label {
         display: flex;
         gap: 8px;
         align-items: center;
         cursor: pointer;
-
+        
         &::before {
             content: '';
             display: block;
@@ -147,21 +156,33 @@
             height: 20px;
             border-radius: 6px;
             background-color: var(--neutral-60);
-            
         }
     }
 
     &__input {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 24px;
-        height: 24px;
+        width: 0;
+        height: 0;
         opacity: 0;
-        cursor: pointer;
+
+        &:focus-visible + .field-checkbox__label::before {
+            outline: 1px solid var(--field-ouline);
+            outline-offset: 2px;
+        }
 
         &:checked + .field-checkbox__label::before {
-            background-color: var(--primary-500);;
+            background-color: var(--primary-100);
+        }
+
+        &:checked + .field-checkbox__label::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMyAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMzI1IDEwLjE5MTJMMCA1Ljg2NjI1TDEuODY2MjUgNEw0LjMyNSA2LjQ1ODc1TDEwLjc4MzcgMEwxMi42NSAxLjg2NjI1TDQuMzI1IDEwLjE5MTJaIiBmaWxsPSIjMDA1OENDIi8+Cjwvc3ZnPgo=");
+            background-repeat: no-repeat;
         }
     }
 }
