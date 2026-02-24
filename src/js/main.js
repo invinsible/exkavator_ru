@@ -11,15 +11,15 @@ if (dropdownButtons.length > 0) {
 
 const dropdownFields = document.querySelectorAll('.field-dropdown');
 
-function closeAllSelects(except = null) {
-    dropdownFields.forEach((el) => {
-        if (el !== except) {
-            el.classList.remove('is-open');
-        }
-    });
+if(dropdownFields.length > 0) {
+    function closeAllSelects(except = null) {
+        dropdownFields.forEach((el) => {
+            if (el !== except) {
+                el.classList.remove('is-open');
+            }
+        });
 }
 
-if(dropdownFields.length > 0) {
     dropdownFields.forEach((el) => {
         const input = el.querySelector('input');
         input.readOnly = true;
@@ -29,7 +29,21 @@ if(dropdownFields.length > 0) {
             closeAllSelects(el);
             el.classList.toggle('is-open');
         });
-        
+
+        const options = el.querySelectorAll('.dropdown-backdrop__option');
+        options.forEach((option) => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                el.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
+                input.value = input.type === 'number'
+                    ? option.textContent.trim().replace(/\s/g, '')
+                    : option.textContent.trim();
+                option.classList.add('selected');
+                el.classList.add('selected');
+                el.classList.remove('is-open');
+            });
+        });
+
     })
 }
 
