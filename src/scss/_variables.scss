@@ -66,9 +66,9 @@ $breakpoint-lg: 1280px;
 
 
     // breakpoints
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1280px;
+    // --breakpoint-sm: 480px;
+    // --breakpoint-md: 768px;
+    // --breakpoint-lg: 1280px;
 
     // container
     --container-desktop: 1280px;
@@ -85,12 +85,7 @@ $breakpoint-lg: 1280px;
     --spacing-24: 24px;
     --spacing-32: 32px;
 
-    // radius
-    // --radius-6: 6px;
-    // --radius-8: 8px;
-    // --radius-16: 16px;
-
-    // Text ?
+    // Text
     --text-base: var(--neutral-600);
     --text-white: var(--neutral-0);
     --text-primary: var(--primary-500);
@@ -107,6 +102,6 @@ $breakpoint-lg: 1280px;
     --field-disabled-text: var(--neutral-300);
     --field-ouline: var(--neutral-200);
 
-    --transition-hover: 0.2s ease-in-out;
+    --transition-hover: 0.1s ease-in;
 }
 

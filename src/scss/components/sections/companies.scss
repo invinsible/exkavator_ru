@@ -1,0 +1,72 @@
+.companies {
+
+    &__slider {
+        padding-bottom: 10px;
+    }
+
+    &__list {
+        margin-bottom: 16px;
+        max-width: 340px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        
+        // gap: 8px;
+
+        @media (min-width: $breakpoint-sm) {
+            // gap: 22px;
+            // justify-content: space-between;
+        }
+    }
+
+    &__item  {
+        position: relative;
+        // width: auto;
+    }
+
+    &__link {   
+        padding: 10px;     
+        width: 70px;
+        height: 70px;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid var(--neutral-100);
+        border-radius: 12px;
+
+        @media (min-width: $breakpoint-xs) {
+            width: 102px;
+            height: 102px;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            width: 112px;
+            height: 112px;
+        }
+
+        
+
+        img {
+            // max-width: 100%;
+            // max-height: 100%;
+            object-fit: contain;
+        }
+
+        &.ultra {
+
+            &::after {
+                position: absolute;
+                bottom: -10px;
+                padding: 3px 5px;
+                content: 'ULTRA';
+                color: var(--neutral-0);
+                background-color: var(--yellow-400);
+                border-radius: 6px;
+                @include text-size('sm');
+                text-transform: uppercase;
+            }
+        }
+    }
+}

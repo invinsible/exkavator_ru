@@ -1,0 +1,37 @@
+.dropdown-backdrop {
+    position: absolute;
+    padding: 8px 0;
+    width: 100%;
+    display: none;
+    z-index: 10;
+    background-color: var(--neutral-0);
+    border: 1px solid var(--neutral-100);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px rgba(204, 226, 255, 0.5);
+    transform: translateY(2px);
+    cursor: auto;
+
+    &__option {
+        padding: 6px 12px;
+        @include text-size('sm');
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--neutral-60);
+        }
+
+        &.selected {
+            background-color: var(--primary-50);
+        }
+    }
+
+    &__option-title {
+        padding: 6px 12px;
+        @include text-size('sm');
+        @include text-weight('bold');
+    }
+
+    &__search {
+        padding: 8px;
+    }
+}

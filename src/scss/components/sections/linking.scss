@@ -1,0 +1,23 @@
+.linking  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__block {
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--neutral-100);
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .small-title {
+            margin-bottom: 8px;
+            color: var(--text-base);
+            @include text-weight('semibold');
+        }
+
+    }
+    
+}

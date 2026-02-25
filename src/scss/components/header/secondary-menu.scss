@@ -1,0 +1,27 @@
+.secondary-menu {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+        display: flex;
+        gap: var(--spacing-24);
+    }
+
+    &__link {
+        padding: 20px 0;
+        display: block;
+        color: var(--text-primary);
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+
+        &--accent {
+            color: var(--yellow-500);
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+}

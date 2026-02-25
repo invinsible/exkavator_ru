@@ -1,0 +1,18 @@
+.main-menu {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+        display: flex;
+        gap: var(--spacing-32);
+    }    
+
+    &__link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        color: var(--text-white);
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

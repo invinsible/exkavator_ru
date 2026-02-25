@@ -15,7 +15,12 @@ ol[class] {
 
 a {
   text-decoration: none;
-  color: var(--primary-500);
+  color: var(--text-primary);
+  transition: color var(--transition-hover);
+
+  // &:hover {
+  //   color: var(--link-hover);
+  // }
 }
 
 img {
@@ -29,10 +34,6 @@ button {
   outline: 0;
   background-color: transparent;
   cursor: pointer;
-  
-  // &:focus {
-  //   outline: 1px solid black;
-  // }
 }
 
 input::-webkit-outer-spin-button,

@@ -1,0 +1,27 @@
+.chip {
+    padding: 4px 8px;
+    color: var(--text-base);
+    border-radius: 6px;
+
+    &--medium {        
+        @include text-size('sm');
+    }
+
+    &--small {       
+        @include text-size('xs');
+    }
+
+    &--primary {
+       color: var(--text-white);
+       background-color: var(--primary-500);
+    }
+    &--primary-alt {
+       background-color: var(--primary-50);
+    }
+    &--regular {       
+       background-color: var(--neutral-60);
+    }
+    &--regular-alt {      
+       background-color: var(--neutral-60);
+    }
+}
