@@ -1,60 +1,58 @@
-const dropdownButtons = document.querySelectorAll('.button--dropdown');
-if (dropdownButtons.length > 0) {
-    dropdownButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            this.classList.toggle('is-open');
-        });
-    })
-    
-}
+function initDropdowns(selector, { onSelect } = {}) {
+    const containers = document.querySelectorAll(selector);
+    if (!containers.length) return containers;
 
-
-const dropdownFields = document.querySelectorAll('.field-dropdown');
-
-if(dropdownFields.length > 0) {
-    function closeAllSelects(except = null) {
-        dropdownFields.forEach((el) => {
-            if (el !== except) {
-                el.classList.remove('is-open');
-            }
-        });
-}
-
-    dropdownFields.forEach((el) => {
-        const input = el.querySelector('input');
-        input.readOnly = true;
-
-        el.addEventListener('click', (e) => {
+    containers.forEach(container => {
+        container.addEventListener('click', (e) => {
             if (e.target.closest('.dropdown-backdrop') && !e.target.closest('.dropdown-backdrop__option')) {
                 e.stopPropagation();
                 return;
             }
             e.stopPropagation();
-            closeAllSelects(el);
-            el.classList.toggle('is-open');
+            containers.forEach(c => { if (c !== container) c.classList.remove('is-open'); });
+            container.classList.toggle('is-open');
         });
 
-        const options = el.querySelectorAll('.dropdown-backdrop__option');
-        options.forEach((option) => {
+        container.querySelectorAll('.dropdown-backdrop__option').forEach(option => {
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
-                el.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
-                input.value = input.type === 'number'
-                    ? option.textContent.trim().replace(/\s/g, '')
-                    : option.textContent.trim();
+                container.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
                 option.classList.add('selected');
-                el.classList.add('selected');
-                el.classList.remove('is-open');
-                const searchInput = el.querySelector('.field-text__input');
-                if (searchInput) searchInput.value = '';
+                container.classList.remove('is-open');
+                if (onSelect) onSelect(option, container);
             });
         });
+    });
 
-    })
+    return containers;
 }
 
+const dropdownFields = initDropdowns('.field-dropdown', {
+    onSelect(option, container) {
+        const input = container.querySelector('input');
+        input.value = input.type === 'number'
+            ? option.textContent.trim().replace(/\s/g, '')
+            : option.textContent.trim();
+        container.classList.add('selected');
+        const searchInput = container.querySelector('.field-text__input');
+        if (searchInput) searchInput.value = '';
+    }
+});
+
+dropdownFields.forEach(el => {
+    const input = el.querySelector('input');
+    if (input) input.readOnly = true;
+});
+
+initDropdowns('.sorting', {
+    onSelect(option, container) {
+        const btn = container.querySelector('.button--dropdown');
+        if (btn) btn.textContent = option.textContent.trim();
+    }
+});
+
 document.addEventListener('click', () => {
-    closeAllSelects();
+    document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open'));
 });
 
 const burger = document.querySelector('.mobile-burger');
