@@ -1,138 +1,141 @@
 .main-menu {
-    display: none;
+    display: flex;
 
-    @media (min-width: $breakpoint-md) {
-        display: flex;
-        gap: var(--spacing-32);
-    }
-
-    &__link {
-        display: flex;
-        align-items: center;
-        height: 100%;
-
-        color: var(--text-white);
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    // Mobile menu
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: #{ $breakpoint-md - 1px }) {
         position: fixed;
         top: 56px;
         left: 0;
+        padding-top: 48px;
         width: 100%;
-        height: 100%;
-        z-index: 100;
-        background-color: var(--neutral-0);
+        height: 100%;        
         flex-direction: column;
+        background-color: var(--neutral-0);    
         overflow-y: auto;
         overflow-x: hidden;
-        padding-top: 48px;
+        z-index: 100;        
         transform: translateX(-100%);
         transition: transform 0.3s ease;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        gap: var(--spacing-32);
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__item {
+        border-bottom: 1px solid var(--neutral-100);
+
+        @media (min-width: $breakpoint-md) {
+            border-bottom: 0;
+        }
+    }
+
+    &__item--has-children > &__link::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        @include mask-icon(var(--icon-chevron-down));
+        background-color: var(--text-base);
+        margin-left: auto;
+        flex-shrink: 0;
+        transform: rotate(-90deg);
+
+        @media (min-width: $breakpoint-md) {
+            background-color: var(--text-white);
+            transform: rotate(0);
+        }
+    }
+
+    &__link {
+        padding: 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;        
+        @include text-size('md');
+        color: var(--text-base); 
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0;
+            height: 100%;
+            gap: 2px;
+            color: var(--text-white);
+            @include text-size('base');
+            @include text-weight('semibold');
+        }
+    }
+
+    &__submenu {        
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--neutral-0);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;        
+        list-style: none;
+        overflow-y: auto;
+        z-index: 1;
 
         &.is-open {
-            display: flex;
             transform: translateX(0);
         }
 
-        &__item {
-            border-bottom: 1px solid var(--neutral-100);
+        @media (min-width: $breakpoint-md) {
+            display: none;
         }
+    }
 
-        &__item--has-children > &__link::after {
+    &__back-item {
+        border-bottom: 1px solid var(--neutral-100);
+
+        @media (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+
+     &__back {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 16px;
+        @include text-size('sm');
+        background: none;        
+        color: var(--text-secondary);
+        cursor: pointer;
+
+        &::before {
             content: '';
-            width: 8px;
-            height: 8px;
-            border-right: 2px solid var(--neutral-400);
-            border-bottom: 2px solid var(--neutral-400);
-            transform: rotate(-45deg);
-            margin-left: auto;
+            width: 16px;
+            height: 16px;
+            @include mask-icon(var(--icon-chevron-down));
+            background-color: var(--text-secondary);
+            transform: rotate(90deg);
             flex-shrink: 0;
         }
+    }
 
-        &__link {
-            color: var(--neutral-900);
-            font-size: 16px;
-            font-weight: 500;
-            padding: 16px;
-            width: 100%;
-        }
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px 16px;
+        margin-top: auto;
 
-        &__submenu {
-            list-style: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--neutral-0);
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            padding: 0;
-            margin: 0;
-            overflow-y: auto;
-            z-index: 1;
-
-            &.is-open {
-                transform: translateX(0);
-            }
-        }
-
-        &__back-item {
-            border-bottom: 1px solid var(--neutral-100);
-        }
-
-        &__back {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            width: 100%;
-            padding: 16px;
-            background: none;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--neutral-400);
-
-            &::before {
-                content: '';
-                width: 8px;
-                height: 8px;
-                border-left: 2px solid var(--neutral-400);
-                border-bottom: 2px solid var(--neutral-400);
-                transform: rotate(45deg);
-                flex-shrink: 0;
-            }
-        }
-
-        &__footer {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 24px 16px;
-            margin-top: auto;
-        }
-
-        &__footer-btn {
-            width: 100%;
-            text-align: center;
+        @media (min-width: $breakpoint-md) {
+            display: none;
         }
     }
 
-    // Hide mobile-only elements on desktop
-    @media (min-width: $breakpoint-md) {
-        &__submenu {
-            display: none;
-        }
-
-        &__back-item {
-            display: none;
-        }
-
-        &__footer {
-            display: none;
-        }
+    &__footer-btn {
+        width: 100%;
+        text-align: center;
     }
+
 }
