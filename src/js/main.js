@@ -55,12 +55,6 @@ document.addEventListener('click', () => {
     document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open'));
 });
 
-const burger = document.querySelector('.mobile-burger');
-if (burger) {
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('is-active');
-    });
-}
 
 const specialOffersSlider = new Swiper('.special-offers__slider', {
     slidesPerView: 1.15,
