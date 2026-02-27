@@ -44,7 +44,7 @@ dropdownFields.forEach(el => {
     if (input) input.readOnly = true;
 });
 
-// Связь дропдаунов Марка → Модель
+// Связь дропдаунов Марка и Модель
 (function () {
     const brandContainer = document.querySelector('#brand')?.closest('.field-dropdown');
     const modelContainer = document.querySelector('#model')?.closest('.field-dropdown');
@@ -72,6 +72,8 @@ dropdownFields.forEach(el => {
     setModelEnabled(!!document.querySelector('#brand').value);
 })();
 
+
+// сортировка
 initDropdowns('.sorting', {
     onSelect(option, container) {
         const btn = container.querySelector('.button--dropdown');
@@ -79,11 +81,15 @@ initDropdowns('.sorting', {
     }
 });
 
+
+// клик аутсайд
 document.addEventListener('click', () => {
     document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open'));
 });
 
 
+
+// слайдеры
 const specialOffersSlider = new Swiper('.special-offers__slider', {
     slidesPerView: 1.15,
     spaceBetween: 8,
