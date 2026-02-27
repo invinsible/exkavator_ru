@@ -44,6 +44,34 @@ dropdownFields.forEach(el => {
     if (input) input.readOnly = true;
 });
 
+// Связь дропдаунов Марка → Модель
+(function () {
+    const brandContainer = document.querySelector('#brand')?.closest('.field-dropdown');
+    const modelContainer = document.querySelector('#model')?.closest('.field-dropdown');
+    if (!brandContainer || !modelContainer) return;
+
+    const modelInput = modelContainer.querySelector('#model');
+
+    function setModelEnabled(enabled) {
+        if (enabled) {
+            modelContainer.classList.remove('disabled');
+            modelInput.disabled = false;
+        } else {
+            modelContainer.classList.add('disabled');
+            modelInput.disabled = true;
+            modelInput.value = '';
+            modelContainer.classList.remove('selected');
+            modelContainer.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
+        }
+    }
+
+    brandContainer.querySelectorAll('.dropdown-backdrop__option').forEach(option => {
+        option.addEventListener('click', () => setModelEnabled(true));
+    });
+
+    setModelEnabled(!!document.querySelector('#brand').value);
+})();
+
 initDropdowns('.sorting', {
     onSelect(option, container) {
         const btn = container.querySelector('.button--dropdown');
