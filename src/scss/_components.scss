@@ -195,6 +195,59 @@
     margin-bottom: 40px;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    .button {
+        min-width: 32px;
+
+        &.current {
+            background-color: var(--neutral-60);
+            outline: 1px solid  var(--neutral-100);
+        }
+    }
+}
+
+.text-section {
+    color: var(--text-secondary);
+    @include text-size('sm');
+
+    p {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p + ul {
+        padding-left: 25px;
+        margin-top: -25px;
+        margin-bottom: 25px;
+    }
+}
+
+.cta-help-block {
+    padding: 16px;
+    background-color: var(--neutral-25);
+    border-radius: 12px;
+
+    &__title {
+        @include text-size('lg');
+        @include text-weight('bold');
+    }
+
+    &__text {
+        max-width: 730px;
+    }
+
+    .button {
+        @include text-weight('semibold');
+    }
+}
+
 @import 'components/sections/filter';
 @import 'components/sections/categories';
 @import 'components/sections/companies';

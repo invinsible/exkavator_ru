@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Продажа спецтехники, строительной техники б y и новой. Объявления о покупке и продаже спецтехники на портале Экскаватор Ру</title>
+  <title>Аренда спецтехники (строительной техники) на портале Экскаватор Ру</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -132,10 +132,10 @@
     <div class="container">
         <div class="layout">
             <main class="content">
-                <h1>Продажа спецтехники б/у и новой</h1>
+                <h1>Аренда спецтехники б/у и новой</h1>
                 <section class="filter-block section">                    
                     <div class="filter">
-                        <p class="small-title">Поиск по 24 304 объявлениям</p>
+                        <p class="small-title">Поиск по 7924 объявлениям</p>
                         <div class="filter__inputs">
                             <div class="field-dropdown">
                                 <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
@@ -154,6 +154,13 @@
                             </div>
 
                             <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="place">
+                                    <span class="field-dropdown__caption">Регион, город, населенный пункт</span>
+                                </label>
+                            </div>
+
+                            <div class="field-dropdown">
                                 <input class="field-dropdown__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
                                 <label class="field-dropdown__label" for="brand">
                                     <span class="field-dropdown__caption">Марка</span>
@@ -167,7 +174,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    
+
                                     <ul class="dropdown-backdrop__list">
                                         <li class="dropdown-backdrop__option">все типы</li>
                                         <li class="dropdown-backdrop__option-title">Землеройная техника</li>
@@ -190,94 +197,50 @@
                             </div>
 
                             <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="place">
-                                    <span class="field-dropdown__caption">Регион, город, населенный пункт</span>
+                                <input class="field-dropdown__input" type="text" placeholder="Арендодатель" name="landlord" id="landlord" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="landlord">
+                                    <span class="field-dropdown__caption">Арендодатель</span>
                                 </label>
                             </div>
 
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="durability">
-                                    <span class="field-dropdown__caption">Состояние техники</span>
-                                </label>
-                            </div>
-
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="availability">
-                                    <span class="field-dropdown__caption">Доступность</span>
-                                </label>
-                                <div class="dropdown-backdrop">
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">100 000</li>
-                                        <li class="dropdown-backdrop__option">50 000</li>
-                                    </ul>
+                            <div class="filter__range">
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="hourPriceFrom">
+                                        <span class="field-dropdown__caption">Цена за час от ₽</span>
+                                    </label>
+                                </div>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="hourPriceTo">
+                                        <span class="field-dropdown__caption">до ₽</span>
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="filter__range">
                                 <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="minPrice">
-                                        <span class="field-dropdown__caption">Цена от, ₽</span>
+                                    <input class="field-dropdown__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="shiftPriceFrom">
+                                        <span class="field-dropdown__caption">Цена за смену от ₽</span>
                                     </label>
-                                    <div class="dropdown-backdrop">
-                                        <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">100 000</li>
-                                            <li class="dropdown-backdrop__option">50 000</li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="maxPrice">
-                                        <span class="field-dropdown__caption">до, ₽</span>
+                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="shiftPriceTo">
+                                        <span class="field-dropdown__caption">до ₽</span>
                                     </label>
-                                    <div class="dropdown-backdrop">
-                                        <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">40 000</li>
-                                            <li class="dropdown-backdrop__option">80 000</li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
-
-                            <div class="filter__range">
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="yearFrom">
-                                        <span class="field-dropdown__caption">Год выпуска от</span>
-                                    </label>
-                                </div>
-                                <div class=" field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="yearTo">
-                                        <span class="field-dropdown__caption">до</span>
-                                    </label>
-                                </div>
-                            </div>                            
                         </div>
                         <div class="filter__checkboxes">
                             <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-cold">
+                                <label class="field-checkbox__label" for="ch-cold">Холодная аренда</label>
+                            </div>
+                            <div class="field-checkbox">
                                 <input type="checkbox" class="field-checkbox__input" id="ch-price">
                                 <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-photo">
-                                <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-nds">
-                                <label class="field-checkbox__label" for="ch-nds">Продажа с НДС</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-diler">
-                                <label class="field-checkbox__label" for="ch-diler">Официальный дилер</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-deliver">
-                                <label class="field-checkbox__label" for="ch-deliver">С возможностью доставки</label>
                             </div>
                         </div>
                         <div class="filter__buttons">
@@ -465,6 +428,107 @@
                         </ul>
                     </div>
                 </section>
+
+                <section class="results section">
+                    <div class="results__title">
+                        <p class="small-title">Найдено 1234 объявления</p>
+                        <div class="sorting">
+                            <button class="button button--small button--regular-alt button--dropdown">Сначала актуальные</button>
+                            <div class="dropdown-backdrop">
+                                <ul class="dropdown-backdrop__list">
+                                    <li class="dropdown-backdrop__option">Сначала актуальные</li>
+                                    <li class="dropdown-backdrop__option">Сначала дешевые</li>
+                                    <li class="dropdown-backdrop__option">Сначала дорогие</li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="results-list">
+                        <li class="results-list__item viewed premium">
+                            <div class="results-list__row">
+                                <a href="#" class="results-list__img-block">
+                                    <img src="img/temp/result-1.jpg" alt=""> 
+                                </a>
+                                <div class="results-list__info-block">
+                                    <p class="results-list__cities">Александровск-Сахалинский и ещё <a href="#" class="results-list__tolltip">9 городов</a></p>
+                                    <a href="#" class="results-list__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
+                                    <ul class="results-list__chips">                                        
+                                        <li class="chip chip--small chip--regular">В наличии</li>
+                                        <li class="chip chip--small chip--regular">Бесплатная доставка</li>
+                                    </ul>
+                                    <p class="results-list__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
+                                </div>
+                                <div class="results-list__action-block">
+                                    <p class="results-list__price">
+                                        <span>15 306 212 ₽</span>
+                                        <span>Продажа с НДС</span>
+                                    </p>
+                                    <div class="results-list__buttons">
+                                        <button class="button button--small button--primary-alt">Купить в лизинг</button>
+                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt">Написать</button>
+                                    </div>
+                                    <div class="results-list__user-actions">
+                                        <button class="button button--small button--regular">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="results-list__row"></div>
+                        </li>
+                        <li class="results-list__item">
+                            <div class="results-list__row">
+                                <a href="#" class="results-list__img-block">
+                                    <img src="img/temp/result-1.jpg" alt="">
+                                </a>
+                                <div class="results-list__info-block">
+                                    <p class="results-list__cities">Александровск-Сахалинский и ещё <a href="#" class="results-list__tolltip">9 городов</a></p>
+                                    <a href="#" class="results-list__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
+                                    <ul class="results-list__chips">                                        
+                                        <li class="chip chip--small chip--regular">В наличии</li>
+                                        <li class="chip chip--small chip--regular">Бесплатная доставка</li>
+                                    </ul>
+                                    <p class="results-list__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
+                                </div>
+                                <div class="results-list__action-block">
+                                    <p class="results-list__price">
+                                        <span>15 306 212 ₽</span>
+                                        <span>Продажа с НДС</span>
+                                    </p>
+                                    <div class="results-list__buttons">
+                                        <button class="button button--small button--primary-alt">Купить в лизинг</button>
+                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt">Написать</button>
+                                    </div>
+                                    <div class="results-list__user-actions">
+                                        <button class="button button--small button--regular">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="results-list__row"></div>
+                        </li>
+                    </ul>
+                    
+                </section>
+
+                
 
                 <section class="special-offers section">
                     <div class="special-offers__title">

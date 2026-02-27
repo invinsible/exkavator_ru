@@ -79,5 +79,10 @@
             }
         }
     }
+
+    &__results-chips {
+        display: flex;
+        gap: 6px;
+    }
     
 }
