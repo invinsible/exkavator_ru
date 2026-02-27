@@ -242,10 +242,6 @@
     &__text {
         max-width: 730px;
     }
-
-    .button {
-        @include text-weight('semibold');
-    }
 }
 
 @import 'components/sections/filter';
