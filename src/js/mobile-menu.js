@@ -1,30 +1,30 @@
-(function () {
-    const header = document.querySelector('.main-header');
+(function () {    
     const burger = document.querySelector('.mobile-burger');
     const footerBtn = document.querySelector('.footerMobileMenu');
-    const menu = document.querySelector('.main-menu');
-    if (!burger || !menu) return;
+    const mainMenu = document.querySelector('.main-menu');
+    const mainMenuList = document.querySelector('.main-menu__list');
+    if (!burger || !mainMenu) return;
 
     function openMenu() {
-        menu.classList.add('is-open');
+        mainMenu.classList.add('is-open');
         burger.classList.add('is-active');
         document.body.classList.add('menu-open');
     }
 
     function closeMenu() {
-        menu.classList.remove('is-open');
+        mainMenu.classList.remove('is-open');
         burger.classList.remove('is-active');        
         setTimeout(() => {
             document.body.classList.remove('menu-open');
         }, 250);
        
-        menu.querySelectorAll('.main-menu__submenu.is-open').forEach(function (sub) {
+        mainMenuList.querySelectorAll('.main-menu__submenu.is-open').forEach(function (sub) {
             sub.classList.remove('is-open');
         });
     }
 
     burger.addEventListener('click', function () {
-        if (menu.classList.contains('is-open')) {
+        if (mainMenu.classList.contains('is-open')) {
             closeMenu();
         } else {
             openMenu();
@@ -32,14 +32,14 @@
     });
 
     footerBtn.addEventListener('click', function () {
-        if (menu.classList.contains('is-open')) {
+        if (mainMenu.classList.contains('is-open')) {
             closeMenu();
         } else {
             openMenu();
         }
     });
 
-    menu.querySelectorAll('.main-menu__item--has-children').forEach(function (item) {
+    mainMenuList.querySelectorAll('.main-menu__item--has-children').forEach(function (item) {
         var link = item.querySelector(':scope > .main-menu__link');
         var submenu = item.querySelector(':scope > .main-menu__submenu');
         if (!link || !submenu) return;
@@ -51,7 +51,7 @@
         });
     });
 
-    menu.querySelectorAll('.main-menu__back').forEach(function (btn) {
+    mainMenuList.querySelectorAll('.main-menu__back').forEach(function (btn) {
         btn.addEventListener('click', function () {
             var submenu = btn.closest('.main-menu__submenu');
             if (submenu) {

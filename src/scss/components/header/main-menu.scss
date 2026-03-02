@@ -1,29 +1,37 @@
 .main-menu {
-    display: flex;
-
     @media (max-width: #{ $breakpoint-md - 1px }) {
         position: fixed;
         top: 56px;
         left: 0;
-        padding-top: 48px;
         width: 100%;
-        height: 100%;        
-        flex-direction: column;
-        background-color: var(--neutral-0);    
+        height: 100%;
+        background-color: var(--neutral-0);
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 100;        
         transform: translateX(-100%);
         transition: transform 0.3s ease;
     }
-
-    @media (min-width: $breakpoint-md) {
-        gap: var(--spacing-32);
-    }
+    
 
     &.is-open {
         transform: translateX(0);
     }
+    
+
+    &__list {
+        display: flex;
+
+        @media (max-width: #{ $breakpoint-md - 1px }) {
+            padding-top: 48px;
+            flex-direction: column;
+        }        
+
+        @media (min-width: $breakpoint-md) {
+            gap: var(--spacing-32);
+        }
+    }
+
 
     &__item {
         border-bottom: 1px solid var(--neutral-100);
@@ -121,21 +129,21 @@
         }
     }
 
-    &__footer {
+    &__btn-item {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        padding: 24px 16px;
-        margin-top: auto;
+        gap: 16px;
+        padding: 16px;
+
+        .button {
+            width: 100%;
+        }
 
         @media (min-width: $breakpoint-md) {
             display: none;
         }
     }
 
-    &__footer-btn {
-        width: 100%;
-        text-align: center;
-    }
+    
 
 }
