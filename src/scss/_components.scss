@@ -9,10 +9,10 @@
 @import 'components/global';
 
 .layout {
-    padding: 16px 0;
-    display: grid;
+    padding: 16px 0;   
 
     @media (min-width: 1024px) {
+        display: grid;
         grid-template-columns: 1fr 298px;
         column-gap: 16px;   
     }
