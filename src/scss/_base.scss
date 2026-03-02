@@ -8,12 +8,13 @@ body {
     &.menu-open {
         overflow: hidden;
 
-        // .main-header {
-        //     position: fixed;
-        //     width: 100%;
-        //     top: 0;
-        //     z-index: 5;
-        // }
+        .main-header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 101;
+        }
 
         .secondary-header + .container {
             padding-top: 56px;

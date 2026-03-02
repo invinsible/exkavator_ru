@@ -8,20 +8,15 @@
     function openMenu() {
         menu.classList.add('is-open');
         burger.classList.add('is-active');
-        // header.classList.add('fixed');
         document.body.classList.add('menu-open');
-        // document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
         menu.classList.remove('is-open');
-        burger.classList.remove('is-active');
-        // header.classList.remove('fixed');
-        // document.body.style.overflow = '';
-        document.body.classList.remove('menu-open');
-        // setTimeout(() => {
-            
-        // }, 300);
+        burger.classList.remove('is-active');        
+        setTimeout(() => {
+            document.body.classList.remove('menu-open');
+        }, 250);
        
         menu.querySelectorAll('.main-menu__submenu.is-open').forEach(function (sub) {
             sub.classList.remove('is-open');
