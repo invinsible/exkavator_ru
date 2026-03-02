@@ -286,20 +286,38 @@
                             <button class="button button--primary button--large" disabled>Найдено 1234 объявления</button>
                         </div>
 
-                        <div class="filter__results-chips">
-                            <a href="#" class="button button--small button--regular">Hitachi</a>
-                            <a href="#" class="button button--small button--regular">Komatsu</a>
-                            <a href="#" class="button button--small button--regular">Hyundai</a>
-                            <a href="#" class="button button--small button--regular">Caterpillar</a>
-                            <a href="#" class="button button--small button--regular">Doosan / Develon</a>
-                            <a href="#" class="button button--small button--regular">Volvo</a>
-                            <a href="#" class="button button--small button--regular">JCB</a>
-                            <a href="#" class="button button--small button--regular">Sany</a>
-                            <a href="#" class="button button--small button--regular">Lonking</a>
-                            <a href="#" class="button button--small button--regular">Case</a>
-                            <a href="#" class="button button--small button--regular">Zauberg</a>
-                            <a href="#" class="button button--small button--regular">UMC</a>
-                            <a href="#" class="button button--small button--regular">Lovol</a>
+                        <div class="filter__result-chips slider-chips">
+                            <div class="slider-chips__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="button button--small button--regular swiper-slide">Hitachi</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Komatsu</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Hyundai</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Caterpillar</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Doosan / Develon</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Volvo</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">JCB</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Sany</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Lonking</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Case</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Zauberg</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">UMC</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Lovol</a>
+
+                                    <a href="#" class="button button--small button--regular swiper-slide">Case</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Zauberg</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">UMC</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Lovol</a>
+
+                                    <a href="#" class="button button--small button--regular swiper-slide">Case</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Zauberg</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">UMC</a>
+                                    <a href="#" class="button button--small button--regular swiper-slide">Lovol</a>
+                                </div>
+                            </div>
+                            <div class="slider-chips__nav">
+                                <button class="slider-chips__prev" type="button"></button>
+                                <button class="slider-chips__next" type="button"></button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -761,7 +779,48 @@
     </div>
 
     <footer class="main-footer">
-        <div class="container"></div>
+        <div class="container">
+            <ul class="crumbs">
+                <li class="crumbs__item">© Экскаватор Ру 2003—<span class="main-footer__current-year">2026</span></li>
+                <li class="crumbs__item">
+                    <a href="#">Пользовательское соглашение</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Реклама на Экскаватор Ру</a>
+                </li>
+            </ul>
+            <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>
+
+            <div class="mobile-footer">
+                <nav class="mobile-footer__menu">
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/front_loader.svg" alt="Продажа">
+                        <span>Продажа</span>
+                    </a>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/percent_discount.svg" alt="Скидки">
+                        <span>Скидки</span>
+                    </a>
+                    <button class="mobile-footer__link footerMobileMenu" href="#">
+                        <div class="mobile-footer__menu-btn">
+                            <img src="img/svg/mobile-menu-btn.svg" alt="Иконка мобильного меню">
+                        </div>
+                        <span>Меню</span>
+                    </button>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/newsmode.svg" alt="Новости">
+                        <span>Новости</span>
+                    </a>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/adaptive_audio_mic.svg" alt="Конференция">
+                        <span>Конференция</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
     </footer>
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>

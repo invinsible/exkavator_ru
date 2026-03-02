@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/main.css">
 
   <style>
+    body {
+        padding-bottom: 120px;
+    }
     fieldset {
         padding: 25px;
         margin-bottom: 15px;
@@ -18,7 +21,6 @@
 
         @media(min-width: 1180px) {
             flex-direction: row;
-            align-items: center;
         }
         
     }
@@ -29,6 +31,7 @@
         padding: 10px;
         border: 1px dashed #ccc;
         border-radius: 8px;
+        flex: 1;
     }
   </style>
 </head>
@@ -289,12 +292,119 @@
                 <p class="text-sm fw-bold">Мелкий текст жирный</p>
                 <p class="text-xs">Сверх мелкий текст</p>
         </fieldset>
+        <fieldset>
+            <legend>Inputs</legend>
+            <div class="ds-row">
+                <div class="ds-element-wrapper">
+                    <p>field-dropdown <small>(basic, search, disabled)</small></p>
+                    <div class="field-dropdown">
+                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
+                        <label class="field-dropdown__label" for="type">
+                            <span class="field-dropdown__caption">Тип техники</span>
+                        </label>
+                        <div class="dropdown-backdrop">
+                            <ul class="dropdown-backdrop__list">
+                                <li class="dropdown-backdrop__option">Тягачи седельные</li>
+                                <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
+                                <li class="dropdown-backdrop__option">Терминальные тягачи</li>
+                                <li class="dropdown-backdrop__option">Электротягачи</li>
+                                <li class="dropdown-backdrop__option">Натяжные машины</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="field-dropdown">
+                        <input class="field-dropdown__input" type="text" placeholder="Марка" name="test2" id="test2" autocomplete="off"/>
+                        <label class="field-dropdown__label" for="test2">
+                            <span class="field-dropdown__caption">Марка</span>
+                        </label>
+                        <div class="dropdown-backdrop">
+                            <div class="dropdown-backdrop__search">
+                                <div class="field-text field-text--small">
+                                    <input type="text" class="field-text__input" id="test2-search" placeholder="Поиск">
+                                    <label for="test2-search" class="field-text__label">
+                                        <span class="field-text__caption">Поиск</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <ul class="dropdown-backdrop__list">
+                                <li class="dropdown-backdrop__option">все типы</li>
+                                <li class="dropdown-backdrop__option-title">Землеройная техника</li>
+                                <li class="dropdown-backdrop__option">Грейдеры</li>
+                                <li class="dropdown-backdrop__option">Земснаряды</li>
+                                <li class="dropdown-backdrop__option">Экскаваторы колесные</li>
+                                <li class="dropdown-backdrop__option-title">Строительное оборудование</li>
+                                <li class="dropdown-backdrop__option">оборудование 1</li>
+                                <li class="dropdown-backdrop__option">оборудование 2</li>
+                                <li class="dropdown-backdrop__option">оборудование 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="field-dropdown disabled">
+                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type1" id="type1" autocomplete="off" disabled/>
+                        <label class="field-dropdown__label" for="type1">
+                            <span class="field-dropdown__caption">Тип техники</span>
+                        </label>
+                        <div class="dropdown-backdrop">
+                            <ul class="dropdown-backdrop__list">
+                                <li class="dropdown-backdrop__option">Тягачи седельные</li>
+                                <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
+                                <li class="dropdown-backdrop__option">Терминальные тягачи</li>
+                                <li class="dropdown-backdrop__option">Электротягачи</li>
+                                <li class="dropdown-backdrop__option">Натяжные машины</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>field-text <small>(basic, small, disabled)</small></p>
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city" id="city" autocomplete="off"/>
+                        <label class="field-text__label" for="city">
+                            <span class="field-text__caption">Город, населенный пункт</span>
+                        </label>
+                    </div>
+                    <div class="field-text field-text--small">
+                        <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city3" id="city3" autocomplete="off"/>
+                        <label class="field-text__label" for="city3">
+                            <span class="field-text__caption">Город, населенный пункт</span>
+                        </label>
+                    </div>
+                    <div class="field-text disabled">
+                        <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city2" id="city2" autocomplete="off" disabled/>
+                        <label class="field-text__label" for="city2">
+                            <span class="field-text__caption">Город, населенный пункт</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>field-checkbox <small>(basic, checked, disabled)</small></p>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-price">
+                        <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-price1" checked>
+                        <label class="field-checkbox__label" for="ch-price1">Только с ценой</label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-price11" disabled>
+                        <label class="field-checkbox__label" for="ch-price11">Только с ценой</label>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+        </fieldset>
     </div>
     
 
     
             
 
-  <!-- <script src="js/main.min.js"></script> -->
+  <script src="js/main.min.js"></script>
 </body>
 </html>

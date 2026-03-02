@@ -103,6 +103,15 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
     }
 });
 
+const filterChipsSlider = new Swiper('.slider-chips__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 6,
+    navigation: {
+        nextEl: '.slider-chips__next',
+        prevEl: '.slider-chips__prev',
+    },
+});
+
 const companiesSlider = new Swiper('.companies__slider', {
     slidesPerView: 4,
     spaceBetween: 9,
