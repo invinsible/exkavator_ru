@@ -114,3 +114,8 @@ const companiesSlider = new Swiper('.companies__slider', {
     }
 });
 
+// футер
+const currentYear = document.querySelector('.main-footer__current-year');
+if (currentYear) {
+    currentYear.innerHTML = new Date().getFullYear();
+}

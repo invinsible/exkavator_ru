@@ -4,6 +4,23 @@ body {
     color: var(--text-base);
     @include text-size('base');
     @include text-weight('base');
+
+    &.menu-open {
+        overflow: hidden;
+
+        // .main-header {
+        //     position: fixed;
+        //     width: 100%;
+        //     top: 0;
+        //     z-index: 5;
+        // }
+
+        .secondary-header + .container {
+            padding-top: 56px;
+        }
+    }
+
+    
 }
 
 .container {
