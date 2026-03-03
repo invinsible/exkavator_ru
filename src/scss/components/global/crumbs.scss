@@ -9,8 +9,7 @@
         align-items: center;
         padding-right: 4px;
         color: var(--text-secondary);
-        @include text-size('sm');
-        
+        @include text-size('sm');        
 
         &::after {
             content: '';
@@ -34,6 +33,10 @@
         margin-bottom: 16px;
         a {
             color: var(--text-secondary);
+
+            &:hover {
+                color: var(--link-hover);
+            }
         }
     }
 }

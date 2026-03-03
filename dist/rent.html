@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Аренда спецтехники (строительной техники) на портале Экскаватор Ру</title>
+  <title>Аренда - Главная</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -138,7 +138,7 @@
         <div class="layout">
             <main class="content">
                 <h1>Аренда спецтехники б/у и новой</h1>
-                <section class="filter-block section">                    
+                <section class="filter-block section">
                     <div class="filter">
                         <p class="small-title">Поиск по 7924 объявлениям</p>
                         <div class="filter__inputs">
@@ -158,10 +158,10 @@
                                 </div>
                             </div>
 
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="place">
-                                    <span class="field-dropdown__caption">Регион, город, населенный пункт</span>
+                            <div class="field-text">
+                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                                <label class="field-text__label" for="place">
+                                    <span class="field-text__caption">Регион, город, населенный пункт</span>
                                 </label>
                             </div>
 
@@ -199,6 +199,15 @@
                                 <label class="field-dropdown__label" for="model">
                                     <span class="field-dropdown__caption">Модель</span>
                                 </label>
+                                 <div class="dropdown-backdrop">
+                                    
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option">Модель 1</li>
+                                        <li class="dropdown-backdrop__option">Модель 2</li>
+                                        <li class="dropdown-backdrop__option">Модель 3</li>
+                                        <li class="dropdown-backdrop__option">Модель 4</li>                                        
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="field-dropdown">
@@ -249,9 +258,10 @@
                             </div>
                         </div>
                         <div class="filter__buttons">
-                            <button class="button button--primary-alt button--no-body button--medium">Сбросить</button>
-                            <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button>
-                            <button class="button button--primary button--large">Показать 1234 объявления</button>
+                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
+                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
+                            <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
+                            <p class="filter__no-filters">Укажите параметры поиска</p>
                         </div>
                     </div>                    
                     <div class="categories">
@@ -433,107 +443,6 @@
                         </ul>
                     </div>
                 </section>
-
-                <section class="results section">
-                    <div class="results__title">
-                        <p class="small-title">Найдено 1234 объявления</p>
-                        <div class="sorting">
-                            <button class="button button--small button--regular-alt button--dropdown">Сначала актуальные</button>
-                            <div class="dropdown-backdrop">
-                                <ul class="dropdown-backdrop__list">
-                                    <li class="dropdown-backdrop__option">Сначала актуальные</li>
-                                    <li class="dropdown-backdrop__option">Сначала дешевые</li>
-                                    <li class="dropdown-backdrop__option">Сначала дорогие</li>                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="results-list">
-                        <li class="results-list__item viewed premium">
-                            <div class="results-list__row">
-                                <a href="#" class="results-list__img-block">
-                                    <img src="img/temp/result-1.jpg" alt=""> 
-                                </a>
-                                <div class="results-list__info-block">
-                                    <p class="results-list__cities">Александровск-Сахалинский и ещё <a href="#" class="results-list__tolltip">9 городов</a></p>
-                                    <a href="#" class="results-list__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
-                                    <ul class="results-list__chips">                                        
-                                        <li class="chip chip--small chip--regular">В наличии</li>
-                                        <li class="chip chip--small chip--regular">Бесплатная доставка</li>
-                                    </ul>
-                                    <p class="results-list__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                </div>
-                                <div class="results-list__action-block">
-                                    <p class="results-list__price">
-                                        <span>15 306 212 ₽</span>
-                                        <span>Продажа с НДС</span>
-                                    </p>
-                                    <div class="results-list__buttons">
-                                        <button class="button button--small button--primary-alt">Купить в лизинг</button>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
-                                        <button class="button button--small button--primary-alt">Написать</button>
-                                    </div>
-                                    <div class="results-list__user-actions">
-                                        <button class="button button--small button--regular">
-                                            <svg class="icon">
-                                                <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                            </svg>
-                                        </button>
-                                        <button class="button button--small button--regular">
-                                            <svg class="icon">
-                                                <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="results-list__row"></div>
-                        </li>
-                        <li class="results-list__item">
-                            <div class="results-list__row">
-                                <a href="#" class="results-list__img-block">
-                                    <img src="img/temp/result-1.jpg" alt="">
-                                </a>
-                                <div class="results-list__info-block">
-                                    <p class="results-list__cities">Александровск-Сахалинский и ещё <a href="#" class="results-list__tolltip">9 городов</a></p>
-                                    <a href="#" class="results-list__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
-                                    <ul class="results-list__chips">                                        
-                                        <li class="chip chip--small chip--regular">В наличии</li>
-                                        <li class="chip chip--small chip--regular">Бесплатная доставка</li>
-                                    </ul>
-                                    <p class="results-list__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                </div>
-                                <div class="results-list__action-block">
-                                    <p class="results-list__price">
-                                        <span>15 306 212 ₽</span>
-                                        <span>Продажа с НДС</span>
-                                    </p>
-                                    <div class="results-list__buttons">
-                                        <button class="button button--small button--primary-alt">Купить в лизинг</button>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
-                                        <button class="button button--small button--primary-alt">Написать</button>
-                                    </div>
-                                    <div class="results-list__user-actions">
-                                        <button class="button button--small button--regular">
-                                            <svg class="icon">
-                                                <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                            </svg>
-                                        </button>
-                                        <button class="button button--small button--regular">
-                                            <svg class="icon">
-                                                <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="results-list__row"></div>
-                        </li>
-                    </ul>
-                    
-                </section>
-
-                
 
                 <section class="special-offers section">
                     <div class="special-offers__title">
@@ -906,7 +815,48 @@
     </div>
 
     <footer class="main-footer">
-        <div class="container"></div>
+        <div class="container">
+            <ul class="crumbs">
+                <li class="crumbs__item">© Экскаватор Ру 2003—<span class="main-footer__current-year">2026</span></li>
+                <li class="crumbs__item">
+                    <a href="#">Пользовательское соглашение</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Реклама на Экскаватор Ру</a>
+                </li>
+            </ul>
+            <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>
+
+            <div class="mobile-footer">
+                <nav class="mobile-footer__menu">
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/front_loader.svg" alt="Продажа">
+                        <span>Продажа</span>
+                    </a>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/percent_discount.svg" alt="Скидки">
+                        <span>Скидки</span>
+                    </a>
+                    <button class="mobile-footer__link footerMobileMenu" href="#">
+                        <div class="mobile-footer__menu-btn">
+                            <img src="img/svg/mobile-menu-btn.svg" alt="Иконка мобильного меню">
+                        </div>
+                        <span>Меню</span>
+                    </button>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/newsmode.svg" alt="Новости">
+                        <span>Новости</span>
+                    </a>
+                    <a class="mobile-footer__link" href="#">
+                        <img src="img/svg/adaptive_audio_mic.svg" alt="Конференция">
+                        <span>Конференция</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
     </footer>
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>

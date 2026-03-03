@@ -18,9 +18,9 @@ a {
   color: var(--text-primary);
   transition: color var(--transition-hover);
 
-  // &:hover {
-  //   color: var(--link-hover);
-  // }
+  &:hover {
+    color: var(--link-hover);
+  }
 }
 
 img {

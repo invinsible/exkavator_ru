@@ -16,6 +16,9 @@
             padding: 16px;
             background-color: var(--neutral-20);
             border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
 
             &:has(.results-list__title:hover) .results-list__img-block img {
                 transform: scale(1.1);
@@ -107,7 +110,7 @@
             // width: 528px;
         }
 
-        &__cities {            
+        &__cities {
             margin-bottom: 8px;
             color: var(--text-secondary);
             @include text-size('sm');
@@ -183,6 +186,17 @@
             }
         }
 
+        &__time {
+            width: 240px;
+            @include text-size('xs');
+            color: var(--text-secondary);
+        }
+
+        &__approve {
+            color: var(--text-base);
+            @include text-weight('semibold');
+        }
+
         &__user-actions {
             display: flex;
             gap: 4px;
@@ -190,6 +204,42 @@
             .button {
                 width: 100%;
             }
+        }
+    }
+
+    .result-list-more-items {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include text-size('xs');
+        color: var(--text-secondary);
+
+        &__item {
+            display: flex;
+            gap: 12px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__img {
+            width: 60px;
+            height: 40px;
+            border: 1px solid var(--text-secondary);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        &__info {
+            @include text-size('sm');
+        }
+
+        &__show-more {
+            width: fit-content;
         }
     }
 }

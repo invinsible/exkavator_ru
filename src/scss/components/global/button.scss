@@ -76,6 +76,7 @@
         &:hover, &:focus {
             box-shadow: 0px 2px 8px 0px #E0E5EB80;
             outline: 1px solid  var(--neutral-100);
+            color: var(--text-base);
         }
         &:active  {
             background-color: var(--neutral-100);

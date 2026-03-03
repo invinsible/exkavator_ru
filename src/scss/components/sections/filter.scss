@@ -63,6 +63,16 @@
         gap: 16px;
     }
 
+    &__no-filters {
+        padding: 12px 16px;
+        color: var(--text-disabled);
+        line-height: 24px;
+    }
+
+    &__more-params {
+        margin-right: auto;
+    }
+
     &__range {
         display: flex;
         gap: 2px;

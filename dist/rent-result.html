@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Продажа - Поисковая выдача</title>
+  <title>Аренда - Поисковая выдача</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -139,25 +139,19 @@
             <main class="content">
                 <div class="crumbs crumbs--bread">
                     <li class="crumbs__item">
-                        <a href="#">Продажа</a>
+                        <a href="#">Аренда</a>
                     </li>
                     <li class="crumbs__item">
-                        <a href="#">Экскаваторы</a>
+                        <a href="#">Экскаваторы в Краснодаре</a>
                     </li>
                     <li class="crumbs__item">
                         <a href="#">Гусеничные экскаваторы</a>
                     </li>
-                    <li class="crumbs__item">
-                        <a href="#">Komatsu</a>
-                    </li>
-                    <li class="crumbs__item">
-                        <a href="#">Komatsu в Санкт-Петербурге</a>
-                    </li>
                 </div>
-                <h1>Новые гусеничные экскаваторы в Краснодаре</h1>
-                <section class="filter-block section">                    
+                <h1>Аренда гусеничных экскаваторов в Краснодаре</h1>
+                <section class="filter-block section">
                     <div class="filter">
-                        <p class="small-title">Поиск по 226 объявлениям</p>
+                        <p class="small-title">Поиск по 7924 объявлениям</p>
                         <div class="filter__inputs">
                             <div class="field-dropdown selected">
                                 <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" value="Экскаваторы гусеничные"/>
@@ -169,10 +163,18 @@
                                         <li class="dropdown-backdrop__option">Тягачи седельные</li>
                                         <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
                                         <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                        <li class="dropdown-backdrop__option selected">Экскаваторы гусеничные</li>
+                                        <li class="dropdown-backdrop__option">Электротягачи</li>
                                         <li class="dropdown-backdrop__option">Натяжные машины</li>
+                                        <li class="dropdown-backdrop__option selected">Экскаваторы гусеничные</li>                                        
                                     </ul>
                                 </div>
+                            </div>
+
+                            <div class="field-text">
+                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off" value="Краснодар, Краснодарский край, Россия"/>
+                                <label class="field-text__label" for="place">
+                                    <span class="field-text__caption">Регион, город, населенный пункт</span>
+                                </label>
                             </div>
 
                             <div class="field-dropdown">
@@ -189,7 +191,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    
+
                                     <ul class="dropdown-backdrop__list">
                                         <li class="dropdown-backdrop__option">все типы</li>
                                         <li class="dropdown-backdrop__option-title">Землеройная техника</li>
@@ -209,97 +211,62 @@
                                 <label class="field-dropdown__label" for="model">
                                     <span class="field-dropdown__caption">Модель</span>
                                 </label>
-                            </div>
-
-                            <div class="field-text">
-                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off" value="Краснодар, Краснодарский край, Россия"/>
-                                <label class="field-text__label" for="place">
-                                    <span class="field-text__caption">Регион, город, населенный пункт</span>
-                                </label>
-                            </div>
-
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="durability">
-                                    <span class="field-dropdown__caption">Состояние техники</span>
-                                </label>
-                            </div>
-
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="availability">
-                                    <span class="field-dropdown__caption">Доступность</span>
-                                </label>
-                                <div class="dropdown-backdrop">
+                                 <div class="dropdown-backdrop">
+                                    
                                     <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">100 000</li>
-                                        <li class="dropdown-backdrop__option">50 000</li>
+                                        <li class="dropdown-backdrop__option">Модель 1</li>
+                                        <li class="dropdown-backdrop__option">Модель 2</li>
+                                        <li class="dropdown-backdrop__option">Модель 3</li>
+                                        <li class="dropdown-backdrop__option">Модель 4</li>                                        
                                     </ul>
                                 </div>
                             </div>
 
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Арендодатель" name="landlord" id="landlord" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="landlord">
+                                    <span class="field-dropdown__caption">Арендодатель</span>
+                                </label>
+                            </div>
+
                             <div class="filter__range">
                                 <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="minPrice">
-                                        <span class="field-dropdown__caption">Цена от, ₽</span>
+                                    <input class="field-dropdown__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="hourPriceFrom">
+                                        <span class="field-dropdown__caption">Цена за час от ₽</span>
                                     </label>
-                                    <div class="dropdown-backdrop">
-                                        <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">100 000</li>
-                                            <li class="dropdown-backdrop__option">50 000</li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="maxPrice">
-                                        <span class="field-dropdown__caption">до, ₽</span>
+                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="hourPriceTo">
+                                        <span class="field-dropdown__caption">до ₽</span>
                                     </label>
-                                    <div class="dropdown-backdrop">
-                                        <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">40 000</li>
-                                            <li class="dropdown-backdrop__option">80 000</li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
 
                             <div class="filter__range">
                                 <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="yearFrom">
-                                        <span class="field-dropdown__caption">Год выпуска от</span>
+                                    <input class="field-dropdown__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="shiftPriceFrom">
+                                        <span class="field-dropdown__caption">Цена за смену от ₽</span>
                                     </label>
                                 </div>
-                                <div class=" field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="yearTo">
-                                        <span class="field-dropdown__caption">до</span>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="shiftPriceTo">
+                                        <span class="field-dropdown__caption">до ₽</span>
                                     </label>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="filter__checkboxes">
                             <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-cold">
+                                <label class="field-checkbox__label" for="ch-cold">Холодная аренда</label>
+                            </div>
+                            <div class="field-checkbox">
                                 <input type="checkbox" class="field-checkbox__input" id="ch-price">
                                 <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-photo" checked>
-                                <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-nds">
-                                <label class="field-checkbox__label" for="ch-nds">Продажа с НДС</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-diler">
-                                <label class="field-checkbox__label" for="ch-diler">Официальный дилер</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-deliver">
-                                <label class="field-checkbox__label" for="ch-deliver">С возможностью доставки</label>
                             </div>
                         </div>
                         <div class="filter__buttons">
@@ -323,7 +290,6 @@
                             </button>
                             <button class="button button--primary button--large" disabled>Показать 1234 объявления</button>
                         </div>
-
                         <div class="filter__result-chips slider-chips">
                             <div class="slider-chips__slider swiper">
                                 <div class="swiper-wrapper">
@@ -382,7 +348,7 @@
                                 </a>
                                 <div class="results-list__info-block">
                                     <p class="results-list__cities">Александровск-Сахалинский и ещё <a href="#" class="results-list__tolltip">9 городов</a></p>
-                                    <a href="#" class="results-list__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
+                                    <a href="#" class="results-list__title">Аренда гусеничного экскаватора HYUNDAI ROBEX 220LC-9S</a>
                                     <ul class="results-list__chips">                                        
                                         <li class="chip chip--small chip--regular">В наличии</li>
                                         <li class="chip chip--small chip--regular">Бесплатная доставка</li>
@@ -391,9 +357,9 @@
                                 </div>
                                 <div class="results-list__action-block">
                                     <div class="results-list__price price-block">
-                                        <p>15 306 212 ₽</p>
-                                        <span>цена с НДС</span>
-                                    </div>                                
+                                        <p>15 306 212 ₽ <small>час</small></p>
+                                        <p>15 306 212 ₽ <small>смена</small></p>
+                                    </div>
                                     <div class="results-list__buttons">
                                         <button class="button button--small button--primary-alt">Купить в лизинг</button>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
@@ -428,12 +394,42 @@
                                         <li class="chip chip--small chip--regular">Бесплатная доставка</li>
                                     </ul>
                                     <p class="results-list__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
+                                    <div class="result-list-more-items">
+                                        <p>Другие объявления</p>
+                                        <div class="result-list-more-items__wrapper">
+                                            <a href="#" class="result-list-more-items__item">
+                                                <div class="result-list-more-items__img">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="result-list-more-items__info">
+                                                    <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
+                                                    <ul class="crumbs">
+                                                        <li class="crumbs__item">60 000 ₽ смена</li>
+                                                        <li class="crumbs__item">3500 ₽ час</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        <a href="#" class="result-list-more-items__item">
+                                            <div class="result-list-more-items__img">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="result-list-more-items__info">
+                                                <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
+                                                <ul class="crumbs">
+                                                    <li class="crumbs__item">60 000 ₽ смена</li>
+                                                    <li class="crumbs__item">3500 ₽ час</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        </div>
+                                        <a href="#" class="result-list-more-items__show-more">Показать еще 10 из 28</a>
+                                    </div>
                                 </div>
                                 <div class="results-list__action-block">
                                     <div class="results-list__price price-block">
-                                        <p>15 306 212 ₽</p>
-                                        <span>цена с НДС</span>
-                                    </div> 
+                                        <p>15 306 212 ₽ <small>час</small></p>
+                                        <p>15 306 212 ₽ <small>смена</small></p>
+                                    </div>
                                     <div class="results-list__buttons">
                                         <button class="button button--small button--primary-alt">Купить в лизинг</button>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
@@ -453,7 +449,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="results-list__row"></div>
+                            <div class="results-list__row">
+                                <p class="results-list__time xs-secondary-text">Обновлено сегодня</p>
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">
+                                        <span class="results-list__approve">Росткомплект ДВ</span>
+                                    </li>
+                                    <li class="crumbs__item">
+                                        11 лет на площадке
+                                    </li>
+                                    <li class="crumbs__item">
+                                        Парк техники: <a href="#">138 единиц</a>
+                                    </li>
+                                    <li class="crumbs__item">
+                                        Работаем 24/7
+                                    </li>
+                                </ul>                                
+                            </div>
                         </li>
                     </ul>
                 </section>
@@ -545,9 +557,9 @@
                                 </div>
                                 <div class="results-list__action-block">
                                     <div class="results-list__price price-block">
-                                        <p>15 306 212 ₽</p>
-                                        <span>цена с НДС</span>
-                                    </div> 
+                                        <p>15 306 212 ₽ <small>час</small></p>
+                                        <p>15 306 212 ₽ <small>смена</small></p>
+                                    </div>
                                     <div class="results-list__buttons">
                                         <button class="button button--small button--primary-alt">Купить в лизинг</button>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
@@ -583,24 +595,22 @@
                 </section>
                 <section class="section">
                     <div class="cta-help-block">
-                        <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
-                        <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
-                        <button class="button button--large button--primary-alt">Разместить заявку</button>
+                        <div class="cta-help-block__wrapper-text">
+                            <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
+                            <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
+                        </div>
+                        <button class="button button--large button--primary-alt  button--dropdown">
+                            <svg class="icon">
+                                <use xlink:href="img/sprites/sprite-16.svg#favorite"></use>
+                            </svg>
+                            Разместить заявку
+                        </button>
                     </div>
                 </section>
                 <section class="section text-section">
-                    <p>Экскаваторы на гусеничном ходу — землеройные машины, предназначенные для выполнения тяжёлых земляных и строительных работ. Благодаря мощным гидравлическим системам и ёмким прочным ковшам они способны эффективно копать и перемещать большие объёмы грунта/скальной породы за один раз. Большинство моделей пригодны для работы в достаточно сложных условиях, в том числе при сверхнизких температурах, на заболоченной местности, на карьерах или лесоповалах и т.п.</p>
-                    <p>Гусеничные экскаваторы делятся на различные типы в зависимости от нескольких ключевых параметров:</p>
-                    <ul>
-                        <li>массы (мини, среднего или тяжёлого класса);</li>
-                        <li>назначения (универсальные, карьерные, болотные, демонтажные, шахтные);</li>
-                        <li>типа привода (дизельные, электрические, гибридные);</li>
-                        <li>количества ковшей (одно- или многоковшовые);</li>
-                        <li>возможности поворота платформы (полноповоротные или неполноповоротные).</li>
-                    </ul>
-                    <p>Гусеничный гидравлический экскаватор применяется во многих сферах: в строительстве – для рытья котлованов, укладки коммуникаций и подготовки площадок; в карьерах — для рыхления мёрзлых почв, добычи или перемещения грунта. На промышленных объектах — для демонтажа и погрузки. В сельском хозяйстве — для рытья водоёмов, ирригационных каналов. Универсальность этой техники и возможность смены навесного оборудования позволяет выполнять широкий спектр задач в сложных условиях и на разной глубине.</p>
-                    <p>Цена на гусеничный экскаватор значительно разнится в зависимости от производителя, класса техники и дополнительных опций. Обычно предлагаются арктические пакеты для работы в условиях сверхнизких температур, опции для улучшения комфортабельности кабины или большей её защиты, усиленные или более мощные элементы конструкции. Поэтому, перед тем как купить гусеничный экскаватор, внимательно изучите объявления с данной страницы и выберите машину, наиболее соответствующую предъявляемым требованиям.</p>
-                    <p><b>В каталоге 1298 предложений по гусеничным экскаваторам от официальных дилеров и компаний.</b></p>
+                    <p>Чтобы взять в аренду гусеничный экскаватор на самых выгодных условиях, воспользуйтесь нашей площадкой, где собрано максимальное число предложений.</p>
+                    <p>Как выбрать оптимальный вариант экскаватора на гусеницах для аренды? Одним из самых важных показателей является сила гидравлики. Именно эта характеристика определяет производительность работ. Особое внимание стоит уделить подбору ковша, в том числе его режущей кромки, зубьев и др. Тип и размер ковша зависит от плотности, связности и абразивности грунта. Вместимость рассчитывается по следующей формуле: грузоподъемность/ (коэффициент заполнения х плотность материала).</p>
+                    <p>Если вы хотите сами транспортировать технику, помните, что от веса машины зависит способ ее перевозки.</p>
                 </section>
                 
               
@@ -860,189 +870,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="drawer drawer--full-width">
-        <header class="drawer__header">
-            <button>Сбросить</button>
-            <p class="drawer__title">Параметры</p>
-            <button>Сохранить</button>
-        </header>
-        <div class="drawer__content">
-            <div class="filter">
-                <div class="filter__inputs">
-                    <div class="field-dropdown selected">
-                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" value="Экскаваторы гусеничные"/>
-                        <label class="field-dropdown__label" for="type">
-                            <span class="field-dropdown__caption">Тип техники</span>
-                        </label>
-                        <div class="dropdown-backdrop">
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">Тягачи седельные</li>
-                                <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
-                                <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                <li class="dropdown-backdrop__option selected">Экскаваторы гусеничные</li>
-                                <li class="dropdown-backdrop__option">Натяжные машины</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="field-dropdown">
-                        <input class="field-dropdown__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
-                        <label class="field-dropdown__label" for="brand">
-                            <span class="field-dropdown__caption">Марка</span>
-                        </label>
-                        <div class="dropdown-backdrop">
-                            <div class="dropdown-backdrop__search">
-                                <div class="field-text field-text--small">
-                                    <input type="text" class="field-text__input" id="brand-search" placeholder="Поиск">
-                                    <label for="brand-search" class="field-text__label">
-                                        <span class="field-text__caption">Поиск</span>
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">все типы</li>
-                                <li class="dropdown-backdrop__option-title">Землеройная техника</li>
-                                <li class="dropdown-backdrop__option">Грейдеры</li>
-                                <li class="dropdown-backdrop__option">Земснаряды</li>
-                                <li class="dropdown-backdrop__option">Экскаваторы колесные</li>
-                                <li class="dropdown-backdrop__option-title">Строительное оборудование</li>
-                                <li class="dropdown-backdrop__option">оборудование 1</li>
-                                <li class="dropdown-backdrop__option">оборудование 2</li>
-                                <li class="dropdown-backdrop__option">оборудование 3</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="field-dropdown disabled">
-                        <input class="field-dropdown__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
-                        <label class="field-dropdown__label" for="model">
-                            <span class="field-dropdown__caption">Модель</span>
-                        </label>
-                    </div>
-
-                    <div class="field-text">
-                        <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off" value="Краснодар, Краснодарский край, Россия"/>
-                        <label class="field-text__label" for="place">
-                            <span class="field-text__caption">Регион, город, населенный пункт</span>
-                        </label>
-                    </div>
-
-                    <div class="field-dropdown">
-                        <input class="field-dropdown__input" type="text" placeholder="Состояние техники" name="durability" id="durability" autocomplete="off"/>
-                        <label class="field-dropdown__label" for="durability">
-                            <span class="field-dropdown__caption">Состояние техники</span>
-                        </label>
-                    </div>
-
-                    <div class="field-dropdown">
-                        <input class="field-dropdown__input" type="text" placeholder="Доступность" name="availability" id="availability" autocomplete="off"/>
-                        <label class="field-dropdown__label" for="availability">
-                            <span class="field-dropdown__caption">Доступность</span>
-                        </label>
-                        <div class="dropdown-backdrop">
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">100 000</li>
-                                <li class="dropdown-backdrop__option">50 000</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="filter__range">
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="minPrice">
-                                <span class="field-dropdown__caption">Цена от, ₽</span>
-                            </label>
-                            <div class="dropdown-backdrop">
-                                <ul class="dropdown-backdrop__list">
-                                    <li class="dropdown-backdrop__option">100 000</li>
-                                    <li class="dropdown-backdrop__option">50 000</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="maxPrice">
-                                <span class="field-dropdown__caption">до, ₽</span>
-                            </label>
-                            <div class="dropdown-backdrop">
-                                <ul class="dropdown-backdrop__list">
-                                    <li class="dropdown-backdrop__option">40 000</li>
-                                    <li class="dropdown-backdrop__option">80 000</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="filter__range">
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearFrom">
-                                <span class="field-dropdown__caption">Год выпуска от</span>
-                            </label>
-                        </div>
-                        <div class=" field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearTo">
-                                <span class="field-dropdown__caption">до</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="filter__range">
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearFrom">
-                                <span class="field-dropdown__caption">Год выпуска от</span>
-                            </label>
-                        </div>
-                        <div class=" field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearTo">
-                                <span class="field-dropdown__caption">до</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="filter__range">
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearFrom">
-                                <span class="field-dropdown__caption">Год выпуска от</span>
-                            </label>
-                        </div>
-                        <div class=" field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearTo">
-                                <span class="field-dropdown__caption">до</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="filter__range">
-                        <div class="field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="Год выпуска от" name="yearFrom" id="yearFrom" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearFrom">
-                                <span class="field-dropdown__caption">Год выпуска от</span>
-                            </label>
-                        </div>
-                        <div class=" field-dropdown">
-                            <input class="field-dropdown__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
-                            <label class="field-dropdown__label" for="yearTo">
-                                <span class="field-dropdown__caption">до</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <footer class="drawer__footer">
-            <button class="button button--primary button--large">Показать 1234 объявления</button>
-            <button class="button button--regular button--large">
-                <img src="img/svg/moreActions.svg" alt="">
-            </button>
-        </footer>
-    </div>
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
