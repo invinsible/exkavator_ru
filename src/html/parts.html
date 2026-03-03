@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Аренда - Главная</title>
+  <title>Запчасти - Главная</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -58,7 +58,7 @@
                                 <a href="#" class="main-menu__link">Мини-техника</a>
                             </li>
                             <li class="main-menu__btn-item">
-                                <a href="#" class="button button--primary button--large button--full-width">Разместить репутационную статью</a> 
+                                <a href="#" class="button button--primary button--large">Разместить репутационную статью</a> 
                             </li>
                         </ul>
                     </li>
@@ -101,8 +101,8 @@
                         </ul>
                     </li>
                     <li class="main-menu__btn-item">
-                        <a href="#" class="button button--primary button--large button--full-width">Разместить рекламу</a>
-                        <a href="#" class="button button--primary-alt button--large button--full-width">Подписаться на Телеграм</a>
+                        <a href="#" class="button button--primary button--large">Разместить рекламу</a>
+                        <a href="#" class="button button--primary-alt button--large">Подписаться на Телеграм</a>
                     </li>
                 </ul>
             </div> 
@@ -137,25 +137,16 @@
     <div class="container">
         <div class="layout">
             <main class="content">
-                <h1>Аренда спецтехники б/у и новой</h1>
+                <h1>Запчасти для спецтехники</h1>
                 <section class="filter-block section">
                     <div class="filter">
                         <p class="small-title">Поиск по 7924 объявлениям</p>
                         <div class="filter__inputs">
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="type">
-                                    <span class="field-dropdown__caption">Тип техники</span>
+                            <div class="field-text">
+                                <input class="field-text__input" type="text" placeholder="Номер (артикул) или название запчасти" name="article" id="article" autocomplete="off"/>
+                                <label class="field-text__label" for="article">
+                                    <span class="field-text__caption">Номер (артикул) или название запчасти</span>
                                 </label>
-                                <div class="dropdown-backdrop">
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Тягачи седельные</li>
-                                        <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
-                                        <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                        <li class="dropdown-backdrop__option">Электротягачи</li>
-                                        <li class="dropdown-backdrop__option">Натяжные машины</li>
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-text">
@@ -166,95 +157,89 @@
                             </div>
 
                             <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="brand">
-                                    <span class="field-dropdown__caption">Марка</span>
-                                </label>
-                                <div class="dropdown-backdrop">
-                                    <div class="dropdown-backdrop__search">
-                                        <div class="field-text field-text--small">
-                                            <input type="text" class="field-text__input" id="brand-search" placeholder="Поиск">
-                                            <label for="brand-search" class="field-text__label">
-                                                <span class="field-text__caption">Поиск</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">все типы</li>
-                                        <li class="dropdown-backdrop__option-title">Землеройная техника</li>
-                                        <li class="dropdown-backdrop__option">Грейдеры</li>
-                                        <li class="dropdown-backdrop__option">Земснаряды</li>
-                                        <li class="dropdown-backdrop__option">Экскаваторы колесные</li>
-                                        <li class="dropdown-backdrop__option-title">Строительное оборудование</li>
-                                        <li class="dropdown-backdrop__option">оборудование 1</li>
-                                        <li class="dropdown-backdrop__option">оборудование 2</li>
-                                        <li class="dropdown-backdrop__option">оборудование 3</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="field-dropdown disabled">
-                                <input class="field-dropdown__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
-                                <label class="field-dropdown__label" for="model">
-                                    <span class="field-dropdown__caption">Модель</span>
+                                <input class="field-dropdown__input" type="text" placeholder="Рубрика" name="topic" id="topic" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="topic">
+                                    <span class="field-dropdown__caption">Рубрика</span>
                                 </label>
                                  <div class="dropdown-backdrop">
                                     
                                     <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Модель 1</li>
-                                        <li class="dropdown-backdrop__option">Модель 2</li>
-                                        <li class="dropdown-backdrop__option">Модель 3</li>
-                                        <li class="dropdown-backdrop__option">Модель 4</li>                                        
+                                        <li class="dropdown-backdrop__option">Рубрика 1</li>
+                                        <li class="dropdown-backdrop__option">Рубрика 2</li>
+                                        <li class="dropdown-backdrop__option">Рубрика 3</li>
+                                        <li class="dropdown-backdrop__option">Рубрика 4</li>                                        
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Арендодатель" name="landlord" id="landlord" autocomplete="off"/>
-                                <label class="field-dropdown__label" for="landlord">
-                                    <span class="field-dropdown__caption">Арендодатель</span>
+                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="category" id="category" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="category">
+                                    <span class="field-dropdown__caption">Категория</span>
                                 </label>
-                            </div>
-
-                            <div class="filter__range">
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="hourPriceFrom">
-                                        <span class="field-dropdown__caption">Цена за час от ₽</span>
-                                    </label>
-                                </div>
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="hourPriceTo">
-                                        <span class="field-dropdown__caption">до ₽</span>
-                                    </label>
+                                 <div class="dropdown-backdrop">
+                                    
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option">Категория 1</li>
+                                        <li class="dropdown-backdrop__option">Категория 2</li>
+                                        <li class="dropdown-backdrop__option">Категория 3</li>
+                                        <li class="dropdown-backdrop__option">Категория 4</li>                                        
+                                    </ul>
                                 </div>
                             </div>
 
-                            <div class="filter__range">
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="shiftPriceFrom">
-                                        <span class="field-dropdown__caption">Цена за смену от ₽</span>
-                                    </label>
-                                </div>
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="shiftPriceTo">
-                                        <span class="field-dropdown__caption">до ₽</span>
-                                    </label>
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="manufacture" id="manufacture" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="manufacture">
+                                    <span class="field-dropdown__caption">Производитель</span>
+                                </label>
+                                 <div class="dropdown-backdrop">
+                                    
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option">Производитель 1</li>
+                                        <li class="dropdown-backdrop__option">Производитель 2</li>
+                                        <li class="dropdown-backdrop__option">Производитель 3</li>
+                                        <li class="dropdown-backdrop__option">Производитель 4</li>                                        
+                                    </ul>
                                 </div>
                             </div>
+
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="type" id="type" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="type">
+                                    <span class="field-dropdown__caption">Тип техники</span>
+                                </label>
+                                 <div class="dropdown-backdrop">
+                                    
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option">Тип техники 1</li>
+                                        <li class="dropdown-backdrop__option">Тип техники 2</li>
+                                        <li class="dropdown-backdrop__option">Тип техники 3</li>
+                                        <li class="dropdown-backdrop__option">Тип техники 4</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="brand" id="brand" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="brand">
+                                    <span class="field-dropdown__caption">Марка техники</span>
+                                </label>
+                                 <div class="dropdown-backdrop">
+                                    
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option">Марка техники 1</li>
+                                        <li class="dropdown-backdrop__option">Марка техники 2</li>
+                                        <li class="dropdown-backdrop__option">Марка техники 3</li>
+                                        <li class="dropdown-backdrop__option">Марка техники 4</li>                                        
+                                    </ul>
+                                </div>
+                            </div>                            
                         </div>
                         <div class="filter__checkboxes">
                             <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-cold">
-                                <label class="field-checkbox__label" for="ch-cold">Холодная аренда</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-price">
-                                <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
+                                <input type="checkbox" class="field-checkbox__input" id="ch-delivery">
+                                <label class="field-checkbox__label" for="ch-delivery">Доставка по России</label>
                             </div>
                         </div>
                         <div class="filter__buttons">
@@ -265,7 +250,7 @@
                         </div>
                     </div>                    
                     <div class="categories">
-                        <p class="small-title">Популярные типы техники</p>
+                        <p class="small-title">Запчасти по типам техники</p>
                         <ul class="categories__list">
                             <li>
                                 <a class="rounded-link-card rounded-link-card--blue" href="#">
@@ -366,7 +351,7 @@
                             </li>
                         </ul>
 
-                        <p class="small-title">Популярные марки</p>
+                        <p class="small-title">Запчасти по рубрикам и категориям</p>
                         <ul class="categories__list">
                             <li>
                                 <a class="rounded-link-card rounded-link-card--blue" href="#">
@@ -441,6 +426,61 @@
                                 </a>
                             </li>
                         </ul>
+
+                        <p class="small-title">Дилеры</p>
+                        <ul class="categories__list">
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Bobcat</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Case</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">JCB</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Caterpillar</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Komatsu</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Liebherr</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="small-title">Компании</p>
+                        <ul class="categories__list">
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Поставщики запчастей</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Ремонт спецтехники</span>
+                                    <span class="rounded-link-card__description">1492 объявлений</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
 
@@ -457,39 +497,39 @@
                         <ul class="special-offers__list swiper-wrapper">
                             <li class="special-item swiper-slide">
                                 <a href="#" class="special-item__img">
-                                    <img src="img/temp/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
+                                    <img src="img/temp/parts-1-raw.jpg" alt="Подшипник поворотной плиты H1P 045/053, H1T 45/53">
                                 </a>
                                 <div class="special-item__description">
-                                    <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
+                                    <a href="#" class="special-item__title">Подшипник поворотной плиты H1P 045/053, H1T 45/53</a>
                                     <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                     <div class="special-item__action">
-                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
                             <li class="special-item swiper-slide">
                                 <a href="#" class="special-item__img">
-                                    <img src="img/temp/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
+                                    <img src="img/temp/parts-1-raw.jpg" alt="11004705 Подшипник поворотной плиты гидронасоса H1P147-165">
                                 </a>
                                 <div class="special-item__description">
-                                    <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
+                                    <a href="#" class="special-item__title">11004705 Подшипник поворотной плиты гидронасоса H1P147-165</a>
                                     <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                     <div class="special-item__action">
-                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
                             <li class="special-item swiper-slide">
                                 <a href="#" class="special-item__img">
-                                    <img src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
+                                    <img src="img/temp/parts-1-raw.jpg" alt="Двигатель ISUZU C240">
                                 </a>
                                 <div class="special-item__description">
-                                    <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
+                                    <a href="#" class="special-item__title">Двигатель ISUZU C240</a>
                                     <p class="special-item__cities">Москва и еще 22 города</p>
                                     <div class="special-item__action">
-                                        <span class="special-item__price">11 240 703 <i>₽</i></span>
+                                        <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
                                         <button class="button button--small button--primary-alt">Позвонить</button>
                                     </div>
                                 </div>
@@ -608,7 +648,7 @@
                 
                 <section class="linking section rounded-gray-block">
                     <div class="linking__block ">
-                        <p class="small-title">Спецтехника в России</p>
+                        <p class="small-title">Запчасти для экскаваторов-погрузчиков в России</p>
                         <ul class="crumbs">
                             <li class="crumbs__item">
                                 <a href="#">Москва</a>
@@ -641,42 +681,7 @@
                                 <a href="#">Красноярск</a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="linking__block ">
-                        <p class="small-title">Спецтехника мировых брендов</p>
-                        <ul class="crumbs">
-                            <li class="crumbs__item">
-                                <a href="#">Китайские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские фронтальные погрузчики</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские гусеничные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские колесные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Японские мини тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Белорусские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские колесные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские гусеничные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские фронтальные погрузчики</a>
-                            </li>
-                        </ul>
-                    </div>
+                    </div>                   
                 </section>
                 
             </main>

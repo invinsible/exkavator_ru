@@ -134,11 +134,7 @@
         flex-direction: column;
         gap: 16px;
         padding: 16px;
-
-        .button {
-            width: 100%;
-        }
-
+        
         @media (min-width: $breakpoint-md) {
             display: none;
         }

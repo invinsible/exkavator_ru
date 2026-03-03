@@ -135,6 +135,11 @@
             font-style: normal;
             @include text-weight('base');
         }
+
+        &--no-price {
+            @include text-size('sm');
+            @include text-weight('base');
+        }
     }
 
     &__description {
