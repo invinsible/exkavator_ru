@@ -6,8 +6,6 @@ body {
     @include text-weight('base');
 
     &.menu-open {
-        overflow: hidden;
-
         .main-header {
             position: fixed;
             width: 100%;
@@ -21,6 +19,9 @@ body {
         }
     }
 
+    &.scroll-lock {
+        overflow: hidden;
+    }
     
 }
 

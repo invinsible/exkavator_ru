@@ -8,14 +8,14 @@
     function openMenu() {
         mainMenu.classList.add('is-open');
         burger.classList.add('is-active');
-        document.body.classList.add('menu-open');
+        document.body.classList.add('menu-open', 'scroll-lock');
     }
 
     function closeMenu() {
         mainMenu.classList.remove('is-open');
         burger.classList.remove('is-active');        
         setTimeout(() => {
-            document.body.classList.remove('menu-open');
+            document.body.classList.remove('menu-open', 'scroll-lock');
         }, 250);
        
         mainMenuList.querySelectorAll('.main-menu__submenu.is-open').forEach(function (sub) {

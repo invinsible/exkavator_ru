@@ -44,7 +44,7 @@ dropdownFields.forEach(el => {
     if (input) input.readOnly = true;
 });
 
-// Связь дропдаунов Марка и Модель
+// связь dropdown Марка и Модель
 (function () {
     const brandContainer = document.querySelector('#brand')?.closest('.field-dropdown');
     const modelContainer = document.querySelector('#model')?.closest('.field-dropdown');
@@ -82,12 +82,15 @@ initDropdowns('.sorting', {
 });
 
 
-// клик аутсайд
+// клик аутсайд для dropdown
 document.addEventListener('click', () => {
     document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open'));
 });
 
-
+const drawer = document.querySelector('drawer');
+if(drawer) {
+    
+}
 
 // слайдеры
 const specialOffersSlider = new Swiper('.special-offers__slider', {
