@@ -7,6 +7,7 @@
 
 @import 'components/header';
 @import 'components/global';
+@import 'components/blocks';
 
 .layout {
     padding: 16px 0;   
@@ -29,7 +30,7 @@
 }
 
 .content {
-    max-width: 958px;
+    max-width: 100%;    
 
     h1 {
         margin-bottom: 40px;
@@ -37,12 +38,18 @@
     h2 {
         margin-bottom: 16px;
     }
+
     @media (min-width: 768px) { 
         padding-top: 16px;
     }
     @media (min-width: 1024px) {
         padding-top: 24px;
+        max-width: 662px;
     }
+    @media (min-width: 1440px) {
+        max-width: 958px;
+    }
+    
     
 }
 
@@ -93,6 +100,10 @@
                 border-radius: 8px;
                 overflow: hidden;
 
+                img {
+                    @include cover-img;
+                }
+
                 & + p {
                     padding: 8px 4px;
                 }
@@ -106,8 +117,7 @@
                 overflow: hidden;
 
                 img {
-                    height: 100%;
-                    object-fit: cover;
+                    @include cover-img;
                 }
             }
         }
@@ -201,20 +211,7 @@
     margin-bottom: 40px;
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
 
-    .button {
-        min-width: 32px;
-
-        &.current {
-            background-color: var(--neutral-60);
-            outline: 1px solid  var(--neutral-100);
-        }
-    }
-}
 
 .text-section {
     color: var(--text-secondary);
@@ -235,26 +232,7 @@
     }
 }
 
-.cta-help-block {
-    padding: 16px;
-    background-color: var(--neutral-25);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
 
-    .button {
-        flex-shrink: 0;
-    }
-
-    &__title {
-        @include text-size('lg');
-        @include text-weight('bold');
-    }
-
-    &__wrapper-text {
-         max-width: 730px;
-    }
-}
 
 .price-block {
     display: flex;

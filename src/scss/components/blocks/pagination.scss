@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    .button {
+        min-width: 32px;
+        gap: 0;
+    }
+    &__current {
+        background-color: var(--neutral-60);
+        outline: 1px solid  var(--neutral-100);
+    }
+    &__next, &__prev {
+        font-size: 0;
+        &::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            @include mask-icon(var(--icon-chevron-down));
+            background-color: var(--text-base);
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: inherit;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__next::before {
+        transform: rotate(-90deg);
+    }
+    &__prev::before {
+        transform: rotate(90deg);
+    }
+}

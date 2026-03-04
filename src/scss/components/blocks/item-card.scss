@@ -1,0 +1,242 @@
+.item-card {
+    padding: 16px;
+    background-color: var(--neutral-20);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+    &.top {
+        .item-card__img-block {
+            width: 100%;
+            height: 240px;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 330px;
+            }
+        }
+        .item-card__time {
+            width: 330px;
+        }
+    }
+
+    &.premium {
+        .item-card__labels {
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: var(--icon-premium);
+                background-repeat: no-repeat;
+                z-index: 2;
+            }
+        }
+    }
+
+    &.viewed {
+        .item-card__labels {
+            &::after {
+                content: 'Просмотрено';
+                display: block;
+                padding: 1px 6px;
+                background-color: rgba(26, 26, 26, 0.85);
+                color: var(--text-white);
+                border-radius: 3px;
+                @include text-size('xs');
+                z-index: 2;
+            }
+        }
+    }
+
+    //hover
+    &:has(.results-list__title:hover) .results-list__img-block img {
+        transform: scale(1.1);
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: row;
+        }
+    }
+
+    &__labels {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    // картинка
+    &__img-block {
+        position: relative;
+        display: block;
+        width: 240px;
+        height: 160px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:hover {
+            &+.results-list__info-block>.results-list__title {
+                color: var(--link-hover)
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            @include cover-img;
+            transition: transform var(--transition-hover);
+        }
+
+    }
+
+    //центральный блок
+    &__info-block {
+        // width: 528px;
+    }
+
+    &__cities {
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+        @include text-size('sm');
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 4px;
+        @include text-size('lg');
+        @include text-weight('bold');
+
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
+
+    &__chips {
+        margin-bottom: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    &__description {
+        @include text-size('sm');
+    }
+
+
+    // блок с ценой и кнопками
+    &__action-block {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-shrink: 0;
+    }
+
+    &__price {
+        text-align: center;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__time {
+        width: 240px;
+        @include text-size('xs');
+        color: var(--text-secondary);
+    }
+
+    &__approve {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--text-base);
+        @include text-weight('semibold');
+
+        &::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-image: var(--icon-approve-card);
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__user-actions {
+        display: flex;
+        gap: 4px;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    // Блок Показать больше объявялений
+    .item-card-more {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include text-size('xs');
+        color: var(--text-secondary);
+
+        &__item {
+            display: flex;
+            gap: 12px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__img {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            img {
+                @include cover-img;
+            }
+        }
+
+        &__info {
+            @include text-size('sm');
+        }
+
+        &__button {
+            width: fit-content;
+        }
+    }
+}

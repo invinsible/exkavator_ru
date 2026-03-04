@@ -1,0 +1,38 @@
+.cta-help-block {
+    padding: 16px;
+    background-color: var(--neutral-25);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media(min-width: $breakpoint-sm) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        flex-shrink: 0;
+
+        @media(min-width: $breakpoint-sm) {
+            margin-left: auto;
+            width: fit-content;
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        @include text-size('lg');
+        @include text-weight('bold');
+    }
+
+    &__wrapper-text {
+        width: 100%;
+
+        @media(min-width: $breakpoint-sm) {
+            width: 75%;
+        }
+    }
+}
