@@ -126,6 +126,24 @@ const companiesSlider = new Swiper('.companies__slider', {
     }
 });
 
+// item-card-more: показать/свернуть
+document.querySelectorAll('.item-card-more').forEach(block => {
+    const button = block.querySelector('.item-card-more__button');
+    const items = block.querySelectorAll('.item-card-more__item');
+    if (!button || items.length <= 2) {
+        if (button) button.style.display = 'none';
+        return;
+    }
+
+    const defaultText = button.textContent;
+
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = block.classList.toggle('is-open');
+        button.textContent = isOpen ? 'Свернуть' : defaultText;
+    });
+});
+
 // футер
 const currentYear = document.querySelector('.main-footer__current-year');
 if (currentYear) {
