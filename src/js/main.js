@@ -96,12 +96,17 @@ if (currentYear) {
 }
 
 
-// клик аутсайд 
+// клик аутсайд
+const clickOutsideTargets = [
+    { selector: '.field-dropdown', stateClass: 'is-open' },
+    { selector: '.sorting', stateClass: 'is-open' },
+    { selector: '.main-header-search', stateClass: 'is-show', ignore: '.js-header-search' },
+];
+
 document.addEventListener('click', (e) => {
-     // закрываем поиск в шапке
-    if (headerSearch && !e.target.closest('.main-header-search') && !e.target.closest('.js-header-search')) {
-        headerSearch.classList.remove('is-show');
-    }
-    // закрываем дропдауны и сортировки
-    document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open')); 
+    clickOutsideTargets.forEach(({ selector, stateClass, ignore }) => {
+        if (e.target.closest(selector)) return;
+        if (ignore && e.target.closest(ignore)) return;
+        document.querySelectorAll(selector).forEach(el => el.classList.remove(stateClass));
+    });
 });
