@@ -205,6 +205,11 @@
     display: block;
     width: 16px;
     height: 16px;
+
+    &--24 {
+        width: 24px;
+        height: 24px; 
+    }
 }
 
 .section {
@@ -371,5 +376,117 @@
 
     @media (min-width: $breakpoint-sm) {
         display: none;
+    }
+}
+
+.user-controls {
+    position: relative;
+
+    &__group {
+        display: none;        
+
+        @media (min-width: $breakpoint-lg) {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background-color: transparent;
+        }
+        
+    }    
+
+    &__button {
+        color: var(--neutral-0);
+        cursor: pointer;
+        font-size: 0;
+
+        &:hover {
+            color: var(--neutral-100);
+        }
+    }
+
+    &__mobile-button {
+        display: flex;
+        gap: 2px;
+        align-items: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            @include mask-icon(var(--icon-chevron-down));
+            background-color: var(--neutral-0);
+        }
+
+        &.is-open {
+            @media (max-width: #{ $breakpoint-lg - 1px }) {
+                &::after {
+                    transform: rotate(-180deg);
+                }
+
+                & + .user-controls__group {
+                    position: absolute;
+                    top: 42px;
+                    right: 0;
+                    padding: 8px 0;
+                    width: 180px;
+                    z-index: 10;
+                    background-color: var(--neutral-0);
+                    border: 1px solid var(--neutral-100);
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px 0 rgba(204, 226, 255, .5);
+                    transform: translateY(2px);
+                    cursor: auto;
+
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                & + .user-controls__group > .user-controls__button,
+                & + .user-controls__group > .user-controls__enter-button {
+                    padding: 6px 12px;
+                    color: var(--text-base);
+                    font-size: 12px;
+                    text-align: right;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    svg {
+                        color: var(--neutral-400);
+                    }
+                }
+
+                & + .user-controls__group > .user-controls__enter-button {
+                    margin: 0 auto;
+                    height: 40px;
+                    width: 130px;
+                    justify-content: center;
+                }
+            }
+            
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            display: none;
+        }
+    }
+
+    &__enter-button {        
+
+        @media (min-width: $breakpoint-lg) {
+            padding: 8px;
+            @include text-size('sm');
+            border-radius: 8px;
+            background-color: var(--neutral-0);
+        }
+
+        &:hover {
+
+            @media (min-width: $breakpoint-lg) {
+                background-color: var(--neutral-100);
+            }            
+        }
+        
     }
 }

@@ -1,3 +1,42 @@
+// Header
+const userControlsMobileButton  = document.querySelector('.user-controls__mobile-button');
+const showHeaderSearchButton  = document.querySelector('.js-header-search');
+const headerSearch = document.querySelector('.main-header-search');
+
+if(userControlsMobileButton) {
+    userControlsMobileButton.addEventListener('click', function () {
+        this.classList.toggle('is-open');
+    });
+}
+
+// поиск в header
+if (headerSearch) {    
+    const headerSearchInput = headerSearch.querySelector('.main-header-search__input');
+    const headerSearchControls = headerSearch.querySelector('.main-header-search__controls');
+    const headerSearchReset = headerSearch.querySelector('.main-header-search__reset');
+    const headerSearchSubmit = headerSearch.querySelector('.main-header-search__submit');
+
+    showHeaderSearchButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        headerSearch.classList.toggle('is-show');
+        headerSearchInput.focus();
+    });    
+
+    headerSearchInput.addEventListener('input', function(e) {
+        headerSearchControls.classList.toggle('show', e.target.value.length > 0);
+    });
+
+    headerSearchReset.addEventListener('click', function() {
+        headerSearchInput.value = '';
+        headerSearchControls.classList.remove('show');
+    });
+
+    headerSearchSubmit.addEventListener('click', function() {
+        console.log(headerSearchInput.value);
+    });
+}
+
+
 // слайдеры
 const specialOffersSlider = new Swiper('.special-offers__slider', {
     slidesPerView: 1.15,
@@ -55,3 +94,14 @@ const currentYear = document.querySelector('.main-footer__current-year');
 if (currentYear) {
     currentYear.innerHTML = new Date().getFullYear();
 }
+
+
+// клик аутсайд 
+document.addEventListener('click', (e) => {
+     // закрываем поиск в шапке
+    if (headerSearch && !e.target.closest('.main-header-search') && !e.target.closest('.js-header-search')) {
+        headerSearch.classList.remove('is-show');
+    }
+    // закрываем дропдауны и сортировки
+    document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open')); 
+});

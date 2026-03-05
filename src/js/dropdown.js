@@ -269,7 +269,3 @@ initDropdowns('.sorting', {
     }
 });
 
-// клик аутсайд для дропдаунов и сортировки
-document.addEventListener('click', () => {
-    document.querySelectorAll('.field-dropdown, .sorting').forEach(el => el.classList.remove('is-open'));
-});
