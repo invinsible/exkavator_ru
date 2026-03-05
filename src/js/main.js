@@ -110,3 +110,12 @@ document.addEventListener('click', (e) => {
         document.querySelectorAll(selector).forEach(el => el.classList.remove(stateClass));
     });
 });
+
+// Маска телефона (iMask)
+document.querySelectorAll('input[type="tel"]').forEach(function (input) {
+    IMask(input, {
+        mask: '+{7} (000) 000-00-00',
+        lazy: false,
+        placeholderChar: '_'
+    });
+});

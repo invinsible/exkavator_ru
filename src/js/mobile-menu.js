@@ -40,8 +40,8 @@
     });
 
     mainMenuList.querySelectorAll('.main-menu__item--has-children').forEach(function (item) {
-        var link = item.querySelector(':scope > .main-menu__link');
-        var submenu = item.querySelector(':scope > .main-menu__submenu');
+        const link = item.querySelector(':scope > .main-menu__link');
+        const submenu = item.querySelector(':scope > .main-menu__submenu');
         if (!link || !submenu) return;
 
         link.addEventListener('click', function (e) {
@@ -53,7 +53,7 @@
 
     mainMenuList.querySelectorAll('.main-menu__back').forEach(function (btn) {
         btn.addEventListener('click', function () {
-            var submenu = btn.closest('.main-menu__submenu');
+            const submenu = btn.closest('.main-menu__submenu');
             if (submenu) {
                 submenu.classList.remove('is-open');
             }

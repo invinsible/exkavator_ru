@@ -121,7 +121,7 @@
                         </svg>
                         Поиск по сайту
                     </button>
-                    <button class="user-controls__button js-show-popup" aria-label="Обратный звонок" type="button">
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/header-sprite.svg#header-message"></use>
                         </svg>
@@ -946,7 +946,51 @@
 
     
 
+    <div class="popup" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-subscribe">
+                        <label class="field-checkbox__label" for="ch-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-presonal-data">
+                        <label class="field-checkbox__label" for="ch-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>                
+                
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

@@ -195,14 +195,6 @@
 .field-checkbox {
     position: relative;
 
-    // &:hover {
-    //     .field-checkbox__label::before {
-    //         background-color: var(--neutral-100);
-    //     }
-    //     .field-checkbox__input:checked + .field-checkbox__label::before {
-    //         background-color: var(--primary-200);
-    //     }
-    // }
     &:has(.field-checkbox__input:not(:disabled)):hover {
         .field-checkbox__label::before {
             background-color: var(--neutral-100);
@@ -214,9 +206,10 @@
     }
 
     &__label {
+        position: relative;
         display: flex;
         gap: 8px;
-        align-items: center;
+        align-items: flex-start;
         cursor: pointer;
         
         &::before {
@@ -226,6 +219,7 @@
             height: 20px;
             border-radius: 6px;
             background-color: var(--neutral-60);
+            flex-shrink: 0;
         }
     }
 
