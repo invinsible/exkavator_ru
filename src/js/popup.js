@@ -34,4 +34,36 @@ document.querySelectorAll('.popup').forEach(function (popup) {
             closePopup(popup);
         });
     }
+
+    const cancelBtn = popup.querySelector('.js-close-popup');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', function () {
+            closePopup(popup);
+        });
+    }
 });
+
+// Попап Заказать обратный звонок
+(function () {
+    const popup = document.getElementById('popup-callback');
+    if (!popup) return;
+
+    const phoneInput = popup.querySelector('#callback-phone');
+    const personalDataCheckbox = popup.querySelector('#ch-presonal-data');
+    const submitBtn = popup.querySelector('.send-callback-form');
+
+    function updateSubmitState() {
+        const phoneFilled = phoneInput.value.indexOf('_') === -1;
+        const agreed = personalDataCheckbox.checked;
+        submitBtn.disabled = !(phoneFilled && agreed);
+    }
+
+    phoneInput.addEventListener('input', updateSubmitState);
+    personalDataCheckbox.addEventListener('change', updateSubmitState);
+
+    submitBtn.addEventListener('click', function () {
+        if (submitBtn.disabled) return;
+        console.log(phoneInput.value);
+        closePopup(popup);
+    });
+})();

@@ -21,7 +21,11 @@ const paths = {
     dest:  'dist/css/'
   },
   scripts: {
-    src:  'src/js/**/*.js',
+    src:  'src/js/*.js',
+    dest: 'dist/js/'
+  },
+  pageScripts: {
+    src:  'src/js/pages/*.js',
     dest: 'dist/js/'
   },
   images: {
@@ -77,6 +81,15 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+// JS страниц — минификация без конкатенации
+function pageScripts() {
+  return src(paths.pageScripts.src)
+    .pipe(terser())
+    .on('error', handleError)
+    .pipe(dest(paths.pageScripts.dest))
+    .pipe(browserSync.stream());
+}
+
 // Сжатие картинок
 function images() {
   return src(paths.images.src)
@@ -120,6 +133,7 @@ function watchFiles(done) {
   watch(paths.html.src, html);
   watch(paths.styles.watch, styles);
   watch(paths.scripts.src, scripts);
+  watch(paths.pageScripts.src, pageScripts);
   watch(paths.images.src, images);
   watch(paths.fonts.src, fonts);
   watch(paths.vendors.src, vendors);
@@ -127,7 +141,7 @@ function watchFiles(done) {
 }
 
 // Сборка
-const buildAll = parallel(html, styles, scripts, images, fonts, vendors);
+const buildAll = parallel(html, styles, scripts, pageScripts, images, fonts, vendors);
 
 // dev
 exports.default = series(clean, buildAll, parallel(serve, watchFiles));

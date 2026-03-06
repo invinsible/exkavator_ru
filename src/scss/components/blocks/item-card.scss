@@ -8,17 +8,20 @@
 
 
     &.top {
-        .item-card__img-block {
-            width: 100%;
-            height: 240px;
+        @media (min-width: $breakpoint-sm) {
+            .item-card__img-block {
+                width: 100%;
+                height: 240px;
 
-            @media (min-width: $breakpoint-sm) {
+                @media (min-width: $breakpoint-sm) {
+                    width: 330px;
+                }
+            }
+            .item-card__time {
                 width: 330px;
             }
         }
-        .item-card__time {
-            width: 330px;
-        }
+        
     }
 
     &.premium {
@@ -63,6 +66,16 @@
         @media (min-width: $breakpoint-sm) {
             flex-direction: row;
         }
+
+        &:last-child {
+            flex-direction: column-reverse;
+            gap: 8px;
+
+            @media (min-width: $breakpoint-sm) {
+                flex-direction: row;
+                gap: 16px;
+            }
+        }
     }
 
     &__labels {
@@ -77,10 +90,14 @@
 
     // картинка
     &__img-block {
+        height: 185px;
+
+        @media (min-width: $breakpoint-sm) {
+            width: 240px;
+            height: 160px;
+        }
         position: relative;
         display: block;
-        width: 240px;
-        height: 160px;
         flex-shrink: 0;
         border-radius: 8px;
         overflow: hidden;
@@ -125,8 +142,12 @@
     &__title {
         display: block;
         margin-bottom: 4px;
-        @include text-size('lg');
+        @include text-size('md');
         @include text-weight('bold');
+
+        @media (min-width: $breakpoint-sm) {
+            @include text-size('lg');
+        }
 
         &:hover {
             color: var(--link-hover);
@@ -147,11 +168,15 @@
 
     // блок с ценой и кнопками
     &__action-block {
-        margin-left: auto;
+        
         display: flex;
         flex-direction: column;
         gap: 12px;
         flex-shrink: 0;
+
+        @media (min-width: $breakpoint-sm) {
+            margin-left: auto;
+        }
     }
 
     &__price {
@@ -160,11 +185,35 @@
 
     &__buttons {
         display: flex;
-        flex-direction: column;
-        gap: 4px;
+        gap: 8px;
+        
+
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: column;
+            gap: 4px;
+        }
 
         .button {
             width: 100%;
+
+            &:first-child {
+                display: none;
+                @media (min-width: $breakpoint-sm) {
+                    display: block;
+                }
+            }
+        }
+
+        .button--small {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 12px;
+
+            @media (min-width: $breakpoint-sm) {
+                padding: 8px;
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
     }
 
@@ -192,8 +241,12 @@
     }
 
     &__user-actions {
-        display: flex;
-        gap: 4px;
+        display: none;        
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+            gap: 4px;
+        }
 
         .button {
             width: 100%;

@@ -1,68 +1,3 @@
-// конфиги дропдаунов для страницы trade-result
-// id должно совпадать с id input.field-dropdown__input в разметке
-// hasSearch - генерировать инпут с поиском внутри дропдауна
-const dropdownConfigs = [
-    {
-        id: 'customDrop',
-        hasSearch: false,
-        options: [
-            { name: 'Опция 1', value: 'option1'},
-            { name: 'Опция 2', value: 'option2'},
-            { name: 'Опция 3', value: 'option3'},
-        ]
-    },
-    {
-        id: 'type',
-        hasSearch: false,
-        options: [
-            { name: 'Тягачи седельные', value: 'tyagachi' },
-            { name: 'Прицепы-тяжеловозы', value: 'pritsepy' },
-            { name: 'Терминальные тягачи', value: 'terminal-tyagachi' },
-            { name: 'Экскаваторы гусеничные', value: 'excavator-gus' },
-            { name: 'Натяжные машины', value: 'natyazhnye' },
-        ]
-    },
-    {
-        id: 'brand',
-        hasSearch: true,
-        options: [
-            { name: 'все типы', value: '' },
-            { name: 'Землеройная техника', isTitle: true },
-            { name: 'Грейдеры', value: 'graders' },
-            { name: 'Земснаряды', value: 'zemsnarjady' },
-            { name: 'Экскаваторы колесные', value: 'excavator-kol' },
-            { name: 'Строительное оборудование', isTitle: true },
-            { name: 'оборудование 1', value: 'oborud-1' },
-            { name: 'оборудование 2', value: 'oborud-2' },
-            { name: 'оборудование 3', value: 'oborud-3' },
-        ]
-    },
-    {
-        id: 'availability',
-        hasSearch: false,
-        options: [
-            { name: '100 000', value: '100000' },
-            { name: '50 000', value: '50000' },
-        ]
-    },
-    {
-        id: 'minPrice',
-        hasSearch: false,
-        options: [
-            { name: '100 000', value: '100000' },
-            { name: '50 000', value: '50000' },
-        ]
-    },
-    {
-        id: 'maxPrice',
-        hasSearch: false,
-        options: [
-            { name: '40 000', value: '40000' },
-            { name: '80 000', value: '80000' },
-        ]
-    },
-];
-
 // debounce
 function debounce(fn, delay) {
     let timer;
@@ -72,7 +7,7 @@ function debounce(fn, delay) {
     };
 }
 
-// фильтрация опций дропдауна по search-инпуту
+// поиск опций внутри дропдауна
 function initDropdownSearch(container) {
     const searchInput = container.querySelector('.dropdown-backdrop__search .field-text__input');
     if (!searchInput) return;
@@ -90,8 +25,7 @@ function initDropdownSearch(container) {
         let titleHasVisibleOptions = false;
 
         items.forEach(item => {
-            if (item.classList.contains('dropdown-backdrop__option-title')) {
-                // перед обработкой нового заголовка — применяем видимость предыдущего
+            if (item.classList.contains('dropdown-backdrop__option-title')) {                
                 if (currentTitle) {
                     currentTitle.style.display = titleHasVisibleOptions ? '' : 'none';
                 }
@@ -103,8 +37,7 @@ function initDropdownSearch(container) {
                 if (matches) titleHasVisibleOptions = true;
             }
         });
-
-        // последний заголовок
+        
         if (currentTitle) {
             currentTitle.style.display = titleHasVisibleOptions ? '' : 'none';
         }
@@ -113,7 +46,7 @@ function initDropdownSearch(container) {
     searchInput.addEventListener('input', filterOptions);
 }
 
-// сброс фильтрации: очистить search и показать все опции
+// сброс поиска: очистить search и показать все опции
 function resetDropdownSearch(container) {
     const searchInput = container.querySelector('.dropdown-backdrop__search .field-text__input');
     if (!searchInput) return;
@@ -201,39 +134,38 @@ function initDropdowns(selector, { onSelect, readOnly } = {}) {
     return containers;
 }
 
-// --- инициализация ---
-
-// рендер опций из конфигов (только основной фильтр .filter-block)
-const filterBlock = document.querySelector('.filter-block');
-if (filterBlock) {
-    dropdownConfigs.forEach(function (config) {
-        const input = filterBlock.querySelector('#' + config.id);
-        if (!input) return;
-        const container = input.closest('.field-dropdown');
-        if (!container) return;
-        renderDropdownOptions(container, config);
-    });
-}
-
-// подстановка значений опции
-initDropdowns('.field-dropdown', {
-    readOnly: true,
-    onSelect(option, container) {
-        const input = container.querySelector('input');
-        input.value = input.type === 'number'
-            ? option.textContent.trim().replace(/\s/g, '')
-            : option.textContent.trim();
-        input.dataset.value = option.dataset.value || '';
-        container.classList.add('selected');
-        resetDropdownSearch(container);
+// вызывается из page-скрипта после определения конфигов
+function initPageDropdowns(dropdownConfigs) {
+    // рендер опций из конфигов (только основной фильтр .filter-block)
+    const filterBlock = document.querySelector('.filter-block');
+    if (filterBlock) {
+        dropdownConfigs.forEach(function (config) {
+            const input = filterBlock.querySelector('#' + config.id);
+            if (!input) return;
+            const container = input.closest('.field-dropdown');
+            if (!container) return;
+            renderDropdownOptions(container, config);
+        });
     }
-});
 
-// инициализация поиска внутри дропдаунов
-document.querySelectorAll('.field-dropdown').forEach(initDropdownSearch);
+    // подстановка значений опции
+    initDropdowns('.field-dropdown', {
+        readOnly: true,
+        onSelect(option, container) {
+            const input = container.querySelector('input');
+            input.value = input.type === 'number'
+                ? option.textContent.trim().replace(/\s/g, '')
+                : option.textContent.trim();
+            input.dataset.value = option.dataset.value || '';
+            container.classList.add('selected');
+            resetDropdownSearch(container);
+        }
+    });
 
-// связь дропдаунов Марка и Модель. Обернул всё в {} чтобы переменные в общий контекст не уходили
-{
+    // инициализация поиска внутри дропдаунов
+    document.querySelectorAll('.field-dropdown').forEach(initDropdownSearch);
+
+    // связь дропдаунов Марка и Модель
     const brandContainer = document.querySelector('#brand')?.closest('.field-dropdown');
     const modelContainer = document.querySelector('#model')?.closest('.field-dropdown');
 
@@ -259,13 +191,13 @@ document.querySelectorAll('.field-dropdown').forEach(initDropdownSearch);
 
         setModelEnabled(!!document.querySelector('#brand').value);
     }
-}
 
-// сортировка
-initDropdowns('.sorting', {
-    onSelect(option, container) {
-        const btn = container.querySelector('.button--dropdown');
-        if (btn) btn.textContent = option.textContent.trim();
-    }
-});
+    // сортировка
+    initDropdowns('.sorting', {
+        onSelect(option, container) {
+            const btn = container.querySelector('.button--dropdown');
+            if (btn) btn.textContent = option.textContent.trim();
+        }
+    });
+}
 
