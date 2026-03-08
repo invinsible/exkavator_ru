@@ -1,0 +1,27 @@
+.detail-page {
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    &__chips {
+        margin-bottom: 16px;
+        display: flex;
+        gap: 8px;
+    }
+
+
+
+    &__mobile-price-block {
+
+        p {
+            @include text-size('secondary');
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            display: none;
+        }
+    }
+    
+    
+}

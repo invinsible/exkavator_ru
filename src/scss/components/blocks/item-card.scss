@@ -223,21 +223,9 @@
         color: var(--text-secondary);
     }
 
-    &__approve {
-        display: flex;
-        align-items: center;
-        gap: 4px;
+    .crumbs__item--approve {
         color: var(--text-base);
         @include text-weight('semibold');
-
-        &::before {
-            content: '';
-            display: block;
-            width: 16px;
-            height: 16px;
-            background-image: var(--icon-approve-card);
-            background-repeat: no-repeat;
-        }
     }
 
     &__user-actions {

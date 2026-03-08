@@ -46,8 +46,7 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
         prevEl: '.special-offers__prev',
     },
     breakpoints: {
-        480: { spaceBetween: 12 },
-        768: { slidesPerView: 3 },       
+        768: { slidesPerView: 3 },
     }
 });
 

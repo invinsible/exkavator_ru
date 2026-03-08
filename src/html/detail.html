@@ -159,34 +159,268 @@
                     <div class="chip chip--medium chip--regular">В наличии</div>
                     <div class="chip chip--medium chip--regular">Бесплатная доставка</div>
                 </div>
+                <div class="price-block detail-page__mobile-price-block">
+                    <p class="price-dropdown">15 306 212 ₽</p>
+                    <span>Цена с НДС</span>
+                </div>
 
                 <div class="detail-item">
-                    <ul class="crumbs">
+                    <ul class="crumbs detail-item-crumbs">
                         <li class="crumbs__item">Добавлено 23.02.2026</li>
                         <li class="crumbs__item">Обновлено сегодня</li>
-                        <li class="crumbs__item">207 просмотров</li>
-                        <li class="crumbs__item">
-                            <button>распечатать</button>
+                        <li class="crumbs__item detail-item-crumbs__views">207 <span>просмотров <img src="img/svg/view-icon.svg"></span></li>
+                        <li class="crumbs__item detail-item-crumbs__print">
+                            <button class="print" aria-label="распечатать">
+                                <img src="img/svg/print-icon.svg">
+                            </button>
                         </li>
                     </ul>
-                    <div class="detail-item__wrapper">
-                        <div class="detail-item__slider detail-item-slider">
-                            <div class="swiper-wrapper">
-                                <div class="slide">
-                                    <img src="img/temp/item-2-raw.jpg" alt="">
+                    <section class="detail-item__wrapper section">
+                        <div class="detail-item__gallery">
+                            <div class="detail-item__slider detail-item-slider swiper">
+                                <div class="detail-item-slider__wrapper swiper-wrapper">
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/detail-raw-1.jpg" alt="">
+                                    </div>
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/item-1-raw.jpg" alt="">
+                                    </div>
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/detail-raw-2.jpg" alt="">
+                                    </div>
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" alt="">
+                                    </div>
+
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" alt="">
+                                    </div>
+                                    <div class="detail-item-slider__slide swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" alt="">
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="img/temp/item-3-raw.jpg" alt="">
-                                </div>
-                                <div class="slide">
-                                    <img src="img/temp/item-1-raw.jpg" alt="">
+                                <div class="detail-item-slider__next"></div>
+                                <div class="detail-item-slider__prev"></div>
+                            </div>
+                            <div thumbsSlider="" class="swiper detail-item-slider__thumb">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/detail-raw-1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/item-1-raw.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/detail-raw-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" />
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/temp/item-2-raw.jpg" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="detail-item-slider__nav"></div>
-                            <div class="detail-item-slider__gallery"></div>
                         </div>
-                        <div class="detail-item__buttons"></div>
-                    </div>
+                        
+                        
+                        <div class="detail-item__buttons detail-item-action-block">
+                            <div class="price-block">
+                                <p class="price-dropdown">15 306 212 ₽</p>
+                                <span>Цена с НДС</span>
+                            </div>
+                            <div class="detail-item-action-block__buttons">
+                                <button class="button button--large button--primary-alt">Позвонить</button>
+                                <button class="button button--large button--primary-alt">Обратный звонок</button>
+                                <button class="button button--large button--primary-alt">Написать</button>
+                                <button class="button button--large button--primary-alt">Купить в лизинг</button>
+                            </div>
+                            
+                            <div class="detail-item-action-block__controls">
+                                <button class="button button--large button--regular">
+                                    <svg class="icon icon--20">
+                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
+                                    </svg>
+                                </button>
+                                <button class="button button--large button--regular">
+                                    <svg class="icon icon--20">
+                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="detail-item__blocks section">
+                        <div class="detail-item-description-block">
+                            <p class="detail-item-description-block__title">Основные характеристики</p>
+                            <div class="detail-item-specifications">
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Расположение</span>
+                                    <span class="detail-item-specifications__item-text">Санкт-Петербург и еще <a href="#">34 города</a></span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Состояние техники</span>
+                                    <span class="detail-item-specifications__item-text">Новая</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Год выпуска</span>
+                                    <span class="detail-item-specifications__item-text">2025</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Подтип</span>
+                                    <span class="detail-item-specifications__item-text">Полноповоротный. Одноковшовый</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Навесное оборудование</span>
+                                    <span class="detail-item-specifications__item-text">Стандартный ковш</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Масса</span>
+                                    <span class="detail-item-specifications__item-text detail-item-specifications__item-text--secondary">Не указано</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Объем ковша, куб. м</span>
+                                    <span class="detail-item-specifications__item-text">1,1</span>
+                                </p>
+                                <p class="detail-item-specifications__item">
+                                    <span class="detail-item-specifications__item-title">Моточасы наработки</span>
+                                    <span class="detail-item-specifications__item-text">0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-item-description-block">
+                            <p class="detail-item-description-block__title">Описание</p>
+                            <div class="detail-item-text">
+                                <p>Объем ковша: 1.1 куб. </p>
+                                <p>Навесное оборудование: стандартный ковш</p>
+                                <p>Одноковшовые</p>
+                                <p>Полноповоротные</p>
+                                <p>Новейший 2025 года выпуска и в наличии в СПб.</p>
+                                <p>Ждём на осмотр!</p>
+                                <p>Характеристики</p>
+                                <p>Дальность копания, мм 9860Глубина копания, мм 5810Длина стрелы, мм 5700Емкость ковша, м3 0.94–1.06Габариты, ШхДхВ, мм 2800х9480х3045Масса общ., кг 20100Высота выгрузки, мм 7160Усилие копания ковша, кH 149Удельное давление на грунт, кПа 46</p>
+                                <p>ДВС Cummins DLA045</p>
+                                <p>Тип ДВС Дизельный, 4-тактный, с турбонаддувомОбъем двигателя, л 4.5Кол-во цилиндров 4Мощность ДВС, кВт/лс 108/145Стандарт выбросов Stage IVОбъем топливного бака, л 400Ширина платформы, мм 2800Ходовая шир., мм 2200Макс. дорожный просвет, мм 440Гидронасос Переменного типа, расход 490 л/минОбъем гидравлического бака, л 132Кабина ОстекленнаяСкорость вращения кабины, об/мин 12.4Цена с НДС. В наличии. Помогу с доставкой. Готова к эксплуатации. Заводская гарантия. Доставка по РФ.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item-description-block">
+                            <p class="detail-item-description-block__title">Дополнительное оборудование</p>
+                            <div class="detail-item-text">
+                                <ul>
+                                    <li>Централизованная система смазки</li>
+                                    <li>Джойстиковое управление</li>
+                                    <li>Электронная система управления</li>
+                                    <li>Обогреватель</li>
+                                    <li>Кондиционер</li>
+                                    <li>Предпусковой подогреватель</li>
+                                    <li>Гидролиния для навесного оборудования</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h2>Компания</h2>
+                        <div class="detail-item-company">
+                            <div class="detail-item-company__wrapper">
+                                <div class="detail-item-company__img">
+                                    <img src="img/temp/companies-7.jpg" alt="">
+                                </div>
+                                <div class="detail-item-company__info">                                    
+                                    <p>ООО «ВОЛОТТЕХСТРОЙ»</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item crumbs__item--approve">Официальный дилер</li>
+                                        <li class="crumbs__item">11 лет на площадке</li>
+                                    </ul>                                                                       
+                                    <p>Адрес: Россия, Ленинградская область, Санкт-Петербург,улица Седова 5</p>
+                                    <div class="detail-item-company__list">
+                                        <p>Объявления компании: </p>
+                                        <ul>
+                                            <li><a href="#" target="_blank">Продажа спецтехники</a> 27</li>
+                                            <li><a href="#" target="_blank">Запчасти</a> 1</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="section">
+                        <h3>Объявления компании</h3>
+                        <div class="list">
+                            <li class="item-card viewed premium">
+                                <div class="item-card__row">
+                                    <a href="#" class="item-card__img-block">
+                                        <div class="item-card__labels"></div>
+                                        <img src="img/temp/result-1.jpg" alt="">
+                                    </a>
+                                    <div class="item-card__info-block">
+                                        <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
+                                        <a href="#" class="item-card__title">Гусеничный экскаватор HYUNDAI ROBEX
+                                            220LC-9S</a>
+                                        <ul class="item-card__chips">
+                                            <li class="chip chip--small chip--regular">Гарантийное обслуживание и сервис
+                                            </li>
+                                            <li class="chip chip--small chip--regular">Обучение ваших специалистов</li>
+                                            <li class="chip chip--small chip--regular">Диагностика машин перед сезоном</li>
+                                        </ul>
+                                        <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX
+                                            220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
+                                    </div>
+                                    <div class="item-card__action-block">
+                                        <div class="item-card__price price-block">
+                                            <p>15 306 212 ₽</p>
+                                            <span>цена с НДС</span>
+                                        </div>
+                                        <div class="item-card__buttons">
+                                            <button class="button button--small button--primary-alt">Купить в
+                                                лизинг</button>
+                                            <button class="button button--small button--primary-alt">Позвонить</button>
+                                            <button class="button button--small button--primary-alt">Написать</button>
+                                            <button class="button button--small button--primary-alt item-card__show-buttons">
+                                                ...
+                                            </button>
+                                        </div>
+                                        <div class="item-card__user-actions">
+                                            <button class="button button--small button--regular">
+                                                <svg class="icon">
+                                                    <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--small button--regular">
+                                                <svg class="icon">
+                                                    <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-card__row">
+                                    <p class="item-card__time">Обновлено сегодня</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
+                                        <li class="crumbs__item">11 лет на площадке</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                        </div>
+                    </section>
+                    <section class="section">
+                        <div class="cta-help-block">
+                            <div class="cta-help-block__wrapper-text">
+                                <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
+                                <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
+                            </div>
+                            <button class="button button--large button--primary-alt">
+                                Разместить заявку
+                            </button>
+                        </div>
+                    </section>
                 </div>
                 
 
@@ -198,72 +432,25 @@
           
                 <section class="linking section rounded-gray-block">
                     <div class="linking__block ">
-                        <p class="small-title">Спецтехника в России</p>
+                        <p class="small-title">Смотрите также</p>
                         <ul class="crumbs">
                             <li class="crumbs__item">
-                                <a href="#">Москва</a>
+                                <a href="#">Масса: 20,1 т</a>
                             </li>
                             <li class="crumbs__item">
-                                <a href="#">Санкт-Петербург</a>
+                                <a href="#">Объем ковша: 1,1 куб. м</a>
                             </li>
                             <li class="crumbs__item">
-                                <a href="#">Краснодар</a>
+                                <a href="#">Стандартный ковш</a>
                             </li>
                             <li class="crumbs__item">
-                                <a href="#">Екатеринбург</a>
+                                <a href="#">Полноповоротные</a>
                             </li>
                             <li class="crumbs__item">
-                                <a href="#">Благовещенск</a>
+                                <a href="#">Одноковшовые</a>
                             </li>
                             <li class="crumbs__item">
-                                <a href="#">Челябинск</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Казань</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Новосибирск</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Самара</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Красноярск</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="linking__block ">
-                        <p class="small-title">Спецтехника мировых брендов</p>
-                        <ul class="crumbs">
-                            <li class="crumbs__item">
-                                <a href="#">Китайские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские фронтальные погрузчики</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские гусеничные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Китайские колесные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Японские мини тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Белорусские тракторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские колесные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские гусеничные экскаваторы</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Российские фронтальные погрузчики</a>
+                                <a href="#">Komatsu PC200</a>
                             </li>
                         </ul>
                     </div>
@@ -451,5 +638,6 @@
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/detail.js"></script>
 </body>
 </html>

@@ -27,6 +27,17 @@
                 display: none;
             }
         }
+
+        &--approve {
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: var(--icon-approve-card);
+                background-repeat: no-repeat;
+            }
+        }
     }
 
     &--bread {
@@ -39,4 +50,6 @@
             }
         }
     }
+
+
 }
