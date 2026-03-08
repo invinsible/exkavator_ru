@@ -75,7 +75,7 @@ function styles() {
 function scripts() {
   return src(paths.scripts.src)
     .pipe(concat('main.min.js'))
-    .pipe(terser())
+    .pipe(terser({ mangle: false }))
     .on('error', handleError)
     .pipe(dest(paths.scripts.dest))
     .pipe(browserSync.stream());
@@ -84,7 +84,7 @@ function scripts() {
 // JS страниц — минификация без конкатенации
 function pageScripts() {
   return src(paths.pageScripts.src)
-    .pipe(terser())
+    .pipe(terser({ mangle: false }))
     .on('error', handleError)
     .pipe(dest(paths.pageScripts.dest))
     .pipe(browserSync.stream());
