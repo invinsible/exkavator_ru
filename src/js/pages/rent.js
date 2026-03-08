@@ -1,33 +1,27 @@
-// конфиги дропдаунов для страницы trade-result
-// id должно совпадать с id input.field-dropdown__input в разметке
-// hasSearch - генерировать инпут с поиском внутри дропдауна
-// в конце обязательно вызываем initPageDropdowns
 const dropdownConfigs = [
     {
-        id: 'customDrop',
-        hasSearch: false,
-        options: [
-            { name: 'Опция 1', value: 'option1'},
-            { name: 'Опция 2', value: 'option2'},
-            { name: 'Опция 3', value: 'option3'},
-        ]
-    },
-    {
         id: 'type',
-        hasSearch: false,
+        hasSearch: true,
         options: [
+            { name: 'все типы', value: '' },
+            { name: 'Раздел тип технки 1', isTitle: true },
             { name: 'Тягачи седельные', value: 'tyagachi' },
             { name: 'Прицепы-тяжеловозы', value: 'pritsepy' },
             { name: 'Терминальные тягачи', value: 'terminal-tyagachi' },
             { name: 'Экскаваторы гусеничные', value: 'excavator-gus' },
+            { name: 'Раздел тип технки 2', isTitle: true },
             { name: 'Натяжные машины', value: 'natyazhnye' },
+            { name: 'Тип техники 22', value: 'tt22' },
+            { name: 'Тип техники 23', value: 'tt23' },
+            { name: 'Тип техники 24', value: 'tt34' },
+            { name: 'Тип техники 25', value: 'tt222' },
         ]
     },
     {
         id: 'brand',
         hasSearch: true,
         options: [
-            { name: 'все типы', value: '' },
+            { name: 'все марки', value: '' },
             { name: 'Землеройная техника', isTitle: true },
             { name: 'Грейдеры', value: 'graders' },
             { name: 'Земснаряды', value: 'zemsnarjady' },
@@ -39,29 +33,28 @@ const dropdownConfigs = [
         ]
     },
     {
-        id: 'availability',
-        hasSearch: false,
+        id: 'model',
+        hasSearch: true,
         options: [
-            { name: '100 000', value: '100000' },
-            { name: '50 000', value: '50000' },
+            { name: 'все модели', value: '' },
+            { name: 'модель 2', value: 'model-2' },
+            { name: 'модель 3', value: 'model-3' },
+            { name: 'модель 4', value: 'model-4' },
+            { name: 'модель 6', value: 'model-5' },
+            { name: 'модель 7', value: 'model-6' },
+            { name: 'модель 8', value: 'model-7' },
         ]
     },
     {
-        id: 'minPrice',
+        id: 'landlord',
         hasSearch: false,
         options: [
-            { name: '100 000', value: '100000' },
-            { name: '50 000', value: '50000' },
+            { name: 'Все арендодатели', value: '' },
+            { name: 'Организации', value: 'organization' },
+            { name: 'Частные лица', value: 'personal' },
         ]
     },
-    {
-        id: 'maxPrice',
-        hasSearch: false,
-        options: [
-            { name: '40 000', value: '40000' },
-            { name: '80 000', value: '80000' },
-        ]
-    },
+
 ];
 
 initPageDropdowns(dropdownConfigs);

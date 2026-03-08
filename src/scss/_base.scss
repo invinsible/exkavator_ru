@@ -5,19 +5,19 @@ body {
     @include text-size('base');
     @include text-weight('base');
 
-    &.menu-open {
-        .main-header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 101;
-        }
+    // &.menu-open {
+    //     .main-header {
+    //         position: fixed;
+    //         width: 100%;
+    //         top: 0;
+    //         left: 0;
+    //         z-index: 101;
+    //     }
 
-        .secondary-header + .container {
-            padding-top: 56px;
-        }
-    }
+    //     .secondary-header + .container {
+    //         padding-top: 56px;
+    //     }
+    // }
 
     &.scroll-lock {
         overflow: hidden;
@@ -33,9 +33,14 @@ body {
     @media (min-width: $breakpoint-xs) {
         padding: 0 24px;
     }
+    
+    // @media (min-width: $breakpoint-md) {
+    //     max-width: 976px;
+    // }
 
     @media (min-width: 1440px) {
         padding: 0;
+        
     }
 }
 

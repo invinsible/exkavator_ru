@@ -77,13 +77,13 @@
         display: flex;
         gap: 2px;
 
-        .field-dropdown {
+        .field-text {
 
-            &:first-child .field-dropdown__label{
+            &:first-child .field-text__label{
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
-            &:last-child .field-dropdown__label{
+            &:last-child .field-text__label{
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
             }

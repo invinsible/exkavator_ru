@@ -145,6 +145,14 @@ function initPageDropdowns(dropdownConfigs) {
             const container = input.closest('.field-dropdown');
             if (!container) return;
             renderDropdownOptions(container, config);
+
+            const currentValue = input.dataset.value;
+            if (currentValue) {
+                const matchingOption = container.querySelector(
+                    '.dropdown-backdrop__option[data-value="' + currentValue + '"]'
+                );
+                if (matchingOption) matchingOption.classList.add('selected');
+            }
         });
     }
 

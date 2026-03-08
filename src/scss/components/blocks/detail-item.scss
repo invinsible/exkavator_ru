@@ -86,6 +86,7 @@
 
         @media (min-width: $breakpoint-sm) {
             grid-template-columns: repeat(2, 1fr);
+            align-items: start;
         }
 
         & > :first-child {
@@ -103,15 +104,16 @@
         width: 100%;
         
         @media (min-width: $breakpoint-sm) {
-            width: 485px;
+            max-width: 485px;
         }
 
         @media (min-width: $breakpoint-md) {
-            width: 419px;
+            max-width: 419px;
+            flex-shrink: 1;
         }
 
         @media (min-width: $breakpoint-lg) {
-            width: 635px;
+            max-width: 635px;
         }
     }
 
@@ -171,54 +173,63 @@
         }
 
         &__prev, &__next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(39, 51, 63, 0.8);
-            backdrop-filter: blur(2px);
-            z-index: 2;
-            cursor: pointer;
+            @media (min-width: $breakpoint-sm) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(39, 51, 63, 0.8);
+                backdrop-filter: blur(2px);
+                z-index: 2;
+                cursor: pointer;
 
-            &::after {
-                content: '';
-                display: block;
-                width: 24px;
-                height: 24px;
-                @include mask-icon(var(--icon-chevron-down));
-                background-color: var(--text-white);
-            }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    @include mask-icon(var(--icon-chevron-down));
+                    background-color: var(--text-white);
+                }
 
-            &:hover {
-                backdrop-filter: blur(4px);
-            }
+                &:hover {
+                    backdrop-filter: blur(4px);
+                }
 
-            &.swiper-button-disabled {
-                opacity: 0.2;
-                cursor: auto;
+                &.swiper-button-disabled {
+                    opacity: 0.2;
+                    cursor: auto;
+                }
             }
+            
         }
         &__next {
-            right: 0;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
+            @media (min-width: $breakpoint-sm) {
+                right: 0;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
 
-            &::after {
-                transform: rotate(-90deg);
+                &::after {
+                    transform: rotate(-90deg);
+                }
             }
+            
         }
         &__prev {
-            left: 0;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
+            @media (min-width: $breakpoint-sm) {
+                left: 0;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
 
-            &::after {
-                transform: rotate(90deg);
+                &::after {
+                    transform: rotate(90deg);
+                }
             }
+            
         }
     }
 

@@ -147,15 +147,6 @@
                                 <label class="field-dropdown__label" for="type">
                                     <span class="field-dropdown__caption">Тип техники</span>
                                 </label>
-                                <div class="dropdown-backdrop">
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Тягачи седельные</li>
-                                        <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
-                                        <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                        <li class="dropdown-backdrop__option">Электротягачи</li>
-                                        <li class="dropdown-backdrop__option">Натяжные машины</li>
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-text">
@@ -170,28 +161,6 @@
                                 <label class="field-dropdown__label" for="brand">
                                     <span class="field-dropdown__caption">Марка</span>
                                 </label>
-                                <div class="dropdown-backdrop">
-                                    <div class="dropdown-backdrop__search">
-                                        <div class="field-text field-text--small">
-                                            <input type="text" class="field-text__input" id="brand-search" placeholder="Поиск">
-                                            <label for="brand-search" class="field-text__label">
-                                                <span class="field-text__caption">Поиск</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">все типы</li>
-                                        <li class="dropdown-backdrop__option-title">Землеройная техника</li>
-                                        <li class="dropdown-backdrop__option">Грейдеры</li>
-                                        <li class="dropdown-backdrop__option">Земснаряды</li>
-                                        <li class="dropdown-backdrop__option">Экскаваторы колесные</li>
-                                        <li class="dropdown-backdrop__option-title">Строительное оборудование</li>
-                                        <li class="dropdown-backdrop__option">оборудование 1</li>
-                                        <li class="dropdown-backdrop__option">оборудование 2</li>
-                                        <li class="dropdown-backdrop__option">оборудование 3</li>
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-dropdown disabled">
@@ -199,15 +168,6 @@
                                 <label class="field-dropdown__label" for="model">
                                     <span class="field-dropdown__caption">Модель</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Модель 1</li>
-                                        <li class="dropdown-backdrop__option">Модель 2</li>
-                                        <li class="dropdown-backdrop__option">Модель 3</li>
-                                        <li class="dropdown-backdrop__option">Модель 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-dropdown">
@@ -218,31 +178,31 @@
                             </div>
 
                             <div class="filter__range">
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="hourPriceFrom">
-                                        <span class="field-dropdown__caption">Цена за час от ₽</span>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
+                                    <label class="field-text__label" for="hourPriceFrom">
+                                        <span class="field-text__caption">Цена за час от, ₽</span>
                                     </label>
                                 </div>
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="hourPriceTo">
-                                        <span class="field-dropdown__caption">до ₽</span>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
+                                    <label class="field-text__label" for="hourPriceTo">
+                                        <span class="field-text__caption">до, ₽</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="filter__range">
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="shiftPriceFrom">
-                                        <span class="field-dropdown__caption">Цена за смену от ₽</span>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
+                                    <label class="field-text__label" for="shiftPriceFrom">
+                                        <span class="field-text__caption">Цена за смену от, ₽</span>
                                     </label>
                                 </div>
-                                <div class="field-dropdown">
-                                    <input class="field-dropdown__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
-                                    <label class="field-dropdown__label" for="shiftPriceTo">
-                                        <span class="field-dropdown__caption">до ₽</span>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
+                                    <label class="field-text__label" for="shiftPriceTo">
+                                        <span class="field-text__caption">до, ₽</span>
                                     </label>
                                 </div>
                             </div>
@@ -861,5 +821,6 @@
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/rent.js"></script>
 </body>
 </html>

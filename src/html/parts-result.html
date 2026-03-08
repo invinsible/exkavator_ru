@@ -158,26 +158,17 @@
                             </div>
 
                             <div class="field-text">
-                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off" value="Краснодар, Краснодарский край, Россия"/>
+                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
                                 <label class="field-text__label" for="place">
                                     <span class="field-text__caption">Регион, город, населенный пункт</span>
                                 </label>
                             </div>
 
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Рубрика" name="topic" id="topic" autocomplete="off"/>
+                            <div class="field-dropdown selected">
+                                <input class="field-dropdown__input" type="text" placeholder="Рубрика" name="topic" id="topic" autocomplete="off" value="Рубрика 2" data-value="topic2"/>
                                 <label class="field-dropdown__label" for="topic">
                                     <span class="field-dropdown__caption">Рубрика</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Рубрика 1</li>
-                                        <li class="dropdown-backdrop__option">Рубрика 2</li>
-                                        <li class="dropdown-backdrop__option">Рубрика 3</li>
-                                        <li class="dropdown-backdrop__option">Рубрика 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-dropdown">
@@ -185,15 +176,6 @@
                                 <label class="field-dropdown__label" for="category">
                                     <span class="field-dropdown__caption">Категория</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Категория 1</li>
-                                        <li class="dropdown-backdrop__option">Категория 2</li>
-                                        <li class="dropdown-backdrop__option">Категория 3</li>
-                                        <li class="dropdown-backdrop__option">Категория 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-dropdown">
@@ -201,31 +183,13 @@
                                 <label class="field-dropdown__label" for="manufacture">
                                     <span class="field-dropdown__caption">Производитель</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Производитель 1</li>
-                                        <li class="dropdown-backdrop__option">Производитель 2</li>
-                                        <li class="dropdown-backdrop__option">Производитель 3</li>
-                                        <li class="dropdown-backdrop__option">Производитель 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>
 
-                            <div class="field-dropdown selected">
-                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="type" id="type" autocomplete="off" value="Экскаваторы гусеничные"/>
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Категория" name="type" id="type" autocomplete="off"/>
                                 <label class="field-dropdown__label" for="type">
                                     <span class="field-dropdown__caption">Тип техники</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Тип техники 1</li>
-                                        <li class="dropdown-backdrop__option">Тип техники 2</li>
-                                        <li class="dropdown-backdrop__option selected">Экскаваторы гусеничные</li>
-                                        <li class="dropdown-backdrop__option">Тип техники 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="field-dropdown">
@@ -233,20 +197,11 @@
                                 <label class="field-dropdown__label" for="brand">
                                     <span class="field-dropdown__caption">Марка техники</span>
                                 </label>
-                                 <div class="dropdown-backdrop">
-                                    
-                                    <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option">Марка техники 1</li>
-                                        <li class="dropdown-backdrop__option">Марка техники 2</li>
-                                        <li class="dropdown-backdrop__option">Марка техники 3</li>
-                                        <li class="dropdown-backdrop__option">Марка техники 4</li>                                        
-                                    </ul>
-                                </div>
                             </div>                            
                         </div>
                         <div class="filter__checkboxes">
                             <div class="field-checkbox">
-                                <input type="checkbox" class="field-checkbox__input" id="ch-delivery" checked>
+                                <input type="checkbox" class="field-checkbox__input" id="ch-delivery">
                                 <label class="field-checkbox__label" for="ch-delivery">Доставка по России</label>
                             </div>
                         </div>
@@ -721,5 +676,6 @@
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/parts.js"></script>
 </body>
 </html>
