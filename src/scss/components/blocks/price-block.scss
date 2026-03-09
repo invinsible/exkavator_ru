@@ -7,6 +7,30 @@
     overflow: hidden;
     text-align: center;
 
+    &--dropdown {
+        position: relative;
+        cursor: pointer;
+
+        &.is-open {
+            overflow: visible;
+
+            .dropdown-backdrop {
+                display: block;
+            }
+
+            p.price-dropdown::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        .dropdown-backdrop {
+            top: 100%;
+            left: 65%;
+            transform: translateX(-50%) translateY(-25px);
+            width: max-content;
+        }
+    }
+
     &--double {
         padding: 0;
         background-color: transparent;

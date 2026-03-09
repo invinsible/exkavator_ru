@@ -25,6 +25,14 @@
         }
     }
 
+    &__option--text {
+        cursor: default;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
     &__option-title {
         padding: 6px 12px;
         @include text-size('sm');

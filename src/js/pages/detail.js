@@ -1,9 +1,3 @@
-const priceDropdown = document.querySelector('.price-dropdown');
-
-priceDropdown.addEventListener('click', () => {
-    console.log('click price');
-});
-
 const thumbMediaQuery = window.matchMedia('(min-width: 768px)');
 let detailItemSlider = null;
 let detailItemSliderThumb = null;
@@ -42,6 +36,7 @@ initSliders();
 thumbMediaQuery.addEventListener('change', initSliders);
 
 initDropdowns('.detail-item-mobile-footer__more');
+initDropdowns('.price-block--dropdown');
 
 document.querySelectorAll('.detail-item-text').forEach((block) => {
     const toggle = block.querySelector(':scope > a:last-child');

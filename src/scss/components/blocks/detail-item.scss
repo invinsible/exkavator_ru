@@ -351,6 +351,12 @@
         
     }
 
+    .detail-item-company-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
 }
 // Прилипающий футер детальнйо страницы. Находиться вне разметки блока detail-item
 .detail-item-mobile-footer {

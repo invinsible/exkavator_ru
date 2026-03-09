@@ -123,6 +123,7 @@ function initDropdowns(selector, { onSelect, readOnly } = {}) {
         container.querySelectorAll('.dropdown-backdrop__option').forEach(option => {
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
+                if (option.classList.contains('dropdown-backdrop__option--text')) return;
                 container.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
                 option.classList.add('selected');
                 container.classList.remove('is-open');
