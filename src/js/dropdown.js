@@ -122,8 +122,7 @@ function initDropdowns(selector, { onSelect, readOnly } = {}) {
 
         container.querySelectorAll('.dropdown-backdrop__option').forEach(option => {
             option.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (option.classList.contains('dropdown-backdrop__option--text')) return;
+                e.stopPropagation();                
                 container.querySelector('.dropdown-backdrop__option.selected')?.classList.remove('selected');
                 option.classList.add('selected');
                 container.classList.remove('is-open');
@@ -135,7 +134,7 @@ function initDropdowns(selector, { onSelect, readOnly } = {}) {
     return containers;
 }
 
-// вызывается из page-скрипта после определения конфигов
+// вызывается из скриптов под конкретную страницу после определения конфигов
 function initPageDropdowns(dropdownConfigs) {
     // рендер опций из конфигов (только основной фильтр .filter-block)
     const filterBlock = document.querySelector('.filter-block');
