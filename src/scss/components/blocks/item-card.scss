@@ -202,6 +202,33 @@
                     display: block;
                 }
             }
+
+        }
+
+        .item-card__show-buttons-wrap {
+            position: relative;
+            flex-shrink: 0;
+            width: 40px;
+
+            @media (min-width: $breakpoint-sm) {
+                display: none;
+            }
+
+            .button {
+                display: block;
+                height: 100%;
+            }
+
+            &.is-open .dropdown-backdrop {
+                display: block;
+            }
+
+            .dropdown-backdrop {
+                bottom: 100%;
+                right: 0;
+                width: max-content;
+                transform: translateY(-2px);
+            }
         }
 
         .button--small {

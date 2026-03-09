@@ -193,9 +193,9 @@
                     <span>Цена с НДС</span>
                     <div class="dropdown-backdrop">
                         <ul class="dropdown-backdrop__list">
-                            <li class="dropdown-backdrop__option dropdown-backdrop__option--text">213 527 $</li>
-                            <li class="dropdown-backdrop__option dropdown-backdrop__option--text">180 730 €</li>
-                            <li class="dropdown-backdrop__option dropdown-backdrop__option--text">1 468 050 ¥</li>
+                            <li class="dropdown-backdrop__option-text">213 527 $</li>
+                            <li class="dropdown-backdrop__option-text">180 730 €</li>
+                            <li class="dropdown-backdrop__option-text">1 468 050 ¥</li>
                         </ul>
                     </div>
                 </div>
@@ -270,9 +270,9 @@
                                 <span>Цена с НДС</span>
                                 <div class="dropdown-backdrop">
                                     <ul class="dropdown-backdrop__list">
-                                        <li class="dropdown-backdrop__option dropdown-backdrop__option--text">213 527 $</li>
-                                        <li class="dropdown-backdrop__option dropdown-backdrop__option--text">180 730 €</li>
-                                        <li class="dropdown-backdrop__option dropdown-backdrop__option--text">1 468 050 ¥</li>
+                                        <li class="dropdown-backdrop__option-text">213 527 $</li>
+                                        <li class="dropdown-backdrop__option-text">180 730 €</li>
+                                        <li class="dropdown-backdrop__option-text">1 468 050 ¥</li>
                                     </ul>
                                 </div>
                             </div>
@@ -422,13 +422,24 @@
                                             <span>цена с НДС</span>
                                         </div>
                                         <div class="item-card__buttons">
-                                            <button class="button button--small button--primary-alt">Купить в
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-lizing">Купить в
                                                 лизинг</button>
-                                            <button class="button button--small button--primary-alt">Позвонить</button>
-                                            <button class="button button--small button--primary-alt">Написать</button>
-                                            <button class="button button--small button--primary-alt item-card__show-buttons">
-                                                ...
-                                            </button>
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
+                                            <div class="item-card__show-buttons-wrap">
+                                                <button class="button button--small button--primary-alt item-card__show-buttons">
+                                                    <svg class="icon">
+                                                        <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-backdrop">
+                                                    <ul class="dropdown-backdrop__list">
+                                                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
+                                                        <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                                                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="item-card__user-actions">
                                             <button class="button button--small button--regular">
@@ -436,7 +447,7 @@
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -477,13 +488,24 @@
                                             <span>цена с НДС</span>
                                         </div>
                                         <div class="item-card__buttons">
-                                            <button class="button button--small button--primary-alt">Купить в
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-lizing">Купить в
                                                 лизинг</button>
-                                            <button class="button button--small button--primary-alt">Позвонить</button>
-                                            <button class="button button--small button--primary-alt">Написать</button>
-                                            <button class="button button--small button--primary-alt item-card__show-buttons">
-                                                ...
-                                            </button>
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                            <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
+                                            <div class="item-card__show-buttons-wrap">
+                                                <button class="button button--small button--primary-alt item-card__show-buttons">
+                                                    <svg class="icon">
+                                                        <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-backdrop">
+                                                    <ul class="dropdown-backdrop__list">
+                                                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
+                                                        <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                                                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="item-card__user-actions">
                                             <button class="button button--small button--regular">
@@ -491,7 +513,7 @@
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -716,9 +738,9 @@
                 </button>
                 <div class="dropdown-backdrop">
                     <ul class="dropdown-backdrop__list">
-                        <li class="dropdown-backdrop__option js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                        <li class="dropdown-backdrop__option">Добавить в избранное</li>
-                        <li class="dropdown-backdrop__option js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
+                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
+                        <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                        <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
                     </ul>
                 </div>
             </div>

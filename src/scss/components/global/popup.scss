@@ -57,6 +57,12 @@
 
     }
 
+    &__footer {
+        .button--large {
+            padding: 12px 5px;
+        }
+    }
+
     &__form {
         display: flex;
         flex-direction: column;

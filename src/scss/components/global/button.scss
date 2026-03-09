@@ -121,14 +121,14 @@
     }
 
     &--large {
-        padding: 12px 5px;
+        padding: 12px 15px;
         @include text-weight('semibold');
     }
     &--medium {
-        padding: 8px 5px;
+        padding: 8px 15px;
     }
     &--small {
-        padding: 8px 5px;
+        padding: 8px 15px;
         font-size: 12px;
         line-height: 16px;
     }

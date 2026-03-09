@@ -36,6 +36,7 @@ initSliders();
 thumbMediaQuery.addEventListener('change', initSliders);
 
 initDropdowns('.detail-item-mobile-footer__more');
+initDropdowns('.item-card__show-buttons-wrap');
 initDropdowns('.price-block--dropdown');
 
 document.querySelectorAll('.detail-item-text').forEach((block) => {
