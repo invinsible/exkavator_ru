@@ -30,14 +30,16 @@
             openMenu();
         }
     });
-
-    footerBtn.addEventListener('click', function () {
-        if (mainMenu.classList.contains('is-open')) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    });
+    if (footerBtn) {
+        footerBtn.addEventListener('click', function () {
+            if (mainMenu.classList.contains('is-open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+    }
+    
 
     mainMenuList.querySelectorAll('.main-menu__item--has-children').forEach(function (item) {
         const link = item.querySelector(':scope > .main-menu__link');

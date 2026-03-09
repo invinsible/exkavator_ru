@@ -25,6 +25,12 @@ body {
     
 }
 
+input,
+textarea
+{
+    font-family: var(--font-family);
+}
+
 .container {
     padding: 0 16px;
     margin: 0 auto;

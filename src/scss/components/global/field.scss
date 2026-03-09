@@ -203,6 +203,84 @@
     
 }
 
+.field-textarea {
+    position: relative;
+    width: 100%;
+
+    &__label {
+        display: block;
+        width: 100%;
+        height: 96px;
+        padding: 12px 8px;
+        background-color: var(--neutral-50);
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        outline-color: var(--field-ouline);
+    }
+
+    &__caption {
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 12px;
+        color: var(--neutral-500);
+        pointer-events: none;
+        user-select: none;
+        transition: all 0.2s ease;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__input {
+        position: absolute;
+        left: 8px;
+        top: 24px;
+        padding-right: 8px;
+        width: 95%;
+        height: calc(96px - 24px - 8px);
+        color: var(--neutral-700);
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        resize: none;
+        @include text-size('base');
+
+
+        &::placeholder {
+            color: transparent;
+            opacity: 0;
+        }
+
+        // смещение caption при фокусе и заполненном input
+        &:focus + .field-textarea__label .field-textarea__caption,
+        &:not(:placeholder-shown) + .field-textarea__label .field-textarea__caption {
+            top: 6px;
+            font-size: 11px;
+            line-height: 16px;
+            color: var(--neutral-400);
+        }
+        // label при заполненном input
+        &:not(:placeholder-shown) + .field-textarea__label {
+            background-color: var(--primary-50);
+        }
+
+        &:disabled + .field-textarea__label {
+            background-color: var(--field-disabled-bg);
+        }
+
+        &:disabled + .field-textarea__label .field-textarea__caption {
+            color: var(--field-disabled-text);
+        }
+
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+
+}
+
 .field-checkbox {
     position: relative;
 

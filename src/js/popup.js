@@ -10,6 +10,8 @@ document.querySelectorAll('.js-open-popup').forEach(function (button) {
             document.body.style.paddingRight = scrollbarWidth + 'px';
             popup.classList.add('is-open');
             document.body.classList.add('popup-open');
+        } else {
+            console.warn('В разметке не найден нужный popup');
         }
     });
 });
@@ -43,27 +45,27 @@ document.querySelectorAll('.popup').forEach(function (popup) {
     }
 });
 
-// Попап Заказать обратный звонок
-(function () {
-    const popup = document.getElementById('popup-callback');
-    if (!popup) return;
+// // Попап Заказать обратный звонок
+// (function () {
+//     const popup = document.getElementById('popup-callback');
+//     if (!popup) return;
 
-    const phoneInput = popup.querySelector('#callback-phone');
-    const personalDataCheckbox = popup.querySelector('#ch-presonal-data');
-    const submitBtn = popup.querySelector('.send-callback-form');
+//     const phoneInput = popup.querySelector('#callback-phone');
+//     const personalDataCheckbox = popup.querySelector('#ch-presonal-data');
+//     const submitBtn = popup.querySelector('.send-callback-form');
 
-    function updateSubmitState() {
-        const phoneFilled = phoneInput.value.indexOf('_') === -1;
-        const agreed = personalDataCheckbox.checked;
-        submitBtn.disabled = !(phoneFilled && agreed);
-    }
+//     function updateSubmitState() {
+//         const phoneFilled = phoneInput.value.indexOf('_') === -1;
+//         const agreed = personalDataCheckbox.checked;
+//         submitBtn.disabled = !(phoneFilled && agreed);
+//     }
 
-    phoneInput.addEventListener('input', updateSubmitState);
-    personalDataCheckbox.addEventListener('change', updateSubmitState);
+//     phoneInput.addEventListener('input', updateSubmitState);
+//     personalDataCheckbox.addEventListener('change', updateSubmitState);
 
-    submitBtn.addEventListener('click', function () {
-        if (submitBtn.disabled) return;
-        console.log(phoneInput.value);
-        closePopup(popup);
-    });
-})();
+//     submitBtn.addEventListener('click', function () {
+//         if (submitBtn.disabled) return;
+//         console.log(phoneInput.value); // отправляем на сервер
+//         closePopup(popup);
+//     });
+// })();

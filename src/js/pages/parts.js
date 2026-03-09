@@ -87,7 +87,6 @@ const dropdownConfigs = [
             { name: 'Частные лица', value: 'personal' },
         ]
     },
-
 ];
 
 initPageDropdowns(dropdownConfigs);

@@ -330,42 +330,37 @@
         
     }
 
-    .detail-item-mobile-footer {
-        padding: 16px;
-        position: fixed;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        z-index: 5;
-        background-color: var(--neutral-0);
+}
+// Прилипающий футер детальнйо страницы. Находиться вне разметки блока detail-item
+.detail-item-mobile-footer {
+    padding: 16px;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+    background-color: var(--neutral-0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0px -2px 16px 0px #27333F1F;
+
+    @media (min-width: $breakpoint-sm) {
+        display: none;
+    }
+
+    &__row {
         display: flex;
-        flex-wrap: wrap;
         gap: 8px;
-        box-shadow: 0px -2px 16px 0px #27333F1F;
+        width: 100%;
 
-
-        @media (min-width: $breakpoint-sm) {
-            display: none;
+        .button {
+            flex: 1;
         }
 
-        &__row {
-            display: flex;
-            gap: 8px;
-            width: 100%;
-
-            .button {
-                flex: 1;
-            }
-
-            &:last-child {
-                .button:last-child {
-                    max-width: 48px;
-                }
+        &:last-child {
+            .button:last-child {
+                max-width: 48px;
             }
         }
-
-        // .button {
-        //     flex: 1;
-        // }
     }
 }
