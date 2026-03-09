@@ -40,3 +40,22 @@ function initSliders() {
 
 initSliders();
 thumbMediaQuery.addEventListener('change', initSliders);
+
+initDropdowns('.detail-item-mobile-footer__more');
+
+document.querySelectorAll('.detail-item-text').forEach((block) => {
+    const toggle = block.querySelector(':scope > a:last-child');
+    if (!toggle) return;
+
+    const maxHeight = 295;
+
+    if (block.scrollHeight > maxHeight) {
+        block.classList.add('is-collapsible', 'is-collapsed');
+
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const collapsed = block.classList.toggle('is-collapsed');
+            toggle.textContent = collapsed ? 'Развернуть' : 'Свернуть';
+        });
+    }
+});

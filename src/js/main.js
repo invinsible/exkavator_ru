@@ -99,6 +99,7 @@ if (currentYear) {
 const clickOutsideTargets = [
     { selector: '.field-dropdown', stateClass: 'is-open' },
     { selector: '.sorting', stateClass: 'is-open' },
+    { selector: '.detail-item-mobile-footer__more', stateClass: 'is-open' },
     { selector: '.main-header-search', stateClass: 'is-show', ignore: '.js-header-search' },
 ];
 

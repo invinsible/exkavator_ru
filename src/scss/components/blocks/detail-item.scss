@@ -98,6 +98,27 @@
 
     .detail-item-text {
         line-height: 24px;
+
+        &.is-collapsible {
+            position: relative;
+            padding-bottom: 24px;
+        }
+
+        &.is-collapsed {
+            max-height: 295px;
+            overflow: hidden;
+        }
+
+        & > a:last-child {
+            display: none;
+        }
+
+        &.is-collapsible > a:last-child {
+            display: inline;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     &__gallery {
@@ -361,6 +382,27 @@
             .button:last-child {
                 max-width: 48px;
             }
+        }
+    }
+
+    &__more {
+        position: relative;
+        width: 48px;
+
+        .button {
+            width: 100%;
+        }
+
+        &.is-open .dropdown-backdrop {
+            display: block;
+        }
+
+        .dropdown-backdrop {
+            bottom: 100%;
+            left: auto;
+            right: 0;
+            width: max-content;
+            transform: translateY(-2px);
         }
     }
 }
