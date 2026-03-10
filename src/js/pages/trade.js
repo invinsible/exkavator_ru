@@ -58,3 +58,4 @@ const dropdownConfigs = [
 ];
 
 initPageDropdowns(dropdownConfigs);
+initDropdowns('.item-card__show-buttons-wrap');
