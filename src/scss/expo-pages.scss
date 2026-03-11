@@ -1,0 +1,176 @@
+.expo-page {
+    padding-top: 24px;
+
+    @media (min-width: 480px) {
+        padding-top: 32px;
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: 48px;
+    }
+
+    @media (min-width: 1440px) {
+        padding-top: 80px;
+    }
+
+    h1 {
+        @include text-size('secondary');
+        @include text-weight('bold');
+
+        @media (min-width: 480px) {
+            font-size: 32px;
+            line-height: 40px;
+            @include text-weight('extrabold');
+        }
+
+        @media (min-width: 768px) {
+            font-size: 36px;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 48px;
+            line-height: 64px;
+            font-weight: 900;
+        }
+    }
+
+    h2 {
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 24px;
+
+        @media (min-width: 480px) {
+            margin-bottom: 32px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        @media (min-width: 768px) {
+            @include text-weight('extrabold');
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+
+    // Первый блок на главной Экспо
+
+    .main-banner {
+        position: relative;
+
+        &__title {
+            margin-bottom: 16px;
+            @media (min-width: 768px) {
+                margin-bottom: 48px;
+                max-width: 73%;
+            }
+            h1 {
+                margin-bottom: 16px;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        &__sub-title {
+            color: var(--neutral-500);
+
+            @media (min-width: 480px) {
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 400;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 28px;
+                line-height: 40px;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            @media (min-width: 480px) {
+                gap: 16px;
+            }
+
+            @media (min-width: 768px) {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 230px;
+            }
+            @media (min-width: 1440px) {
+                width: 308px;
+            }
+        }
+    }
+
+    .exponents {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__aside {
+            @media (min-width: 768px) {
+                width: 230px;
+                flex-shrink: 0;
+            }
+            @media (min-width: 1024px) {
+                width: 315px;
+            }
+            @media (min-width: 1440px) {
+                width: 308px;
+            }
+        }
+
+        &__content {
+            flex: 1;
+        }
+
+        .companies-list__item:nth-child(9) {
+            display: none;
+            @media (min-width: 1024px) {
+                display: flex;
+            }
+        }
+
+        .rounded-gray-block {
+            @media (min-width: 480px) {
+                padding: 24px 16px;
+            }
+
+            @media (min-width: 1024px) {
+                padding: 24px;
+            }
+
+            p {
+                color: var(--text-secondary);
+            }
+        }
+
+        &__form-wrapper {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+
+            @media (min-width: 480px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

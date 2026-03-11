@@ -1,5 +1,5 @@
 body {
-    min-width: 375px;
+    min-width: 340px;
     font-family: var(--font-family);
     color: var(--text-base);
     @include text-size('base');
@@ -25,11 +25,7 @@ body {
     
 }
 
-input,
-textarea
-{
-    font-family: var(--font-family);
-}
+
 
 .container {
     padding: 0 16px;

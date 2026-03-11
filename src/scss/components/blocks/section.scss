@@ -1,0 +1,11 @@
+.section {
+    margin-bottom: 40px;
+
+    &--48-64 {
+        margin-bottom: 48px;
+
+        @media (min-width: 1440px) {
+            margin-bottom: 64px;
+        }
+    }
+}

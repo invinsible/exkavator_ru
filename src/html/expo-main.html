@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная Экспо</title>
+  <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-header__wrapper">
+            <button class="mobile-burger" type="button"><span></span></button>
+            <a href="/" class="main-header__logo">
+                <img src="img/logo-white.png" alt="Логотип Экскаватор.ру">
+            </a>
+            <div class="main-header__relative">
+                <div class="main-menu">
+                    <ul class="main-menu__list">
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="#" class="main-menu__link">Журналы</a>
+                            <ul class="main-menu__submenu">
+                                <li class="main-menu__back-item">
+                                    <button class="main-menu__back" type="button">Журналы</button>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Строительная техника и оборудование</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Карьерная и горная техника</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Строительство и ремонт дорог</a>
+                                </li>
+                                <li class="main-menu__item main-menu__item--has-children">
+                                    <a href="#" class="main-menu__link">Складская техника</a>
+                                    <ul class="main-menu__submenu">
+                                        <li class="main-menu__back-item">
+                                            <button class="main-menu__back" type="button">Складская техника</button>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 1</a>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 2</a>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Подъемная техника</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Коммерческий транспорт</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Мини-техника</a>
+                                </li>
+                                <li class="main-menu__btn-item">
+                                    <a href="#" class="button button--primary button--large button--full-width">Разместить
+                                        репутационную статью</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/trade.html" class="main-menu__link">Продажа</a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/rent.html" class="main-menu__link">Аренда</a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/parts.html" class="main-menu__link">Запчасти</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="requests.html" class="main-menu__link">Заявки</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Реклама</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Конференция</a>
+                        </li>                    
+                        <li class="main-menu__btn-item">
+                            <a href="#" class="button button--primary button--large button--full-width">Разместить
+                                рекламу</a>
+                            <a href="#" class="button button--primary-alt button--large button--full-width">Подписаться на
+                                Телеграм</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-header-search">
+                    <svg class="icon main-header-search__icon">
+                        <use xlink:href="img/sprites/sprite-16.svg#search"></use>
+                    </svg>
+                    <input type="text" class="main-header-search__input">
+                    <div class="main-header-search__controls">
+                        <button class="main-header-search__reset" type="button">
+                            <svg class="icon ">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                        <button class="main-header-search__submit" type="button">Найти</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="main-header__controls user-controls">
+                <button class="user-controls__button user-controls__mobile-button" aria-label="Меню пользователя" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/header-sprite.svg#header-user"></use>
+                    </svg>
+                </button>
+                <div class="user-controls__group">
+                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/header-sprite.svg#header-search"></use>
+                        </svg>
+                        Поиск по сайту
+                    </button>
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/header-sprite.svg#header-message"></use>
+                        </svg>
+                        Обратный звонок
+                    </button>
+                    <button class="user-controls__button" aria-label="Избранное" type="button">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/header-sprite.svg#header-favorite"></use>
+                        </svg>
+                        Избранное
+                    </button>
+                    <button class="user-controls__enter-button" type="button">Войти</button>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="secondary-header">
+        <div class="container secondary-header__wrapper">
+            <ul class="secondary-menu">
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Главная EXPO 365</a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Карта выставки</a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Экспоненты</a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Техника экспонентов</a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Акции</a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#">Новости</a>
+                </li>
+            </ul>
+            <div class="secondary-menu__btns">
+                <a href="#" class="button button--small button--regular-alt">Добавить заявку</a>
+                <a href="#" class="button button--small button--regular-alt">Добавить объявление</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+        <main class="expo-page">
+            <!-- Первый блок -->
+            <section class="section section--48-64">                
+                <div class="main-banner"> 
+                    <div class="main-banner__title">
+                        <h1>EXPO 365 — цифровая платформа отраслевых выставок СТТ Экспо и COMVEX</h1>
+                        <p class="main-banner__sub-title">Проверенные экспоненты, новинки рынка и актуальные предложения. Найдите поставщиков, изучите новинки, свяжитесь с производителями напрямую.</p>
+                    </div>
+                    <ul class="our-numbers-list">
+                        <li class="our-numbers-list__item">
+                            <p class="our-numbers-list__number">1230</p>
+                            <span class="our-numbers-list__description">экспонентов</span>
+                        </li>
+                        <li class="our-numbers-list__item">
+                            <p class="our-numbers-list__number">15 000+</p>
+                            <span class="our-numbers-list__description">единиц техники</span>
+                        </li>
+                        <li class="our-numbers-list__item">
+                            <p class="our-numbers-list__number">18 000+</p>
+                            <span class="our-numbers-list__description">посетителей выставки</span>
+                        </li>
+                        <li class="our-numbers-list__item">
+                            <p class="our-numbers-list__number">25</p>
+                            <span class="our-numbers-list__description">стран участников</span>
+                        </li>
+                    </ul>                    
+                    <aside class="main-banner__buttons">
+                        <button class="button button--primary-alt button--large button--full-width">Найти экспонента</button>
+                        <button class="button button--primary-alt button--large button--full-width">Посмотреть карту выставки</button>
+                        <button class="button button--primary-alt button--large button--full-width">Стать участником</button>
+                    </aside>
+                </div>
+            </section>
+            <!-- Блок производителей -->
+            <section class="section section--48-64">
+                <h2>Экспоненты 2027</h2>
+                <div class="exponents">
+                    <aside class="exponents__aside">
+                        <div class="rounded-gray-block">
+                            <p>Найдите интересующих вас производителей спецтехники или их представительства и дилеров, ознакомьтесь с их стендами и задайте вопросы!</p>
+                            <div class="exponents__form">
+                                <div class="exponents__form-wrapper">
+                                    <div class="field-radio-group">
+                                        <label class="field-radio-group__label">
+                                            <input class="field-radio-group__input" type="radio" name="expo-radio" checked>
+                                            <span class="field-radio-group__caption">СТТ ЭКСПО</span>
+                                        </label>
+                                        <label class="field-radio-group__label">
+                                            <input class="field-radio-group__input" type="radio" name="expo-radio">
+                                            <span class="field-radio-group__caption">COMVEX</span>
+                                        </label>
+                                    </div>
+                                    <div class="field-dropdown">
+                                        <input class="field-dropdown__input" type="text" placeholder="Название компании" name="expo-company-name" id="expo-company-name" autocomplete="off">
+                                        <label class="field-dropdown__label" for="expo-company-name">
+                                            <span class="field-dropdown__caption">Название компании</span>
+                                        </label>
+                                    </div>
+                                    <div class="field-dropdown">
+                                        <input class="field-dropdown__input" type="text" placeholder="Специализация" name="expo-specialization" id="expo-specialization" autocomplete="off">
+                                        <label class="field-dropdown__label" for="expo-specialization">
+                                            <span class="field-dropdown__caption">Специализация</span>
+                                        </label>
+                                    </div>
+                                    <div class="field-text">
+                                        <input class="field-text__input" type="text" placeholder="Бренд" name="expo-brand" id="expo-brand" autocomplete="off">
+                                        <label class="field-text__label" for="expo-brand">
+                                            <span class="field-text__caption">Бренд</span>
+                                        </label>
+                                    </div>
+                                </div>                                
+                                <button class="button button--large button--primary button--full-width">Показать компании</button>
+                            </div>
+                            
+                        </div>
+                    </aside>
+                    <div class="exponents__content">
+                        <div class="companies-list">
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-1.jpg" alt="Логотип группы компаний Эпотос">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-2.jpg" alt="Логотип Миромакс спецтехника">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-3.jpg" alt="Логотип LiuGong Russia">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-4.jpg" alt="Логотип Mh Rus">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-5.jpg" alt="Логотип SunWard">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-6.jpg" alt="Логотип ВолотТехСтрой">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-7.jpg" alt="Логотип ФаворитМаш">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-8.jpg" alt="Логотип ТехПортАвтоСервис">
+                            </a>
+                            <a class="companies-list__item" href="#">
+                                <img src="img/pages/expo/client-logo-9.jpg" alt="Логотип Estar">
+                            </a>
+                            <button class="button button--large button--regular-alt button--full-width">Все экспоненты</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Блок Новости -->
+            <section class="section section--48-64">
+                <div class="news">
+                    <div class="news__main">
+                        <h2>Главные новости</h2>
+                    </div>
+                    <div class="news__row">
+                        <div class="news__column">
+                            <h3>Новости CTT EXPO </h3>
+                        </div>
+                        <div class="news__column">
+                            <h3>Новости COMvex</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Блок с техникой -->
+            <section class="section section--48-64">
+                <h2>Техника экспонентов</h2>
+                <div class="content-aside">
+                    <div class="content-aside__content"></div>
+                    <aside class="content-aside__aside"></aside>
+                </div>
+            </section>
+            <!-- Блок с картой -->
+            <section class="section section--48-64">
+                <h2>Карта экспозиции</h2>
+                <div class="content-aside">
+                    <div class="content-aside__content"></div>
+                    <aside class="content-aside__aside"></aside>
+                </div>
+            </section>
+
+            
+        </main>        
+    </div>    
+
+    <footer class="main-footer">
+        <div class="container">
+            <ul class="crumbs">
+                <li class="crumbs__item">© Экскаватор Ру 2003—<span class="main-footer__current-year">2026</span></li>
+                <li class="crumbs__item">
+                    <a href="#">Пользовательское соглашение</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Реклама на Экскаватор Ру</a>
+                </li>
+            </ul>
+            <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>            
+        </div>
+    </footer>
+
+    <div class="popup" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-subscribe">
+                        <label class="field-checkbox__label" for="ch-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-presonal-data">
+                        <label class="field-checkbox__label" for="ch-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>                
+                
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-seller-message">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Отправить сообщение продавцу</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>            
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="seller-message-phone" id="seller-message-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="seller-message-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="seller-message-email" id="seller-message-email" autocomplete="off" required>
+                        <label class="field-text__label" for="seller-message-email">
+                            <span class="field-text__caption">Ваш email (не обязательно)</span>
+                        </label>
+                    </div>
+                    <div class="field-textarea">
+                        <!-- <input class="field-textarea__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required> -->
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="seller-message-message" id="seller-message-message"></textarea>
+                        <label class="field-textarea__label" for="seller-message-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+                    
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe">
+                        <label class="field-checkbox__label" for="ch-seller-message-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe-presonal-data">
+                        <label class="field-checkbox__label" for="ch-seller-message-subscribe-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>                
+                
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>          
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="popup-call-city" id="popup-call-city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="popup-call-city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-lizing">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Оставьте заявку, и менеджеры свяжутся с вами для уточнения деталей</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>            
+            <div class="popup__content">
+                <div class="popup__form">                    
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваше имя *" name="lizing-name" id="lizing-name" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-name">
+                            <span class="field-text__caption">Ваше имя *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Email *" name="lizing-email" id="lizing-email" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-email">
+                            <span class="field-text__caption">Email *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="lizing-phone" id="lizing-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-phone">
+                            <span class="field-text__caption">Номер телефона *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="ИНН *" name="lizing-inn" id="lizing-inn" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-inn">
+                            <span class="field-text__caption">ИНН *</span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-lizing-subscribe">
+                        <label class="field-checkbox__label" for="ch-lizing-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-lizing-presonal-data">
+                        <label class="field-checkbox__label" for="ch-lizing-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-report">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Пожаловаться на объявление</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>            
+            <div class="popup__content">
+                <div class="popup__form">                    
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Суть жалобы" name="report-topic" id="report-topic" autocomplete="off" required>
+                        <label class="field-text__label" for="report-topic">
+                            <span class="field-text__caption">Суть жалобы</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваше имя *" name="report-name" id="report-name" autocomplete="off" required>
+                        <label class="field-text__label" for="report-name">
+                            <span class="field-text__caption">Ваше имя *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Email *" name="report-email" id="report-email" autocomplete="off" required>
+                        <label class="field-text__label" for="report-email">
+                            <span class="field-text__caption">Email *</span>
+                        </label>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="report-phone" id="report-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="report-phone">
+                            <span class="field-text__caption">Номер телефона *</span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-report-subscribe">
+                        <label class="field-checkbox__label" for="ch-report-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="ch-report-presonal-data">
+                        <label class="field-checkbox__label" for="ch-report-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/expo.js"></script>
+</body>
+</html>

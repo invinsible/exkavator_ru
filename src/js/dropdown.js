@@ -136,25 +136,22 @@ function initDropdowns(selector, { onSelect, readOnly } = {}) {
 
 // вызывается из скриптов под конкретную страницу после определения конфигов
 function initPageDropdowns(dropdownConfigs) {
-    // рендер опций из конфигов (только основной фильтр .filter-block)
-    const filterBlock = document.querySelector('.filter-block');
-    if (filterBlock) {
-        dropdownConfigs.forEach(function (config) {
-            const input = filterBlock.querySelector('#' + config.id);
-            if (!input) return;
-            const container = input.closest('.field-dropdown');
-            if (!container) return;
-            renderDropdownOptions(container, config);
+    // рендер опций из конфигов
+    dropdownConfigs.forEach(function (config) {
+        const input = document.querySelector('#' + config.id);
+        if (!input) return;
+        const container = input.closest('.field-dropdown');
+        if (!container) return;
+        renderDropdownOptions(container, config);
 
-            const currentValue = input.dataset.value;
-            if (currentValue) {
-                const matchingOption = container.querySelector(
-                    '.dropdown-backdrop__option[data-value="' + currentValue + '"]'
-                );
-                if (matchingOption) matchingOption.classList.add('selected');
-            }
-        });
-    }
+        const currentValue = input.dataset.value;
+        if (currentValue) {
+            const matchingOption = container.querySelector(
+                '.dropdown-backdrop__option[data-value="' + currentValue + '"]'
+            );
+            if (matchingOption) matchingOption.classList.add('selected');
+        }
+    });
 
     // подстановка значений опции
     initDropdowns('.field-dropdown', {

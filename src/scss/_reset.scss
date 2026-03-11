@@ -55,8 +55,11 @@ button {
   font-family: var(--font-family);
 }
 
-input {
+input,
+textarea
+{
   font-family: var(--font-family);
+  @include text-weight('base');
 }
 
 input::-webkit-outer-spin-button,

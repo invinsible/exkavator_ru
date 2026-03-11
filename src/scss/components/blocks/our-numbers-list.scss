@@ -1,0 +1,65 @@
+.our-numbers-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    @media (min-width: 480px) {
+        gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: var(--neutral-25);
+
+        @media (min-width: 480px) {
+            border-radius: 16px;
+        }
+
+        @media (min-width: 1024px) {
+            padding: 24px;
+        }
+    }
+
+    &__number {
+        font-size: 24px;
+        line-height: 24px;
+
+        @media (min-width: 480px) {
+            font-size: 32px;
+            line-height: 48px;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 44px;
+            line-height: 64px;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 48px;
+        }
+    }
+
+    &__description {
+        @include text-size('xs');
+        color: var(--text-secondary);
+
+        @media (min-width: 480px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 16px;
+        }
+    }
+}
