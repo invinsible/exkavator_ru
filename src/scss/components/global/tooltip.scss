@@ -1,0 +1,17 @@
+.tooltip {
+    position: fixed;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: var(--neutral-800);
+    color: var(--text-white);
+    @include text-size('xs');
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity var(--transition-hover);
+
+    &.is-active {
+        opacity: 1;
+    }
+}

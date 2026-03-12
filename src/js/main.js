@@ -103,6 +103,7 @@ const clickOutsideTargets = [
     { selector: '.item-card__show-buttons-wrap', stateClass: 'is-open' },
     { selector: '.price-block--dropdown', stateClass: 'is-open' },
     { selector: '.main-header-search', stateClass: 'is-show', ignore: '.js-header-search' },
+    { selector: '.contact-sticky-block__nav', stateClass: 'is-open' },    
 ];
 
 document.addEventListener('click', (e) => {
@@ -110,6 +111,38 @@ document.addEventListener('click', (e) => {
         if (e.target.closest(selector)) return;
         if (ignore && e.target.closest(ignore)) return;
         document.querySelectorAll(selector).forEach(el => el.classList.remove(stateClass));
+    });
+});
+
+// Тултипы
+const tooltip = document.createElement('div');
+tooltip.className = 'tooltip';
+document.body.appendChild(tooltip);
+
+const TOOLTIP_GAP = 6;
+
+document.querySelectorAll('[data-tooltip-text]').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        tooltip.textContent = el.dataset.tooltipText;
+        tooltip.classList.add('is-active');
+
+        const rect = el.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        let top = rect.top - tooltipRect.height - TOOLTIP_GAP;
+
+        if (top < 0) {
+            top = rect.bottom + TOOLTIP_GAP;
+        }
+
+        let left = rect.left + (rect.width - tooltipRect.width) / 2;
+        left = Math.max(4, Math.min(left, window.innerWidth - tooltipRect.width - 4));
+
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+    });
+
+    el.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('is-active');
     });
 });
 

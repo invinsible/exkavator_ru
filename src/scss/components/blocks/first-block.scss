@@ -1,0 +1,42 @@
+.first-block {
+    margin-bottom: 48px;
+
+    @media(min-width: 768px) {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    .crumbs {
+        margin-bottom: 16px;
+    }
+
+
+    &__img {
+        padding: 16px;
+        width: 50%;
+        margin-bottom: 24px;
+        border-radius: 16px;
+        border: 1px solid var(--neutral-100);        
+
+        @media(min-width: 768px) {
+            margin-bottom: 0;
+            width: 24%;
+            flex-shrink: 0;
+        }
+
+        @media(min-width: 1024px) {
+            padding: 24px;
+        }
+    }
+
+    &__text {
+        @media(min-width: 1024px) {
+            @include text-size('md');
+        }
+    }
+}
