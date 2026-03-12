@@ -1,3 +1,9 @@
+.item-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .item-card {
     padding: 16px;
     background-color: var(--neutral-20);
