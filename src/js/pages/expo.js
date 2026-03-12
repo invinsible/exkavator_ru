@@ -22,3 +22,17 @@ const dropdownConfigs = [
 ];
 
 initPageDropdowns(dropdownConfigs);
+
+new Swiper('.action-slider', {
+    slidesPerView: 1.12,
+    spaceBetween: 16,
+    navigation: {
+        nextEl: '.action-slider__next',
+        prevEl: '.action-slider__prev',
+    },
+    breakpoints: {
+        480: { slidesPerView: 1, spaceBetween: 24 },
+        768: { slidesPerView: 1.4 },
+        1440: { slidesPerView: 1.9 },
+    }
+});

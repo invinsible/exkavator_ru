@@ -1,9 +1,28 @@
 .action-slider {
+    position: relative;
+
+    &__slide {
+        height: auto;
+    }
+
+    &__prev, &__next { @include slider-nav($breakpoint-xs); }
+    &__next { @include slider-nav-next($breakpoint-xs); }
+    &__prev { @include slider-nav-prev($breakpoint-xs); }
+
+    &__img {
+        height: 100%;
+
+        img {
+            @include cover-img;
+        }
+    }
+
     &__link {
         position: relative;
         display: block;
         border-radius: 16px;
         overflow: hidden;
+        height: 100%;
     }
 
     &__description {

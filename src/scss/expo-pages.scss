@@ -52,6 +52,10 @@
         }
     }
 
+    .layout, .content, .sidebar {
+        padding: 0;
+    }
+
     // Первый блок на главной Экспо
 
     .main-banner {
@@ -176,22 +180,17 @@
 
     .technic-expo {
 
-
-        @media (min-width: 1440px) {
-            max-width: 948px;
-        }
-
         &__list {
             display: flex;
             flex-direction: column;
             gap: 16px;
 
-            @media (min-width: 1024px) {
-                max-width: 728px;
-            }
-            @media (min-width: 1440px) {
-                max-width: 948px;
-            }
+            // @media (min-width: 1024px) {
+            //     max-width: 728px;
+            // }
+            // @media (min-width: 1440px) {
+            //     max-width: 948px;
+            // }
         }
     }
 }

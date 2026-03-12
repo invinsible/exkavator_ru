@@ -193,65 +193,9 @@
             }
         }
 
-        &__prev, &__next {
-            @media (min-width: $breakpoint-sm) {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 48px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(39, 51, 63, 0.8);
-                backdrop-filter: blur(2px);
-                z-index: 2;
-                cursor: pointer;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 24px;
-                    height: 24px;
-                    @include mask-icon(var(--icon-chevron-down));
-                    background-color: var(--text-white);
-                }
-
-                &:hover {
-                    backdrop-filter: blur(4px);
-                }
-
-                &.swiper-button-disabled {
-                    opacity: 0.2;
-                    cursor: auto;
-                }
-            }
-            
-        }
-        &__next {
-            @media (min-width: $breakpoint-sm) {
-                right: 0;
-                border-top-left-radius: 8px;
-                border-bottom-left-radius: 8px;
-
-                &::after {
-                    transform: rotate(-90deg);
-                }
-            }
-            
-        }
-        &__prev {
-            @media (min-width: $breakpoint-sm) {
-                left: 0;
-                border-top-right-radius: 8px;
-                border-bottom-right-radius: 8px;
-
-                &::after {
-                    transform: rotate(90deg);
-                }
-            }
-            
-        }
+        &__prev, &__next { @include slider-nav($breakpoint-sm); }
+        &__next { @include slider-nav-next($breakpoint-sm); }
+        &__prev { @include slider-nav-prev($breakpoint-sm); }
     }
 
     .detail-item-action-block {
