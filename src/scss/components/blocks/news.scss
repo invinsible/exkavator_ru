@@ -1,3 +1,25 @@
+.news {
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        @media (min-width: 480px) {
+            gap: 32px;
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (min-width: 1440px) {
+            gap: 24px;
+        }
+    }
+}
+
 .news-list-slider {
     display: flex;
     flex-direction: column;
