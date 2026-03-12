@@ -42,7 +42,8 @@
         background-color: transparent;
         border: 0;
         outline: 0;
-        user-select: none;        
+        user-select: none;  
+        @include text-size('base');      
 
         pointer-events: none;
 
@@ -96,7 +97,7 @@
         .field-dropdown__caption {
             top: 12px;
             font-size: 11px;
-            line-height: 16px;
+            line-height: 14px;
             color: var(--neutral-400);
         }
         .field-dropdown__label {
@@ -159,6 +160,7 @@
         outline: 0;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include text-size('base');
 
 
         &::placeholder {
@@ -166,17 +168,22 @@
             opacity: 0;
         }
 
+        &:focus + .field-text__label {
+            outline: 1px solid var(--field-ouline);
+        }
+
         // смещение caption при фокусе и заполненном input
         &:focus + .field-text__label .field-text__caption,
         &:not(:placeholder-shown) + .field-text__label .field-text__caption {
             top: 12px;
             font-size: 11px;
-            line-height: 16px;
+            line-height: 14px;
             color: var(--neutral-400);
         }
         // label при заполненном input
         &:not(:placeholder-shown) + .field-text__label {
-            background-color: var(--primary-50);            
+            background-color: var(--primary-50);  
+            // outline: 1px solid var(--field-ouline);          
         }
 
         &:disabled + .field-text__label {
@@ -257,7 +264,7 @@
         &:not(:placeholder-shown) + .field-textarea__label .field-textarea__caption {
             top: 6px;
             font-size: 11px;
-            line-height: 16px;
+            line-height: 14px;
             color: var(--neutral-400);
         }
         // label при заполненном input
