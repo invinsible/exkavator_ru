@@ -58,10 +58,16 @@
         margin-left: auto;
         flex-shrink: 0;
         transform: rotate(-90deg);
+        transition: all var(--transition-hover);
 
         @media (min-width: $breakpoint-md) {
             background-color: var(--text-white);
             transform: rotate(0);
+        }
+    }
+    &__item--has-children > &__link:hover {
+        &::after {
+            background-color: var(--yellow-400);
         }
     }
 
@@ -71,7 +77,7 @@
         display: flex;
         align-items: center;        
         @include text-size('md');
-        color: var(--text-base); 
+        color: var(--text-base);
 
         @media (min-width: $breakpoint-md) {
             padding: 0;

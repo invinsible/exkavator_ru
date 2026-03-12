@@ -78,7 +78,7 @@
             outline: 1px solid  var(--neutral-100);
             color: var(--text-base);
         }
-        &:active  {
+        &:active {
             background-color: var(--neutral-100);
             outline: 0;
         }
@@ -125,10 +125,10 @@
         @include text-weight('semibold');
     }
     &--medium {
-        padding: 8px 15px;
+        padding: 8px 8px;
     }
     &--small {
-        padding: 8px 15px;
+        padding: 8px 8px;
         font-size: 12px;
         line-height: 16px;
     }
