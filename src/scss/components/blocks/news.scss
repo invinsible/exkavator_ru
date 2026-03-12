@@ -1,9 +1,18 @@
-.news {
+.news-expo {
+
+    &__main {
+        margin-bottom: 24px;
+
+        @media (min-width: 480px) {
+            margin-bottom: 32px;
+        }
+    }
 
     &__row {
         display: grid;
         grid-template-columns: 1fr;
         gap: 24px;
+        align-items: start;
 
         @media (min-width: 480px) {
             gap: 32px;
@@ -17,6 +26,30 @@
         @media (min-width: 1440px) {
             gap: 24px;
         }
+    }
+
+    &__column {
+        h3 {
+            margin-bottom: 16px;
+            @include text-size('md');
+
+            @media (min-width: 480px) {
+                margin-bottom: 24px;
+                @include text-size('lg');
+            }
+
+            @media (min-width: 768px) {
+                @include text-size('secondary');
+            }
+        }
+
+        &.rounded-gray-block {
+            @media (max-width: 480px) {
+                padding: 0;
+                border: 0;
+            }
+        }
+        
     }
 }
 
@@ -109,5 +142,89 @@
 
     .crumbs {
         margin-top: auto;
+    }
+}
+
+.news-list-default {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (min-width: 480px) {
+        margin-bottom: 16px;
+        gap: 16px;
+    }
+
+    &__item {
+        
+        padding-bottom: 36px;
+        border-bottom: 1px solid var(--neutral-100);
+
+        @media (min-width: 480px) {
+            padding-bottom: 16px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__img {
+        // width: 120px;
+        width: 42%;
+        height: 65px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @media (min-width: 480px) {
+            height: 92px;
+        }
+
+        @media (min-width: 768px) {
+            max-width: 200px;
+            height: 110px;
+        }
+
+        img {
+            @include cover-img;
+        }
+    }
+
+    &__title {
+        @include text-size('sm');
+        @include text-weight('semibold');
+        color: var(--text-base);
+
+        @media (min-width: 480px) {
+            margin-bottom: 8px;
+            @include text-size('base');
+        }
+
+        @media (min-width: 1440px) {
+            margin-bottom: 16px;
+            @include text-size('md');
+        }
+    }
+
+    &__crumbs {
+        position: absolute;
+        left: 0;
+        bottom: -28px;
+        width: 100%;
+
+        @media (min-width: 480px) {
+            position: relative;
+            left: unset;
+            bottom: unset;
+        }
     }
 }

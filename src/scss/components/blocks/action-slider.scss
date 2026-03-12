@@ -1,0 +1,40 @@
+.action-slider {
+    &__link {
+        position: relative;
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    &__description {
+        padding: 16px;
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        right: 16px;
+        border: 1px solid var(--neutral-600);
+        border-radius: 8px;
+        backdrop-filter: blur(8px);
+        background-color: rgba(20, 25, 31, 0.6);
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        color: var(--text-white);
+        @include text-size('md');
+        @include text-weight('bold');
+
+        @media (min-width: 480px) {
+            @include text-size('lg');
+        }
+    }
+
+    &__text {
+        color: var(--text-white);
+        @include text-size('sm');
+
+        @media (min-width: 480px) {
+            @include text-size('base');
+        }
+    }
+}
